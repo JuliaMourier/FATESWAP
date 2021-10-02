@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: b32c244b69b0cb84b892956b2234fb70
+guid: 0deec12fd7703334fa698432d7a0cdcd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7289601772467383436
-    second: LucyStopx32_0
+      213: -6302683063725663865
+    second: RobotWalkx32_0
   - first:
-      213: 2983539580132507077
-    second: LucyStopx32_1
+      213: -5357299170639848628
+    second: RobotWalkx32_1
+  - first:
+      213: -4627753393337012230
+    second: RobotWalkx32_2
+  - first:
+      213: 603963776550186656
+    second: RobotWalkx32_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -52,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LucyStopx32_0
+      name: RobotWalkx32_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,20 +123,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8ce9f9a03ed92560800000000000000
-      internalID: 7289601772467383436
+      spriteID: 789d2c6852f5888a0800000000000000
+      internalID: -6302683063725663865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LucyStopx32_1
+      name: RobotWalkx32_1
       rect:
         serializedVersion: 2
         x: 32
@@ -138,14 +144,56 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cdbd1fc079a76920800000000000000
-      internalID: 2983539580132507077
+      spriteID: c4b548ad9cc07a5b0800000000000000
+      internalID: -5357299170639848628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobotWalkx32_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: affe902cecae6cfb0800000000000000
+      internalID: -4627753393337012230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobotWalkx32_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae2a76dad5b16800800000000000000
+      internalID: 603963776550186656
       vertices: []
       indices: 
       edges: []

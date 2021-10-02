@@ -5,9 +5,23 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    // LIVES
     public int lives = 3;
+    public Lives firstLive;
+    public Lives secondLive;
+    public Lives thirdLive;
+
+    // CHARACTERS
+    public Character Lucie;
+
+    // COLLECTABLES
     public bool hasKey {get; private set;} = false;
+
+    // TEXTS
     public Text textEndLvl;
+    public Text textGameOver;
+
+    // EXIT
     public SpriteRenderer exit;
 
     // when a character find a collectable
@@ -25,5 +39,27 @@ public class GameManager : MonoBehaviour
            this.textEndLvl.enabled = true;
         }
     }
-    //TODO
+
+    // Set the display of lives and set GameOver when the heroes don't have any live left
+    public void HeroesTakeDamage(){
+        if(lives == 3){
+            thirdLive.LooseLive();
+        }
+        else if(lives == 2){
+            secondLive.LooseLive();
+        }
+        else if(lives == 1){
+            firstLive.LooseLive();
+            GameOver(); //The heroes have lost all their lives
+        }
+      
+        lives--; //decrement the lives
+    }
+
+    // Game over : end of the level
+    public void GameOver(){
+        this.textGameOver.enabled = true;
+        this.Lucie.gameObject.SetActive(false);
+    }
+    
 }

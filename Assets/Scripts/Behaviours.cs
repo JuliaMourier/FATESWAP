@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Character))]
 
-
+// NOT USE FOR NOW
 public abstract class Behaviours : MonoBehaviour
 { // class base of any behaviour 
     public Character character {get; private set;}

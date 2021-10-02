@@ -21,6 +21,7 @@ public class Movement : MonoBehaviour
         // Change the position of the character
         this.transform.position = this.transform.position + horizontal * Time.deltaTime * speed;
         
+        // Change the oriantation of the sprite in function of the direction
         if(horizontalMovement > 0.5){ // if the character goes right the sprite need to stay at 0 rotation
             this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 0, this.transform.rotation.z));
             move = true; 
