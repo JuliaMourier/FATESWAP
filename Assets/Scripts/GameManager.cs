@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     // EXIT
     public SpriteRenderer exit;
 
+    //Check if the heroes are out of the map
     public void Update(){
         if(Lucie.gameObject.transform.position.y < -5){
             HeroesTakeDamage();
