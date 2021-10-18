@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
     //Attributs :
     // for the movement :
     public float speed = 1.0f; // Speed of the movement
-    
+    public float impulsionForce = 3.2f;
     // for Animator :
     public Animator animator; // Animator for the different animations of the character => idle, walk, transfor, walkpower and idlepower
     public bool power { get; private set;} = false; // Parameter of the animator : true when the character is in the power state, false otherwise
@@ -42,7 +42,7 @@ public class Movement : MonoBehaviour
         }
         // if Space is pressed and the character is using his power : jump
         if(Input.GetKeyUp(KeyCode.Space) && power){
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, 3f), ForceMode2D.Impulse);
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, impulsionForce), ForceMode2D.Impulse);
         }
         
         // send the parameters of the character state to the animator

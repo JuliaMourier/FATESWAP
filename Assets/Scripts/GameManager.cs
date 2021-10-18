@@ -24,6 +24,12 @@ public class GameManager : MonoBehaviour
     // EXIT
     public SpriteRenderer exit;
 
+    public void Update(){
+        if(Lucie.gameObject.transform.position.y < -5){
+            HeroesTakeDamage();
+        }
+    }
+
     // when a character find a collectable
     public void CollectableFound(Collectables collectable){
         hasKey = true;
