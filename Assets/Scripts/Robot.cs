@@ -43,9 +43,10 @@ public class Robot : MonoBehaviour
     }
 
     //when robot dies launch the animation of explosion and deactivate the robot after 1s
-    public void RobotDie(){
-        animator.SetTrigger("boom");
-        Invoke("Disable", 1);
+    public void RobotDie(Robot robotToDestroy){
+        
+        //Invoke("Disable", 1);
+        StartCoroutine(DeactivateRobot(robotToDestroy));
     }
 
     //deactivate the robot
@@ -54,8 +55,9 @@ public class Robot : MonoBehaviour
     }
 
     // If we want to put less than 1s for the deactivation
-    private IEnumerator DeactivateRobot(){
-        float duration = 0.4f;
+    private IEnumerator DeactivateRobot(Robot robotToDeactivate){
+        animator.SetTrigger("boom");
+        float duration = 1f;
         float elapsed = 0.0f;
 
         // Animate to the starting point
@@ -64,7 +66,7 @@ public class Robot : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
-        this.gameObject.SetActive(false);
+        robotToDeactivate.gameObject.SetActive(false);
     }
 
     

@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 1ff28552dd8c0ba4482ee0ff7be592be
+guid: 787f07d3fdb798544b3bcd1165b97aab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6036345301270375071
-    second: RobotExplodex32_0
+      213: -2366377172464019918
+    second: RobotNainStop_0
   - first:
-      213: 6440980938319005155
-    second: RobotExplodex32_1
-  - first:
-      213: -707696603884487104
-    second: RobotExplodex32_2
-  - first:
-      213: 1412035194122989303
-    second: RobotExplodex32_3
+      213: -1239640116359106225
+    second: RobotNainStop_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -77,7 +71,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -89,7 +83,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 256
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -101,7 +95,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 256
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -115,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RobotExplodex32_0
+      name: RobotNainStop_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 7
+        y: 2
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9aa1dfc11865c350800000000000000
-      internalID: 6036345301270375071
+      spriteID: 23650becf70f82fd0800000000000000
+      internalID: -2366377172464019918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotExplodex32_1
+      name: RobotNainStop_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 39
+        y: 2
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,50 +144,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e50191a906f26950800000000000000
-      internalID: 6440980938319005155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RobotExplodex32_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04ef6b430b1cd26f0800000000000000
-      internalID: -707696603884487104
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RobotExplodex32_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7feec0c178e889310800000000000000
-      internalID: 1412035194122989303
+      spriteID: f41771fc1e9ebcee0800000000000000
+      internalID: -1239640116359106225
       vertices: []
       indices: 
       edges: []
