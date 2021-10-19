@@ -3301,6 +3301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Henrik
       objectReference: {fileID: 0}
+    - target: {fileID: 84783351332131068, guid: 8f023593152c3244e9b6f190a0019c37, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1873912503241653118, guid: 8f023593152c3244e9b6f190a0019c37, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -4016,6 +4020,10 @@ PrefabInstance:
     - target: {fileID: 1257384095287341933, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
       propertyPath: m_Name
       value: Victoria
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257384095287341933, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
