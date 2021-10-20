@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 6086900890380414498}
   - component: {fileID: 6086900890380414499}
   - component: {fileID: 4236927051998501083}
+  - component: {fileID: 5255493745359713109}
+  - component: {fileID: -4064169021393031607}
   m_Layer: 8
   m_Name: Fei
   m_TagString: Untagged
@@ -180,3 +182,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52dadff74720e6444a82a81cfb7a75f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5255493745359713109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6086900890380414496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a87278e819b053140ae092cb8ca6acbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeight: 1
+  speed: 1
+  fallingSpeed: -30
+  rb: {fileID: 6086900890380414525}
+  circular: {fileID: -4064169021393031607}
+  animator: {fileID: 6086900890380414499}
+  enableMovement: 1
+--- !u!58 &-4064169021393031607
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6086900890380414496}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.08684558, y: -0.32}
+  serializedVersion: 2
+  m_Radius: 0.30654758

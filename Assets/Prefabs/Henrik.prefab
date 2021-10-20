@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 2856239228480498228}
   - component: {fileID: 8242032027451846265}
   - component: {fileID: 8242032027451846264}
+  - component: {fileID: 1933275231129759456}
+  - component: {fileID: 970095603824667901}
   m_Layer: 8
   m_Name: Henrik
   m_TagString: Untagged
@@ -141,7 +143,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8308194047607717507}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8e8d01fcb3bf484588dbd0365fa1776, type: 3}
   m_Name: 
@@ -180,3 +182,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52dadff74720e6444a82a81cfb7a75f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1933275231129759456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8308194047607717507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a87278e819b053140ae092cb8ca6acbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeight: 1
+  speed: 1
+  fallingSpeed: -30
+  rb: {fileID: 7811196347154362509}
+  circular: {fileID: 970095603824667901}
+  animator: {fileID: 8242032027451846265}
+  enableMovement: 1
+--- !u!58 &970095603824667901
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8308194047607717507}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.32}
+  serializedVersion: 2
+  m_Radius: 0.30654758

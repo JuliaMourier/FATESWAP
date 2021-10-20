@@ -64,7 +64,7 @@ public class CharacterMovement : MonoBehaviour
         else if (rb.velocity.x < -0.01f)
             transform.localScale = new Vector3(-1, 1, 1);
 
-        animator.SetBool("isMoving", MoveX != 0);
+        animator.SetBool("move", MoveX != 0);
 
 
         if ((Input.GetButtonDown("Jump") && IsGrounded))
