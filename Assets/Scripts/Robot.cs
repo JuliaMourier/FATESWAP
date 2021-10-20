@@ -10,6 +10,8 @@ public class Robot : MonoBehaviour
     private Vector2 direction;
     private bool robotMove = false;
 
+    public bool isAlive = true;
+
     // initialisation of the direction of the robot
     private void Awake(){
         direction = initialDirection;

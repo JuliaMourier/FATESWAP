@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
 
     // CHARACTERS
     public Character Lucie;
+    public Character Victoria;
+    public Character Fei;
+    public Character Henrik;
 
     // COLLECTABLES
     public bool hasKey {get; private set;} = false;
@@ -26,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     //Check if the heroes are out of the map
     public void Update(){
-        if(Lucie.gameObject.transform.position.y < -5){
+        if(CharactersOutOfMap()){
             HeroesTakeDamage();
         }
     }
@@ -44,6 +47,7 @@ public class GameManager : MonoBehaviour
         if(hasKey){
             // display the text "Well done"
            this.textEndLvl.enabled = true;
+           DeactivateCharacters();
         }
     }
 
@@ -66,7 +70,21 @@ public class GameManager : MonoBehaviour
     // Game over : end of the level
     public void GameOver(){
         this.textGameOver.enabled = true;
-        this.Lucie.gameObject.SetActive(false);
+        DeactivateCharacters(); 
     }
     
+    //Test if one of the character is out of the map
+    private bool CharactersOutOfMap(){
+        if(Lucie.transform.position.y < -5 || Victoria.transform.position.y < -5 || Fei.transform.position.y < -5 || Henrik.transform.position.y < -5 ){
+            return true;
+        }
+        return false;
+    }
+
+    private void DeactivateCharacters(){
+        this.Lucie.gameObject.SetActive(false);
+        this.Fei.gameObject.SetActive(false);
+        this.Victoria.gameObject.SetActive(false);
+        this.Henrik.gameObject.SetActive(false);
+    }
 }

@@ -11,7 +11,9 @@ public class RobotHeadColored : MonoBehaviour
     //If the ennemi character jump on the head of a robot, the robot must die
     private void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.Equals(ennemi)){ //The robot dies only if its ennemi kills it
-            ColoredRobot.RobotDie(ColoredRobot);            
+            ColoredRobot.isAlive = false;
+            ColoredRobot.RobotDie(ColoredRobot);
+
         }
     }
 }
