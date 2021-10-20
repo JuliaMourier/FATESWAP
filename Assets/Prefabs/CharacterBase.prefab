@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6605078753533599329}
   - component: {fileID: 2163810041706979058}
   - component: {fileID: 6179767737845630027}
+  - component: {fileID: 4287861626165741364}
+  - component: {fileID: 3440282285713316808}
   m_Layer: 0
   m_Name: CharacterBase
   m_TagString: Untagged
@@ -139,7 +141,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84783351332131068}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8e8d01fcb3bf484588dbd0365fa1776, type: 3}
   m_Name: 
@@ -147,3 +149,37 @@ MonoBehaviour:
   speed: 1
   impulsionForce: 3.2
   animator: {fileID: 0}
+--- !u!114 &4287861626165741364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84783351332131068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a87278e819b053140ae092cb8ca6acbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeight: 1
+  speed: 1
+  fallingSpeed: -20
+  rb: {fileID: 2163810041706979058}
+  circular: {fileID: 3440282285713316808}
+  enableMovement: 1
+--- !u!58 &3440282285713316808
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84783351332131068}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.024101675, y: -0.11}
+  serializedVersion: 2
+  m_Radius: 0.09321861
