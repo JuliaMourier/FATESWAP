@@ -60,9 +60,16 @@ public class CharacterMovement : MonoBehaviour
 
         rb.AddForce(new Vector2(MoveX * speed * rb.mass, 0));
         if (rb.velocity.x > 0.01f)
-            transform.localScale = Vector3.one;
+        {
+            Debug.Log("Change size");
+            transform.localScale =new Vector3(0.65f, 0.65f, 0.65f);
+        }
         else if (rb.velocity.x < -0.01f)
-            transform.localScale = new Vector3(-1, 1, 1);
+        {
+            Debug.Log("Change size inverse");
+         
+        transform.localScale = new Vector3(-0.65f, 0.65f, 0.65f);
+        }
 
         animator.SetBool("move", MoveX != 0);
 
@@ -93,7 +100,6 @@ public class CharacterMovement : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.layer == 6);
         if (collision.gameObject.layer == 6)
         {
             IsGrounded = true;
