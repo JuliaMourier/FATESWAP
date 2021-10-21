@@ -61,12 +61,10 @@ public class CharacterMovement : MonoBehaviour
         rb.AddForce(new Vector2(MoveX * speed * rb.mass, 0));
         if (rb.velocity.x > 0.01f)
         {
-            Debug.Log("Change size");
             transform.localScale =new Vector3(0.65f, 0.65f, 0.65f);
         }
         else if (rb.velocity.x < -0.01f)
         {
-            Debug.Log("Change size inverse");
          
         transform.localScale = new Vector3(-0.65f, 0.65f, 0.65f);
         }
