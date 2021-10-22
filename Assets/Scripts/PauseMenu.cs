@@ -30,7 +30,8 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void Restart() {
-        Debug.Log("Restart...");
+        Resume();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void LoadSettings() {
@@ -38,7 +39,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void LoadMenu() {
-        Time.timeScale = 1f;
+        Resume();
         SceneManager.LoadScene("Menu");
     }
 }
