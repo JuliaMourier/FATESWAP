@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,7 +21,9 @@ public class GameManager : MonoBehaviour
 
     // TEXTS
     public Text textEndLvl;
-    public Text textGameOver;
+
+    // MENUS
+    public GameObject gameOverMenuUI;
 
     // EXIT
     public SpriteRenderer exit;
@@ -69,8 +70,22 @@ public class GameManager : MonoBehaviour
 
     // Game over : end of the level
     public void GameOver(){
-        this.textGameOver.enabled = true;
+        this.gameOverMenuUI.SetActive(true);
         DeactivateCharacters(); 
+    
+    }
+
+    // Restart the current level
+    public void RestartLevel() {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Debug.Log("GM RESTART...");
+    }
+
+    // Load the main menu scene
+    public void LoadMainMenu() {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Menu");
     }
     
     //Test if one of the character is out of the map

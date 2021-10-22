@@ -1,11 +1,12 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
 
+    // If ESCAPE is pressed and depending on the GameIsPaused value,
+    // it calls either the Resume() method or the Pause() method
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape)) {
@@ -17,29 +18,27 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    // Resume the game
     public void Resume() {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
 
+    // Pause the game
     void Pause() {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
 
-    public void Restart() {
-        Resume();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
+    // Load the settings menu
     public void LoadSettings() {
+        // TODO : LOAD THE SETTINGS MENU
         Debug.Log("Load Settings...");
     }
 
-    public void LoadMenu() {
-        Resume();
-        SceneManager.LoadScene("Menu");
+    public void ResetGameIsPausedValue() {
+        GameIsPaused = false;
     }
 }
