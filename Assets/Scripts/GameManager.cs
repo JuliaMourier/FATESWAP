@@ -25,8 +25,16 @@ public class GameManager : MonoBehaviour
     // MENUS
     public GameObject gameOverMenuUI;
 
+    // AUDIO
+    public AudioClip gameOverAudioClip;
+    private AudioSource audioSource;
+
     // EXIT
     public SpriteRenderer exit;
+
+    void Awake() {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     //Check if the heroes are out of the map
     public void Update(){
@@ -71,8 +79,10 @@ public class GameManager : MonoBehaviour
     // Game over : end of the level
     public void GameOver(){
         this.gameOverMenuUI.SetActive(true);
-        DeactivateCharacters(); 
-    
+        audioSource.clip = gameOverAudioClip;
+        audioSource.loop = true;
+        audioSource.Play();
+        DeactivateCharacters();
     }
 
     // Restart the current level
