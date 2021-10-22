@@ -79,7 +79,6 @@ public class GameManager : MonoBehaviour
     public void RestartLevel() {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Debug.Log("GM RESTART...");
     }
 
     // Load the main menu scene
