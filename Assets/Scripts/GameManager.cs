@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
     // Load the main menu scene
     public void LoadMainMenu() {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MainMenu");
     }
     
     //Test if one of the character is out of the map
