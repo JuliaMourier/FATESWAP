@@ -45,22 +45,30 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         if(createLobby.text != ""){
             PhotonNetwork.CreateRoom(createLobby.text.ToUpper()); //Create room (upper case to avoid players errors))
         }
-        Debug.Log(PhotonNetwork.CountOfRooms); 
+        Debug.Log("Create : " + PhotonNetwork.CountOfRooms); 
     }
 
     //Allow the player to Join the room thanks to photon
     public void JoinRoom(){
-        Debug.Log("join room" + PhotonNetwork.CountOfPlayers);
         GetUserName();
         
         PhotonNetwork.JoinRoom(joinLobby.text.ToUpper()); //Join the room (upper case to avoid players errors)
-        
+        Debug.Log("Join : " + PhotonNetwork.CountOfRooms); 
+
+    }
+
+    public void JoinRandomRoom(){
+        GetUserName();
+
+        PhotonNetwork.JoinRandomRoom();
+        Debug.Log("Random Join : " + PhotonNetwork.CountOfRooms); 
+
     }
 
     //When a room is joined, redirect the player to the player list menu (TODO wait until 4 players) and name the room
     public override void OnJoinedRoom()
     {
-        Debug.Log("Room Joined");
+        Debug.Log("Joined, Count of rooms : " + PhotonNetwork.CountOfRooms); 
         OnlineMenu.SetActive(false); //deactivate the current menu
         PlayerListMenu.SetActive(true); //activate the menu of the list of players in the room
         roomName.text = PhotonNetwork.CurrentRoom.Name; //Name the room + number of players
@@ -70,7 +78,6 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         foreach(Player p in PhotonNetwork.PlayerList){ //Fill the players name in the room
             Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(p); //Display the list of the player currently in the room
         }
-       // PhotonNetwork.LoadLevel("MainScene");
     }
 
     //Leave the room when click on back button
