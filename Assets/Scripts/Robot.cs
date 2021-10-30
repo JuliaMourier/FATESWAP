@@ -68,7 +68,7 @@ public class Robot : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
-        robotToDeactivate.gameObject.SetActive(false);
+        robotToDeactivate.Disable();
     }
 
     

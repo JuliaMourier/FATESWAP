@@ -39,9 +39,15 @@ public class Movement : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.T)){
             animator.SetTrigger("transformation");
             power = !power;
+            if(power){
+                GetComponent<Character>().OnPowerActivate();
+            }
+            else {
+                GetComponent<Character>().OnPowerDeactivate();
+            }
         }
         // if Space is pressed and the character is using his power : jump
-        if(Input.GetKeyUp(KeyCode.Space) && power){
+        if(Input.GetKeyUp(KeyCode.Space)){
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, impulsionForce), ForceMode2D.Impulse);
         }
         
