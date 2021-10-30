@@ -61,4 +61,5 @@ crashlytics-build.properties
 # Few files : 
 UserSettings/EditorUserSettings.asset
 ProjectSettings/EditorBuildSettings.asset
-Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Electronic Highway Sign SDF.asset
+ProjectSettings/ProjectSettings.asset
+Assets/TextMesh\ Pro/Examples\ \&\ Extras/Resources/Fonts\ \&\ Materials/Electronic\ Highway\ Sign\ SDF.asset
