@@ -58,5 +58,7 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-# Fichier : EditorUserSettings.asset
+# Few files : 
 UserSettings/EditorUserSettings.asset
+ProjectSettings/EditorBuildSettings.asset
+Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Electronic Highway Sign SDF.asset
