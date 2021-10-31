@@ -11,6 +11,7 @@ public class Door : MonoBehaviour
         }
     }
 
+    //Open the door
     protected virtual void OpenDoor(){
         FindObjectOfType<GameManager>().DoorEnter(this);
     }

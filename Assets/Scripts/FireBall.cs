@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
-    public float duration;
-    public float speed;
-    private Vector3 direction;
+    public float duration; //time to live
+    public float speed; //speed of the Fireball
+    public Vector3 direction; //direction of the fireball
+
+    //When instantiated start to time to live routine => the fireball dies after "duration" seconds
     private void Awake() {
-        direction = new Vector3(1, 0, 0);
         StartCoroutine(DieWhenTimeHasElapsed());
     }
 
@@ -16,8 +17,10 @@ public class FireBall : MonoBehaviour
         this.transform.position = this.transform.position + direction * Time.deltaTime * speed;
     }
 
+
+    //When the fireball hits a obstacle, ennemi or ally => deactivate the fireball after 0.1s   
     private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.layer == LayerMask.NameToLayer("Enemies") || other.gameObject.layer == LayerMask.NameToLayer("Obstacles")){
+        if(other.gameObject.layer == LayerMask.NameToLayer("Enemies") || other.gameObject.layer == LayerMask.NameToLayer("Obstacles") || other.gameObject.layer == LayerMask.NameToLayer("Characters")){
             duration = 0.1f;
             StopAllCoroutines();
             StartCoroutine(DieWhenTimeHasElapsed());
@@ -40,4 +43,10 @@ public class FireBall : MonoBehaviour
 
     }
 
+    //Set the direction of the fireball with Vector3 given
+    public void SetDirection(Vector3 newDirection){
+        this.direction = newDirection;
+    }
+
+   
 }

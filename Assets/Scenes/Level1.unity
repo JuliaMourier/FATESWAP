@@ -667,8 +667,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireBallPrefab: {fileID: 6935333155820511464, guid: 1cbf912b7affc724f8d10ffa7140aad5, type: 3}
-  content: {fileID: 1665308677}
+  hand: {fileID: 1665308677}
   animator: {fileID: 128488468}
+  durationDisabilityFireBall: 0.5
 --- !u!4 &132295289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2668633389615660128, guid: 5d6df33bba57e644c8e4d508e67eb785, type: 3}
@@ -6132,7 +6133,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665308676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.35, y: 0.02, z: 0}
+  m_LocalPosition: {x: 0.5, y: -0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 128488473}

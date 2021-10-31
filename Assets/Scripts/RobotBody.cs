@@ -12,6 +12,7 @@ public class RobotBody : MonoBehaviour
                 FindObjectOfType<GameManager>().HeroesTakeDamage();            
             }
         }
+        //If the robot got hit by a fireball, he must die
         if(collision.gameObject.layer == LayerMask.NameToLayer("Fireball")){
             if(robot.isAlive){
                 FindObjectOfType<Robot>().RobotDie(robot);            
