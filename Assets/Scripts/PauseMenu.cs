@@ -35,12 +35,6 @@ public class PauseMenu : MonoBehaviour
         audioSource.Pause();
     }
 
-    // Load the settings menu
-    public void LoadSettings() {
-        // TODO : LOAD THE SETTINGS MENU
-        Debug.Log("Load Settings...");
-    }
-
     public void ResetGameIsPausedValue() {
         GameIsPaused = false;
     }
