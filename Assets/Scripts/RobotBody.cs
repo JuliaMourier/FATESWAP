@@ -12,5 +12,10 @@ public class RobotBody : MonoBehaviour
                 FindObjectOfType<GameManager>().HeroesTakeDamage();            
             }
         }
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Fireball")){
+            if(robot.isAlive){
+                FindObjectOfType<Robot>().RobotDie(robot);            
+            }
+        }
     }
 }

@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
     public Animator animator; // Animator for the different animations of the character => idle, walk, transfor, walkpower and idlepower
     public bool power { get; private set;} = false; // Parameter of the animator : true when the character is in the power state, false otherwise
     public bool move {get; private set;} // Parameter of the animator : true when the player press a key to move, false otherwise
-
+    public Character character; //character who's moving
     void Update(){
         // get the movement from the player's inputs
         float horizontalMovement = Input.GetAxis("Horizontal");
@@ -24,10 +24,12 @@ public class Movement : MonoBehaviour
         // Change the oriantation of the sprite in function of the direction
         if(horizontalMovement > 0.5){ // if the character goes right the sprite need to stay at 0 rotation
             this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 0, this.transform.rotation.z));
+            character.SetDirection(new Vector3(1, 0, 0)); //Direction to the right
             move = true; 
         }
         else if(horizontalMovement < -0.5){ // if the character goes left we have to rotate its sprite of 180°
             this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 180, this.transform.rotation.z));
+            character.SetDirection(new Vector3(-1, 0, 0)); //Direction to the left
             move = true;
         }
         else {

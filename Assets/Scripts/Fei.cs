@@ -8,8 +8,8 @@ public class Fei : Character
     public override void OnPowerActivate()
     {
         base.OnPowerActivate();
-        GetComponent<BoxCollider2D>().size = new Vector2(0.2f, 0.2f);
-        GetComponent<BoxCollider2D>().offset = new Vector2(0f, -0.2f);
+        GetComponent<BoxCollider2D>().size = new Vector2(0.37f, 0.4f);
+        GetComponent<BoxCollider2D>().offset = new Vector2(0.1f, -0.2f);
 
     }
 

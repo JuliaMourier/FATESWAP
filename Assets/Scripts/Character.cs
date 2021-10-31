@@ -6,11 +6,19 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+   private Vector3 direction;
+
    //if we want to had characters specifications
    virtual public void OnPowerActivate(){
-      Debug.Log("Activate");
+
    }
 
    virtual public void OnPowerDeactivate(){}
 
+   public Vector3 GetDirection(){
+        return direction;
+   }
+   public void SetDirection(Vector3 newDirection){
+      direction = newDirection;
+   }
 }
