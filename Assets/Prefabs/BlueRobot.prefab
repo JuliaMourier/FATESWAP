@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3440338122828600056}
   - component: {fileID: 3440338123547803503}
   - component: {fileID: 3440338122828600057}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlueRobot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d84592ef1d7f54daebebf384fa2b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ennemi: {fileID: 0}
   animator: {fileID: 3440338122828600057}
   initialDirection: {x: 1, y: 0}
   speed: 0.7
@@ -225,8 +226,8 @@ GameObject:
   - component: {fileID: 3440338123791683484}
   - component: {fileID: 3440338123791683481}
   - component: {fileID: 3440338123791683486}
-  - component: {fileID: 3440338123791683487}
-  m_Layer: 0
+  - component: {fileID: 1591608492492026383}
+  m_Layer: 6
   m_Name: HeadCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +325,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3440338123791683487
+--- !u!114 &1591608492492026383
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -333,8 +334,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3440338123791683485}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26a40ee25327414459a27baceda8781b, type: 3}
+  m_Script: {fileID: 11500000, guid: e2d5f34e2dc93244d87af0b7d6b8849a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemi: {fileID: 0}
-  ColoredRobot: {fileID: 3440338123547803503}
+  robot: {fileID: 3440338123547803503}

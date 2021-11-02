@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Robot : MonoBehaviour
 {
-    public Animator animator;
-    public Vector2 initialDirection;
-    public float speed;
-    private Vector2 direction;
-    private bool robotMove = false;
-
-    public bool isAlive = true;
+    public GameObject ennemi ; //Ennemi of the robot => Null if all characters can kill him
+    public Animator animator; //Animator
+    public Vector2 initialDirection; //Initial direction => to set 
+    public float speed; //Speed factor for its movements
+    private Vector2 direction; //Direction of the robot
+    private bool robotMove = false; //is robot moving
+    public bool isAlive = true; //is robot alive, set to false when dies
 
     // initialisation of the direction of the robot
     private void Awake(){
@@ -45,10 +45,10 @@ public class Robot : MonoBehaviour
     }
 
     //when robot dies launch the animation of explosion and deactivate the robot after 1s
-    public void RobotDie(Robot robotToDestroy){
+    public void RobotDie(){
         
         //Invoke("Disable", 1);
-        StartCoroutine(DeactivateRobot(robotToDestroy));
+        StartCoroutine(DeactivateRobot());
     }
 
     //deactivate the robot
@@ -57,7 +57,7 @@ public class Robot : MonoBehaviour
     }
 
     // If we want to put less than 1s for the deactivation
-    private IEnumerator DeactivateRobot(Robot robotToDeactivate){
+    private IEnumerator DeactivateRobot(){
         animator.SetTrigger("boom");
         float duration = 1f;
         float elapsed = 0.0f;
@@ -68,7 +68,7 @@ public class Robot : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
-        robotToDeactivate.Disable();
+        this.Disable();
     }
 
     

@@ -39,7 +39,7 @@ public class FireBall : MonoBehaviour
             yield return null; //do nothing while waiting
         }
 
-        this.gameObject.SetActive(false); //Deactivate the fireball
+        Destroy(this.gameObject); //Deactivate the fireball
 
     }
 
