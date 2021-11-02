@@ -67,6 +67,10 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
      <Compile Include="Assets\Scripts\Temp\TempMovement.cs" />
+<<<<<<< HEAD
+=======
+     <Compile Include="Assets\Scripts\Buttondebug.cs" />
+>>>>>>> f9687d452bbd090502f6be44f85ce2b587d84c29
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
      <Compile Include="Assets\Scripts\Environment\Door.cs" />

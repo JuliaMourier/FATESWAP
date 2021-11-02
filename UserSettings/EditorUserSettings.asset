@@ -31,10 +31,14 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedScenePath-8:
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 22424703114646680e0b0227036c72111f19352f223d68252320092a
 =======
       value: 22424703114646680e0b0227036c731f171311242b66333e243d04
 >>>>>>> f9687d4 (Set the scenes order from loading to level1)
+=======
+      value: 22424703114646680e0b0227036c731f171311242b66333e243d04
+>>>>>>> f9687d452bbd090502f6be44f85ce2b587d84c29
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
