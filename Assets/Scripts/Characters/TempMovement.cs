@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-// THIS SCRIPT IS A TEMPORARY ONE USED FOR TESTING.
+// THIS SCRIPT IS A TEMPORARY ONE USED FOR TESTING OR DEMO.
 public class TempMovement : MonoBehaviour
 {
     // --- Attributes ---
@@ -24,7 +24,11 @@ public class TempMovement : MonoBehaviour
     private KeyCode rightKey;
     private KeyCode powerKey;
 
+    // Swap delay
+    private float swapDelay = 3.0f;
 
+
+    // Configure the controls for the beginning
     void Awake() {
         this.character = GetComponent<Character>();
         if (character != null) {
@@ -32,20 +36,19 @@ public class TempMovement : MonoBehaviour
             switch(character.name) {
                 // Fei is controlled by the arrow keys
                 case "Fei":
-                    jumpKey = KeyCode.UpArrow;
-                    leftKey = KeyCode.LeftArrow;
-                    rightKey = KeyCode.RightArrow;
-                    powerKey = KeyCode.RightShift;
+                    setControlsToArrowKeys();
                     break;
                 // Henrik is controlled by the ZQSD scheme
                 case "Henrik":
-                    jumpKey = KeyCode.Z;
-                    leftKey = KeyCode.Q;
-                    rightKey = KeyCode.D;
-                    powerKey = KeyCode.E;
+                    setControlsToZQSDKeys();
                     break;
             }
         }
+    }
+
+    // Call the swap method according to the delay value
+    void Start() {
+        InvokeRepeating(nameof(swapControls), swapDelay, swapDelay);
     }
 
     void Update(){
@@ -84,5 +87,30 @@ public class TempMovement : MonoBehaviour
         // send the parameters of the character state to the animator
         animator.SetBool("move", move);
         animator.SetBool("power", power);
+    }
+
+    // Swap the controls of the selected character
+    private void swapControls() {
+        if (jumpKey == KeyCode.UpArrow) {
+            setControlsToZQSDKeys();
+        } else {
+            setControlsToArrowKeys();
+        }
+    }
+
+    // Method to set controls to the arrow keys
+    private void setControlsToArrowKeys() {
+        jumpKey = KeyCode.UpArrow;
+        leftKey = KeyCode.LeftArrow;
+        rightKey = KeyCode.RightArrow;
+        powerKey = KeyCode.RightShift;
+    }
+
+    // Method to set controls to the ZQSD keys
+    private void setControlsToZQSDKeys() {
+        jumpKey = KeyCode.Z;
+        leftKey = KeyCode.Q;
+        rightKey = KeyCode.D;
+        powerKey = KeyCode.E;
     }
 }
