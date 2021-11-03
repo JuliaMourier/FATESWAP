@@ -24,13 +24,9 @@ public class TempMovement : MonoBehaviour
     private KeyCode rightKey;
     private KeyCode powerKey;
 
-    // Swap delay
-    private float swapDelay = 3.0f;
-
-
     // Configure the controls for the beginning
     void Awake() {
-        this.character = GetComponent<Character>();
+        //this.character = GetComponent<Character>();
         if (character != null) {
             // We set different controllers according to the character name
             switch(character.name) {
@@ -40,16 +36,20 @@ public class TempMovement : MonoBehaviour
                     break;
                 // Henrik is controlled by the ZQSD scheme
                 case "Henrik":
-                    setControlsToZQSDKeys();
+                    setControlsToZQDEKeys();
+                    break;
+                case "Victoria":
+                    setControlsToIJLOKeys();
                     break;
             }
         }
     }
 
-    // Call the swap method according to the delay value
-    void Start() {
-        InvokeRepeating(nameof(swapControls), swapDelay, swapDelay);
-    }
+    // --- DO NOT DELETE THIS SECTION : USEFUL FOR THE DEMO ---
+    // Calls the swap method according to the delay value
+    // void Start() {
+    //     InvokeRepeating(nameof(swapControls), swapDelay, swapDelay);
+    // }
 
     void Update(){
         // When a horizontal movement is detected (left or right)
@@ -89,12 +89,28 @@ public class TempMovement : MonoBehaviour
         animator.SetBool("power", power);
     }
 
-    // Swap the controls of the selected character
-    private void swapControls() {
-        if (jumpKey == KeyCode.UpArrow) {
-            setControlsToZQSDKeys();
-        } else {
-            setControlsToArrowKeys();
+    // --- DO NOT DELETE THIS SECTION : USEFUL FOR THE DEMO ---
+    // Swap the controls for only two characters
+    // public void swapControls() {        
+    //     if (jumpKey == KeyCode.UpArrow) {
+    //         setControlsToZQDEKeys();
+    //     } else {
+    //         setControlsToArrowKeys();
+    //     }
+    // }
+
+    // Swap the controls of the selected character according to the int value passed in argument
+    public void swapControls(int index) {        
+        switch(index) {
+            case 0:
+                setControlsToArrowKeys();
+                break;
+            case 1:
+                setControlsToZQDEKeys();
+                break;
+            case 2:
+                setControlsToIJLOKeys();
+                break;
         }
     }
 
@@ -106,11 +122,19 @@ public class TempMovement : MonoBehaviour
         powerKey = KeyCode.RightShift;
     }
 
-    // Method to set controls to the ZQSD keys
-    private void setControlsToZQSDKeys() {
+    // Method to set controls to the ZQDE keys
+    private void setControlsToZQDEKeys() {
         jumpKey = KeyCode.Z;
         leftKey = KeyCode.Q;
         rightKey = KeyCode.D;
         powerKey = KeyCode.E;
+    }
+
+    // Method to set controls to the IJLO keys
+    private void setControlsToIJLOKeys() {
+        jumpKey = KeyCode.I;
+        leftKey = KeyCode.J;
+        rightKey = KeyCode.L;
+        powerKey = KeyCode.O;
     }
 }

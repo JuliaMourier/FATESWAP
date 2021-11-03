@@ -1222,7 +1222,7 @@ MonoBehaviour:
   thirdLive: {fileID: 814122845}
   Lucie: {fileID: 529726369}
   Victoria: {fileID: 128488474}
-  Fei: {fileID: 1529642412}
+  Fei: {fileID: 1529642407}
   Henrik: {fileID: 1173284350}
   textEndLvl: {fileID: 1073075801}
   gameOverMenuUI: {fileID: 1611730163}
@@ -4186,6 +4186,27 @@ CanvasRenderer:
 --- !u!1 &1104558279 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3699106935067823404, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
+  m_PrefabInstance: {fileID: 3699106935108163901}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1104558280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104558279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2ef96ec9bd21349bc34e27df23fdf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.4
+  impulsionForce: 3.2
+  animator: {fileID: 1104558282}
+  character: {fileID: 128488474}
+--- !u!95 &1104558282 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3699106935067823401, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
   m_PrefabInstance: {fileID: 3699106935108163901}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1123148714 stripped
@@ -8028,13 +8049,17 @@ PrefabInstance:
       propertyPath: fireBallPrefab
       value: 
       objectReference: {fileID: 4204989419185486378, guid: 7e3425ef60d3c874fbdbff9ec01b0821, type: 3}
+    - target: {fileID: 3699106935067823400, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3699106935067823404, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
       propertyPath: m_Name
       value: Victoria
       objectReference: {fileID: 0}
     - target: {fileID: 3699106935067823404, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}

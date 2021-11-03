@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -32,8 +33,24 @@ public class GameManager : MonoBehaviour
     // EXIT
     public SpriteRenderer exit;
 
+    // SWAP SETTINGS
+    private Dictionary<Character, int> indexByCharacter = new Dictionary<Character, int>();
+    private float swapDelay = 3.0f;
+
     void Awake() {
+        // Get and pass the AudioSource component to the audioSource attribute
         audioSource = GetComponent<AudioSource>();
+
+        // Initialization of the indexByCharacter dictionary
+        indexByCharacter.Add(Fei, 0);
+        indexByCharacter.Add(Henrik, 1);
+        indexByCharacter.Add(Victoria, 2);
+        // indexByCharacter.Add(Lucie, 3);
+    }
+
+    void Start() {
+        // We invoke the swapCharacters() method repeatedly according to the swapDelay value
+        InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);
     }
 
     //Check if the heroes are out of the map
@@ -111,4 +128,36 @@ public class GameManager : MonoBehaviour
         this.Victoria.gameObject.SetActive(false);
         this.Henrik.gameObject.SetActive(false);
     }
+
+    // Method to set the controls index for each character
+    // The new index has to be different of the current one
+    private void swapCharacters() {
+        var indexList = new List<int>(){0, 1, 2};
+        var allCharactersHaveANewIndex = false;
+        int rndIndex;
+        // As long as each character doesn't have a new index, we start the process again
+        while(!allCharactersHaveANewIndex) {
+            rndIndex = Random.Range(0, indexList.Count-1);
+            // Process for the first character (Fei)
+            if (indexByCharacter[Fei] != rndIndex) {
+                indexByCharacter[Fei] = rndIndex;
+                indexList.Remove(rndIndex);
+                // Process for the last two characters
+                if ((indexByCharacter[Henrik] != indexList[0]) && (indexByCharacter[Victoria] != indexList[1])) {
+                    indexByCharacter[Henrik] = indexList[0];
+                    indexByCharacter[Victoria] = indexList[1];
+                } else {
+                    indexByCharacter[Henrik] = indexList[1];
+                    indexByCharacter[Victoria] = indexList[0];
+                }
+                allCharactersHaveANewIndex = true;
+            }
+        }
+        // We update the controls of each character according to its new assigned index
+        foreach (KeyValuePair<Character, int> entry in indexByCharacter) {
+            entry.Key.GetComponentInChildren<TempMovement>().swapControls(entry.Value);            
+        }
+    }
+
+
 }
