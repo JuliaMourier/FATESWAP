@@ -137,7 +137,7 @@ public class GameManager : MonoBehaviour
         int rndIndex;
         // As long as each character doesn't have a new index, we start the process again
         while(!allCharactersHaveANewIndex) {
-            rndIndex = Random.Range(0, indexList.Count-1);
+            rndIndex = Random.Range(0, 3); // 0 included, 3 excluded
             // Process for the first character (Fei)
             if (indexByCharacter[Fei] != rndIndex) {
                 indexByCharacter[Fei] = rndIndex;
