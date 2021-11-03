@@ -30,16 +30,21 @@ public class TempMovement : MonoBehaviour
         if (character != null) {
             // We set different controllers according to the character name
             switch(character.name) {
-                // Fei is controlled by the arrow keys
+                // Fei is controlled by default with the arrow keys
                 case "Fei":
                     setControlsToArrowKeys();
                     break;
-                // Henrik is controlled by the ZQSD scheme
+                // Henrik is controlled by defautl with the ZQSD scheme
                 case "Henrik":
                     setControlsToZQDEKeys();
                     break;
+                // Victoria is controlled by default with IJLO scheme
                 case "Victoria":
                     setControlsToIJLOKeys();
+                    break;
+                // Lucie is controlled by default with CVBSpace scheme
+                case "Lucie":
+                    setControlsToCVBSpaceKeys();
                     break;
             }
         }
@@ -76,10 +81,9 @@ public class TempMovement : MonoBehaviour
         if(Input.GetKeyDown(powerKey)){
             animator.SetTrigger("transformation");
             power = !power;
-            if(power){
+            if(power) {
                 character.OnPowerActivate();
-            }
-            else {
+            } else {
                 character.OnPowerDeactivate();
             }
         }
@@ -111,6 +115,9 @@ public class TempMovement : MonoBehaviour
             case 2:
                 setControlsToIJLOKeys();
                 break;
+            case 3:
+                setControlsToCVBSpaceKeys();
+                break;
         }
     }
 
@@ -136,5 +143,13 @@ public class TempMovement : MonoBehaviour
         leftKey = KeyCode.J;
         rightKey = KeyCode.L;
         powerKey = KeyCode.O;
+    }
+
+    // Method to set controls to the CVBSpace keys
+    private void setControlsToCVBSpaceKeys() {
+        jumpKey = KeyCode.Space;
+        leftKey = KeyCode.V;
+        rightKey = KeyCode.B;
+        powerKey = KeyCode.C;
     }
 }

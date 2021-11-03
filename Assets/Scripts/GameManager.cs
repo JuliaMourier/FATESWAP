@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         indexByCharacter.Add(Fei, 0);
         indexByCharacter.Add(Henrik, 1);
         indexByCharacter.Add(Victoria, 2);
-        // indexByCharacter.Add(Lucie, 3);
+        indexByCharacter.Add(Lucie, 3);
     }
 
     void Start() {
@@ -132,25 +132,33 @@ public class GameManager : MonoBehaviour
     // Method to set the controls index for each character
     // The new index has to be different of the current one
     private void swapCharacters() {
-        var indexList = new List<int>(){0, 1, 2};
+        List<int> indexList;
         var allCharactersHaveANewIndex = false;
         int rndIndex;
+        int previousFeiIndex = indexByCharacter[Fei]; // We need this variable in case the second character process fails
         // As long as each character doesn't have a new index, we start the process again
         while(!allCharactersHaveANewIndex) {
-            rndIndex = Random.Range(0, 3); // 0 included, 3 excluded
+            indexList = new List<int>(){0, 1, 2, 3};
             // Process for the first character (Fei)
-            if (indexByCharacter[Fei] != rndIndex) {
+            rndIndex = Random.Range(0, 4); // 0 included, 4 excluded
+            if (previousFeiIndex != rndIndex) {
                 indexByCharacter[Fei] = rndIndex;
                 indexList.Remove(rndIndex);
-                // Process for the last two characters
-                if ((indexByCharacter[Henrik] != indexList[0]) && (indexByCharacter[Victoria] != indexList[1])) {
-                    indexByCharacter[Henrik] = indexList[0];
-                    indexByCharacter[Victoria] = indexList[1];
-                } else {
-                    indexByCharacter[Henrik] = indexList[1];
-                    indexByCharacter[Victoria] = indexList[0];
+                // Process for the second character (Henrik)
+                rndIndex = Random.Range(0, 3); // 0 included, 3 excluded
+                if (indexByCharacter[Henrik] != indexList[rndIndex]) {
+                    indexByCharacter[Henrik] = indexList[rndIndex];
+                    indexList.RemoveAt(rndIndex);
+                    // Process for the last two characters (Victoria and Lucie)
+                    if ((indexByCharacter[Victoria] != indexList[0]) && (indexByCharacter[Lucie] != indexList[1])) {
+                        indexByCharacter[Victoria] = indexList[0];
+                        indexByCharacter[Lucie] = indexList[1];
+                    } else {
+                        indexByCharacter[Victoria] = indexList[1];
+                        indexByCharacter[Lucie] = indexList[0];
+                    }
+                    allCharactersHaveANewIndex = true;
                 }
-                allCharactersHaveANewIndex = true;
             }
         }
         // We update the controls of each character according to its new assigned index
