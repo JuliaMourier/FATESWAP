@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Cinematic : MonoBehaviour
 {
@@ -13,6 +15,9 @@ public class Cinematic : MonoBehaviour
         if(listOfImages.Count > index){
             listOfImages[index - 1].Deactivate();
             listOfImages[index].Activate();
+        }
+        else {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
