@@ -50,12 +50,6 @@ public class TempMovement : MonoBehaviour
         }
     }
 
-    // --- DO NOT DELETE THIS SECTION : USEFUL FOR THE DEMO ---
-    // Calls the swap method according to the delay value
-    // void Start() {
-    //     InvokeRepeating(nameof(swapControls), swapDelay, swapDelay);
-    // }
-
     void Update(){
         // When a horizontal movement is detected (left or right)
         if (Input.GetKey(leftKey) || Input.GetKey(rightKey)) {
@@ -92,16 +86,6 @@ public class TempMovement : MonoBehaviour
         animator.SetBool("move", move);
         animator.SetBool("power", power);
     }
-
-    // --- DO NOT DELETE THIS SECTION : USEFUL FOR THE DEMO ---
-    // Swap the controls for only two characters
-    // public void swapControls() {        
-    //     if (jumpKey == KeyCode.UpArrow) {
-    //         setControlsToZQDEKeys();
-    //     } else {
-    //         setControlsToArrowKeys();
-    //     }
-    // }
 
     // Swap the controls of the selected character according to the int value passed in argument
     public void swapControls(int index) {        
