@@ -57,9 +57,13 @@ public class TempMovement : MonoBehaviour
             if(Input.GetKey(rightKey)){ // if the character goes right
                 this.transform.Translate(Vector2.right * Time.deltaTime * speed);
                 GetComponent<SpriteRenderer>().flipX = false;
+                character.SetDirection(new Vector3(1, 0, 0)); //Direction to the right
+
             } else { // if the character goes left
                 this.transform.Translate(Vector2.left * Time.deltaTime * speed);
                 GetComponent<SpriteRenderer>().flipX = true;
+                character.SetDirection(new Vector3(-1, 0, 0)); //Direction to the right
+
             }
         } else {
             // the character is not going left or right => no movement 
