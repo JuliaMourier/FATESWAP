@@ -229,6 +229,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 56ad6d8277f1c774db6aaeea06f2605f, type: 3}
+    - target: {fileID: 951611151500916634, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: m_Text
+      value: "Alors il contr\xF4lerait comme Professeur X."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
 --- !u!4 &209280651 stripped
@@ -453,6 +461,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 6ee114b575b7dd642abe45d3c4fbf162, type: 3}
+    - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: m_Text
+      value: "S'il ne pouvait plus voler comme Magn\xE9to,"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
 --- !u!4 &492942516 stripped
@@ -589,9 +601,13 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 4a881ebfbcea9864b97142509591c8df, type: 3}
+    - target: {fileID: 951611151500916634, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "Et saute de la fen\xEAtre"
+      value: Et prit son envol.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -724,6 +740,11 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: dc1eb0fd0a9e16c449a6393e81201c23, type: 3}
+    - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: m_Text
+      value: "Il avait perdu sa joie de vivre... Jusqu'au jour o\xF9, alors qu'il
+        \xE9tait plong\xE9\n dans ses pens\xE9es les plus obscures,"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
 --- !u!1001 &779482880
@@ -789,6 +810,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 1d7506e23b0347045b55ef3315fe3b6c, type: 3}
+    - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: m_Text
+      value: "La lumi\xE8re s'\xE9claira sur son visage p\xE2le. Il eut une r\xE9v\xE9lation."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
 --- !u!4 &779482881 stripped
@@ -859,9 +884,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: da88c911b192ca047ad7850453b48043, type: 3}
+    - target: {fileID: 951611151500916634, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: Il a une super cape
+      value: "Un beau jour, il fabriqua une cape magique capable de le faire voler
+        tr\xE8s haut dans le ciel."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -928,9 +958,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 5ef963670d41d0b4a86a2a14e69f482a, type: 3}
+    - target: {fileID: 951611151500916634, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "5 ans sont pass\xE9s et Javier continue son id\xE9e"
+      value: "Javier se mit donc \xE0 \xE9tudier le potentiel incommensurable du
+        cerveau humain."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -1106,7 +1141,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: b77998a53ea0d204ba0c67bc341581a0, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "Des id\xE9es carr\xE9ment m\xE9chante"
+      value: ... Drastiques.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -1191,7 +1226,8 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 39e3750a027dede46a5ad51769e8e15e, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: Travaille dur
+      value: "Ses recherches ont permis de nombreuses avanc\xE9es dans le monde de
+        la neurologie.\nSes confr\xE8res le surnommaient: \"Professeur Javier\"."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -1270,7 +1306,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Sa passion dans la vie c'est les super h\xE9ros"
+  m_Text: "Javier est un gar\xE7on timide, passionn\xE9 de super-h\xE9ros."
 --- !u!222 &1128836362
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1369,9 +1405,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 03a20bb9335315e438a7ee9100d584f0, type: 3}
+    - target: {fileID: 951611151500916634, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: bcp de recherches
+      value: "Apr\xE8s de longues recherches infructueuses, il se mit \xE0 explorer
+        d'autres options...\nDes options plus..."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -1456,7 +1497,9 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 7b1b16bc1a76b1c4395ff54d78e182b1, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "Javier est triste il ne pourra plus jamais r\xE9aliser son r\xEAve"
+      value: "Le jeune Javier tomba sur une brique en pierre. Il perdit l'usage de
+        ses jambes et vit ses                          r\xEAves de devenir un super-h\xE9ros
+        s'envoler."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -1591,6 +1634,133 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 114ac9b958359f945ae68ca54843216b, type: 2}
   m_audioClip: {fileID: 8300000, guid: 5ec5b3124955b6545be2a785397352f0, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!1 &1289052102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1289052103}
+  - component: {fileID: 1289052104}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1289052103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289052102}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 39184520}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1289052104
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289052102}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7f799ece70589d04bb754c42d9f1b0a3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1896,9 +2066,13 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 03d0496445463444a913fdf8fd851af7, type: 3}
+    - target: {fileID: 951611151500916634, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "Il se prend pour un super h\xE9ros"
+      value: "D\xE9bordant d'enthousiasme, il monta sur le rebord de sa fen\xEAtre"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -1997,9 +2171,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d146213ac9eb2354ba86be12a3073684, type: 3}
+    - target: {fileID: 951611151500916634, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: Difficiles recherches...
+      value: "Pourtant, malgr\xE9 ses exploits retentissants, Javier n'\xE9tait pas
+        satisfait. \nIl n'avait toujours pas trouv\xE9 le moyen de contr\xF4ler l'esprit."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -2084,7 +2263,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: cce71189619f62d4ca1965b7ff7138a5, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "Cr\xE9ation vraiment pas nice"
+      value: "Il fit alors des exp\xE9riences qu'aucun autre avant lui n'avait os\xE9."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -2180,8 +2359,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: ca44c1e5b22543c46bb9df645ad0699f, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "Bless\xE9 de fa\xE7on permanente \xE0 la colonne vert\xE9brale il n'est
-        plus capablde de se d\xE9placer qu'en fauteuil roulant"
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -2243,6 +2421,10 @@ PrefabInstance:
     - target: {fileID: 951611150527845779, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: m_Text
+      value: Ce jeune enfant insouciant se nomme Javier.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
