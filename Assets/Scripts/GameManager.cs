@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
 
     // SWAP SETTINGS
     private Dictionary<Character, int> indexByCharacter = new Dictionary<Character, int>();
-    private float swapDelay = 3.0f;
+    private float swapDelay = 15.0f;
 
     void Awake() {
         // Get and pass the AudioSource component to the audioSource attribute

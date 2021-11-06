@@ -878,15 +878,15 @@ PrefabInstance:
     - target: {fileID: 3056977934308329318, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c67507aa11a1373468288a983943dc35, type: 3}
+      objectReference: {fileID: 21300000, guid: 8e337817a787b4d49a62715e154c6a30, type: 3}
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: switchOn
       value: 
-      objectReference: {fileID: 21300000, guid: 55125fab4834a8c4d90461b2faf3e9f8, type: 3}
+      objectReference: {fileID: 21300000, guid: 152f3fba81bf9544797352b051d40426, type: 3}
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: switchOff
       value: 
-      objectReference: {fileID: 21300000, guid: c67507aa11a1373468288a983943dc35, type: 3}
+      objectReference: {fileID: 21300000, guid: 8e337817a787b4d49a62715e154c6a30, type: 3}
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: theOneWhoCanSwitch
       value: 
@@ -1256,7 +1256,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5601,7 +5601,7 @@ MonoBehaviour:
     m_Bits: 320
   jumpCount: 1
   animator: {fileID: 801221647}
-  character: {fileID: 1529642407}
+  character: {fileID: 1529642412}
 --- !u!114 &1529642407 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9170315971849020986, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
@@ -7523,15 +7523,15 @@ PrefabInstance:
     - target: {fileID: 3056977934308329318, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b070892a13706514180aae4154710505, type: 3}
+      objectReference: {fileID: 21300000, guid: 8e337817a787b4d49a62715e154c6a30, type: 3}
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: switchOn
       value: 
-      objectReference: {fileID: 21300000, guid: e61a2d0500059ea47b2cedbe9aa2df0c, type: 3}
+      objectReference: {fileID: 21300000, guid: 152f3fba81bf9544797352b051d40426, type: 3}
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: switchOff
       value: 
-      objectReference: {fileID: 21300000, guid: b070892a13706514180aae4154710505, type: 3}
+      objectReference: {fileID: 21300000, guid: 8e337817a787b4d49a62715e154c6a30, type: 3}
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: theOneWhoCanSwitch
       value: 
@@ -8593,7 +8593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7760244886690473494, guid: b06f1d1d7116eff41b0d55d72cd70055, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7760244886835089722, guid: b06f1d1d7116eff41b0d55d72cd70055, type: 3}
       propertyPath: m_RootOrder
@@ -8640,8 +8640,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7760244886835089723, guid: b06f1d1d7116eff41b0d55d72cd70055, type: 3}
+      propertyPath: m_Radius
+      value: 0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760244886835089723, guid: b06f1d1d7116eff41b0d55d72cd70055, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7760244886835089725, guid: b06f1d1d7116eff41b0d55d72cd70055, type: 3}
       propertyPath: m_Name
@@ -8662,7 +8666,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8822753907589750108, guid: f47aeec3aad26d2468d3de169bdec008, type: 3}
       propertyPath: m_GravityScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8822753907589750109, guid: f47aeec3aad26d2468d3de169bdec008, type: 3}
       propertyPath: m_RootOrder
