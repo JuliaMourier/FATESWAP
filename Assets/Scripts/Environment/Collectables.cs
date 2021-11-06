@@ -5,11 +5,13 @@ using UnityEngine;
 public class Collectables : MonoBehaviour
 {
     //when a character collect an object Collectable
-    private void OnTriggerEnter2D(Collider2D other){
+    private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.layer == LayerMask.NameToLayer("Characters")){
             CollectableFound();
         }
     }
+        
+  
 
     // Call gameManager function
     protected virtual void CollectableFound(){
