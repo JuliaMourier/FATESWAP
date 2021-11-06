@@ -13,7 +13,7 @@ public class TempMovement : MonoBehaviour
     public Transform top_left;
     public Transform bottom_right;
     public LayerMask Obstacles;
-    public int jumpCount = 1;
+    private int jumpCount = 1;
     // Animator
     public Animator animator; // Animator for the different animations of the character => idle, walk, transfor, walkpower and idlepower
     public bool power { get; private set;} = false; // Parameter of the animator : true when the character is in the power state, false otherwise
@@ -82,7 +82,6 @@ public class TempMovement : MonoBehaviour
                 if (Input.GetKeyDown(jumpKey) && (jumpCount != 0))
                 {
                     jumpCount -= 1;
-                    Debug.Log(jumpCount);
                     GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, impulsionForce), ForceMode2D.Impulse);
                 }
 
