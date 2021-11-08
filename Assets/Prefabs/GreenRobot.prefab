@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d84592ef1d7f54daebebf384fa2b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemi: {fileID: 0}
+  ennemi: {fileID: 7051517751146259247, guid: 29e7cc6984cbfdc4f9a76e69a6a27cef, type: 3}
   animator: {fileID: 6270911354528397856}
   initialDirection: {x: 1, y: 0}
   speed: 0.7

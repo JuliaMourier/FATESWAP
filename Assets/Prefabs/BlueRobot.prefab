@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d84592ef1d7f54daebebf384fa2b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemi: {fileID: 0}
+  ennemi: {fileID: 7696761662435633121, guid: 056add8ea6282d1458ea5a91d8c40a79, type: 3}
   animator: {fileID: 3440338122828600057}
   initialDirection: {x: 1, y: 0}
   speed: 0.7

@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d84592ef1d7f54daebebf384fa2b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemi: {fileID: 0}
+  ennemi: {fileID: 1813225988275286189, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
   animator: {fileID: 6644316412033157496}
   initialDirection: {x: -1, y: 0}
   speed: 0.7
