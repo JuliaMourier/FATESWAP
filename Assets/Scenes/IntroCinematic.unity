@@ -188,7 +188,8 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 100f14a91ac673f42bcea0c83a76df6b, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: Fabrique la fate swap trop forte
+      value: "Il parvint finalement \xE0 mettre au point une puce capable d'\xE9changer
+        les esprits\n des corps qui en poss\xE8dent une: la \"FateSwap\"."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -300,7 +301,8 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: d5b3fb3061da98a4282d31f4ceaa2470, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "4 \xE9lus"
+      value: "Finalement, quatre \"\xE9lus\" sortirent du lot. Lucie, Henrik, Fei
+        et Victoria."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -601,7 +603,9 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: bab7342be27cb104b9c35696f8c6cadf, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: s'entrainent pour s'enfuir
+      value: "Les entrainements se passaient bien, seulement... La FateSwap n'a pas
+        encore \xE9tait r\xE9v\xE9l\xE9.\nEt pour cause, Javier ne voyait pas ce
+        projet du m\xEAme oeil."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -1672,7 +1676,9 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 5caa503d676e39d4f8caed9b41b2d966, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "h\xE9ritent de supers pouvoirs bien styl\xE9s"
+      value: "Ils h\xE9rit\xE8rent de pouvoirs que Javier avait mis au point avec
+        la puce. Tout semblait r\xE9uni pour voir naitre une v\xE9ritable g\xE9n\xE9ration
+        de super-h\xE9ros."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -1741,7 +1747,9 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: fab0bf374c81ec147b549b370d7a3f06, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: Recherches sur plein de gens
+      value: "Il organisa des s\xE9l\xE9ctions pour d\xE9terminer qui pouvait \xEAtre
+        r\xE9c\xE9ptif \xE0 sa cr\xE9ation. Il garda secret les raisons \nde ses
+        entretiens afin de ne pas effrayer la population."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
