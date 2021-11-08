@@ -603,9 +603,8 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: bab7342be27cb104b9c35696f8c6cadf, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "Les entrainements se passaient bien, seulement... La FateSwap n'a pas
-        encore \xE9tait r\xE9v\xE9l\xE9.\nEt pour cause, Javier ne voyait pas ce
-        projet du m\xEAme oeil."
+      value: "Les entrainements se passent bien, la FateSwap n'a pas encore \xE9t\xE9
+        r\xE9v\xE9l\xE9e au public.\nCependant, Javier avait d'autres projet en t\xEAte..."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
