@@ -21,6 +21,8 @@ public class TempMovement : MonoBehaviour
     
     // Character
     public Character character; // character who's moving
+    private GameObject sign; // Player label above the character head
+    private TextMesh tm; // Text of the label
 
     // Controllers
     private KeyCode jumpKey;
@@ -31,6 +33,21 @@ public class TempMovement : MonoBehaviour
 
     // Configure the controls for the beginning
     void Awake() {
+        // Init the label sign/text above the character
+        sign = new GameObject(character.name);
+        sign.transform.rotation = Camera.main.transform.rotation;
+        tm = sign.AddComponent<TextMesh>();
+        tm.color = new Color(1f, 0f, 0f);
+        tm.fontStyle = FontStyle.Bold;
+        tm.alignment = TextAlignment.Center;
+        tm.anchor = TextAnchor.MiddleCenter;
+        tm.characterSize = 0.065f;
+        tm.fontSize = 30;
+
+        // The label is displayed during 3 seconds
+        // After that, we hide it
+        this.Invoke(nameof(hidePlayerLabel), 3f);
+
         //this.character = GetComponent<Character>();
         if (character != null) {
             // We set different controllers according to the character name
@@ -131,6 +148,9 @@ public class TempMovement : MonoBehaviour
         // send the parameters of the character state to the animator
         animator.SetBool("move", move);
         animator.SetBool("power", power);
+
+        // Update the label position above the character head
+        sign.transform.position = this.transform.position + Vector3.up * 0.4f;
     }
 
     // Swap the controls of the selected character according to the int value passed in argument
@@ -149,6 +169,11 @@ public class TempMovement : MonoBehaviour
                 setControlsToCVBSpaceKeys();
                 break;
         }
+
+        // We display the label in order to indicate to the player which character he controls
+        sign.SetActive(true);
+        // We display the label during 5 seconds, after that we hide it
+        this.Invoke(nameof(hidePlayerLabel), 5f);
     }
 
     // Method to set controls to the arrow keys
@@ -157,6 +182,7 @@ public class TempMovement : MonoBehaviour
         leftKey = KeyCode.LeftArrow;
         rightKey = KeyCode.RightArrow;
         powerKey = KeyCode.RightShift;
+        tm.text = "Arrows";
     }
 
     // Method to set controls to the ZQDE keys
@@ -165,6 +191,7 @@ public class TempMovement : MonoBehaviour
         leftKey = KeyCode.Q;
         rightKey = KeyCode.D;
         powerKey = KeyCode.E;
+        tm.text = "ZQDE";
     }
 
     // Method to set controls to the IJLO keys
@@ -173,6 +200,7 @@ public class TempMovement : MonoBehaviour
         leftKey = KeyCode.J;
         rightKey = KeyCode.L;
         powerKey = KeyCode.O;
+        tm.text = "IJLO";
     }
 
     // Method to set controls to the CVBSpace keys
@@ -181,7 +209,14 @@ public class TempMovement : MonoBehaviour
         leftKey = KeyCode.V;
         rightKey = KeyCode.B;
         powerKey = KeyCode.C;
+        tm.text = "CVBSpace";
     }
+
+    // Method to hide the player label
+    private void hidePlayerLabel() {
+        sign.SetActive(false);
+    }
+
     /*
     public void OnTriggerExit2D(Collider2D collision)
     {
