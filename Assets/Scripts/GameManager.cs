@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
         //TODO
     }
 
-    public void DoorEnter(Door door){
+    public void WinTheGame(Door door){
         if(hasKey){
             // display the text "Well done"
            this.textEndLvl.enabled = true;
