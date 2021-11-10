@@ -895,7 +895,7 @@ PrefabInstance:
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: theOneWhoCanSwitch
       value: 
-      objectReference: {fileID: 1151045408}
+      objectReference: {fileID: 1151045411}
     - target: {fileID: 3056977934308329338, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: m_Name
       value: SwitchTarget
@@ -2441,6 +2441,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1813225988275286179, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813225988275286182, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813225988275286186, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5255493745359713109, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
@@ -4375,17 +4383,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141365029}
   m_CullTransparentMesh: 1
---- !u!1 &1151045408 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7051517751146259247, guid: 29e7cc6984cbfdc4f9a76e69a6a27cef, type: 3}
-  m_PrefabInstance: {fileID: 796891578}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1151045411 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7051517750694878019, guid: 29e7cc6984cbfdc4f9a76e69a6a27cef, type: 3}
   m_PrefabInstance: {fileID: 796891578}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151045408}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52dadff74720e6444a82a81cfb7a75f8, type: 3}
@@ -5461,6 +5464,10 @@ PrefabInstance:
       propertyPath: switchOff
       value: 
       objectReference: {fileID: 21300000, guid: c0e84da5ca61e844e8216c0461090ed7, type: 3}
+    - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: theOneWhoCanSwitch
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3056977934308329338, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: m_Name
       value: SwitchAll
@@ -7366,7 +7373,7 @@ PrefabInstance:
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: theOneWhoCanSwitch
       value: 
-      objectReference: {fileID: 1151045408}
+      objectReference: {fileID: 1151045411}
     - target: {fileID: 3056977934308329338, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: m_Name
       value: SwitchPassage
@@ -8092,7 +8099,7 @@ PrefabInstance:
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: theOneWhoCanSwitch
       value: 
-      objectReference: {fileID: 1151045408}
+      objectReference: {fileID: 1151045411}
     - target: {fileID: 3056977934308329338, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: m_Name
       value: SwitchDoor

@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 
 [RequireComponent(typeof(Rigidbody2D))]
 // THIS SCRIPT IS A TEMPORARY ONE USED FOR TESTING OR DEMO.
@@ -26,9 +28,12 @@ public class TempMovement : MonoBehaviour
 
     // Controllers
     private KeyCode jumpKey;
-    private KeyCode leftKey;
-    private KeyCode rightKey;
+
+    private string axis;
     private KeyCode powerKey;
+
+    private Vector2 movement;
+
 
 
     // Configure the controls for the beginning
@@ -73,20 +78,18 @@ public class TempMovement : MonoBehaviour
     }
 
     void Update(){
-        // When a horizontal movement is detected (left or right)
-        if (Input.GetKey(leftKey) || Input.GetKey(rightKey)) {
+            
+        if(Input.GetAxis(axis) == 1){ // if the character goes right
             move = true;
-            if(Input.GetKey(rightKey)){ // if the character goes right
-                this.transform.Translate(Vector2.right * Time.deltaTime * speed);
-                GetComponent<SpriteRenderer>().flipX = false;
-                character.SetDirection(new Vector3(1, 0, 0)); //Direction to the right
+            this.transform.Translate(Vector2.right * Time.deltaTime * speed);
+            GetComponent<SpriteRenderer>().flipX = false;
+            character.SetDirection(new Vector3(1, 0, 0)); //Direction to the right
 
-            } else { // if the character goes left
-                this.transform.Translate(Vector2.left * Time.deltaTime * speed);
-                GetComponent<SpriteRenderer>().flipX = true;
-                character.SetDirection(new Vector3(-1, 0, 0)); //Direction to the right
-
-            }
+        } else if (Input.GetAxis(axis) == -1){ // if the character goes left
+            move = true;
+            this.transform.Translate(Vector2.left * Time.deltaTime * speed);
+            GetComponent<SpriteRenderer>().flipX = true;
+            character.SetDirection(new Vector3(-1, 0, 0)); //Direction to the right
         } else {
             // the character is not going left or right => no movement 
             move = false;
@@ -178,38 +181,36 @@ public class TempMovement : MonoBehaviour
 
     // Method to set controls to the arrow keys
     private void setControlsToArrowKeys() {
+        
         jumpKey = KeyCode.UpArrow;
-        leftKey = KeyCode.LeftArrow;
-        rightKey = KeyCode.RightArrow;
+        axis = "Horizontal";
         powerKey = KeyCode.RightShift;
-        tm.text = "Arrows";
+        tm.text = "J4";
     }
 
     // Method to set controls to the ZQDE keys
     private void setControlsToZQDEKeys() {
-        jumpKey = KeyCode.Z;
-        leftKey = KeyCode.Q;
-        rightKey = KeyCode.D;
-        powerKey = KeyCode.E;
-        tm.text = "ZQDE";
+        jumpKey = KeyCode.Joystick3Button3;
+        axis = "Joystick3Axis";
+        powerKey = KeyCode.Joystick3Button0;
+        tm.text = "J3";
     }
 
     // Method to set controls to the IJLO keys
     private void setControlsToIJLOKeys() {
-        jumpKey = KeyCode.I;
-        leftKey = KeyCode.J;
-        rightKey = KeyCode.L;
-        powerKey = KeyCode.O;
-        tm.text = "IJLO";
+        jumpKey = KeyCode.Joystick2Button3;
+        axis = "Joystick2Axis";
+        powerKey = KeyCode.Joystick2Button0;
+        tm.text = "J2";
     }
 
     // Method to set controls to the CVBSpace keys
     private void setControlsToCVBSpaceKeys() {
-        jumpKey = KeyCode.Space;
-        leftKey = KeyCode.V;
-        rightKey = KeyCode.B;
-        powerKey = KeyCode.C;
-        tm.text = "CVBSpace";
+        jumpKey = KeyCode.Joystick1Button3;
+        powerKey = KeyCode.Joystick1Button0;
+        axis = "Joystick1Axis";
+        // powerKey = KeyCode.C;
+        tm.text = "J1";
     }
 
     // Method to hide the player label
