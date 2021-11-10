@@ -14,7 +14,6 @@ public class Switch : MonoBehaviour
 
 
     private void OnTriggerStay2D(Collider2D other) {
-        Debug.Log("oui");
         //if the character hit the switch
         if(theOneWhoCanSwitch == null){
             if(other.gameObject.layer == LayerMask.NameToLayer("Characters")){ //if anyone can switch the switch no parameter theOneWhoCanSwitch is specified
@@ -25,8 +24,6 @@ public class Switch : MonoBehaviour
             }
         }
         else {
-            Debug.Log(Input.GetKey(theOneWhoCanSwitch.GetComponent<TempMovement>().switchPressKey));
-
             if(other.gameObject.Equals(theOneWhoCanSwitch.gameObject)){ //if only one character can switch the switch, check if the collision is dur to this character
                 if(available && theOneWhoCanSwitch.isPowerActivate && Input.GetKey(theOneWhoCanSwitch.GetComponent<TempMovement>().switchPressKey)){ //if Henrik is capable of switch the switch
                     available = false; //Disable the switch
@@ -60,7 +57,7 @@ public class Switch : MonoBehaviour
         float duration = 0.5f; //Duration of the disability
         float elapsed = 0.0f;
 
-        // Animate the opening
+        // wait
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;

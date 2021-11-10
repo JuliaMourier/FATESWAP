@@ -12,7 +12,7 @@ public class Door : MonoBehaviour
     }
 
     //Open the door
-    protected virtual void OnDoorEntered(){
+    protected virtual void OnDoorEntered(){ //When the door is entered by all the characters
         FindObjectOfType<GameManager>().WinTheGame(this);
     }
 }
