@@ -32,7 +32,8 @@ public class TempMovement : MonoBehaviour
     private string axis;
     private KeyCode powerKey;
 
-    private Vector2 movement;
+    public KeyCode shootKey {get; private set;}
+    public KeyCode switchPressKey{get; private set;}
 
 
 
@@ -59,36 +60,35 @@ public class TempMovement : MonoBehaviour
             switch(character.name) {
                 // Fei is controlled by default with the arrow keys
                 case "Fei":
-                    setControlsToArrowKeys();
+                    setControlsToJ1();
                     break;
                 // Henrik is controlled by defautl with the ZQSD scheme
                 case "Henrik":
-                    setControlsToZQDEKeys();
+                    setControlsToJ4();
                     break;
                 // Victoria is controlled by default with IJLO scheme
                 case "Victoria":
-                    setControlsToIJLOKeys();
+                    setControlsToJ2();
                     break;
                 // Lucie is controlled by default with CVBSpace scheme
                 case "Lucie":
-                    setControlsToCVBSpaceKeys();
+                    setControlsToJ3();
                     break;
             }
         }
     }
 
-    void Update(){
-            
+    void Update(){            
         if(Input.GetAxis(axis) == 1){ // if the character goes right
             move = true;
+            this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 0, this.transform.rotation.z));
             this.transform.Translate(Vector2.right * Time.deltaTime * speed);
-            GetComponent<SpriteRenderer>().flipX = false;
             character.SetDirection(new Vector3(1, 0, 0)); //Direction to the right
 
         } else if (Input.GetAxis(axis) == -1){ // if the character goes left
             move = true;
-            this.transform.Translate(Vector2.left * Time.deltaTime * speed);
-            GetComponent<SpriteRenderer>().flipX = true;
+            this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 180, this.transform.rotation.z));
+            this.transform.Translate(Vector2.right * Time.deltaTime * speed);
             character.SetDirection(new Vector3(-1, 0, 0)); //Direction to the right
         } else {
             // the character is not going left or right => no movement 
@@ -160,16 +160,16 @@ public class TempMovement : MonoBehaviour
     public void swapControls(int index) {
         switch(index) {
             case 0:
-                setControlsToArrowKeys();
+                setControlsToJ1();
                 break;
             case 1:
-                setControlsToZQDEKeys();
+                setControlsToJ2();
                 break;
             case 2:
-                setControlsToIJLOKeys();
+                setControlsToJ3();
                 break;
             case 3:
-                setControlsToCVBSpaceKeys();
+                setControlsToJ4();
                 break;
         }
 
@@ -180,37 +180,60 @@ public class TempMovement : MonoBehaviour
     }
 
     // Method to set controls to the arrow keys
-    private void setControlsToArrowKeys() {
+    private void setControlsToJ4() {
         
         jumpKey = KeyCode.UpArrow;
         axis = "Horizontal";
         powerKey = KeyCode.RightShift;
         tm.text = "J4";
+        if(character.name == "Victoria"){
+            shootKey = KeyCode.Space;
+        }
+        if(character.name == "Henrik"){
+            switchPressKey = KeyCode.Space;
+        }
     }
 
     // Method to set controls to the ZQDE keys
-    private void setControlsToZQDEKeys() {
+    private void setControlsToJ3() {
         jumpKey = KeyCode.Joystick3Button3;
         axis = "Joystick3Axis";
         powerKey = KeyCode.Joystick3Button0;
         tm.text = "J3";
+        if(character.name == "Victoria"){
+            shootKey = KeyCode.Joystick3Button2;
+        }
+        if(character.name == "Henrik"){
+            switchPressKey = KeyCode.Joystick3Button2;
+        }
     }
 
     // Method to set controls to the IJLO keys
-    private void setControlsToIJLOKeys() {
+    private void setControlsToJ2() {
         jumpKey = KeyCode.Joystick2Button3;
         axis = "Joystick2Axis";
         powerKey = KeyCode.Joystick2Button0;
         tm.text = "J2";
+        if(character.name == "Victoria"){
+            shootKey = KeyCode.Joystick2Button2;
+        }
+        if(character.name == "Henrik"){
+            switchPressKey = KeyCode.Joystick2Button2;
+        }
     }
 
     // Method to set controls to the CVBSpace keys
-    private void setControlsToCVBSpaceKeys() {
+    private void setControlsToJ1() {
         jumpKey = KeyCode.Joystick1Button3;
         powerKey = KeyCode.Joystick1Button0;
         axis = "Joystick1Axis";
-        // powerKey = KeyCode.C;
         tm.text = "J1";
+        if(character.name == "Victoria"){
+            shootKey = KeyCode.Joystick1Button2;
+        }
+        if(character.name == "Henrik"){
+            switchPressKey = KeyCode.Joystick1Button2;
+        }
     }
 
     // Method to hide the player label
