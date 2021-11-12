@@ -2627,7 +2627,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 88a1f6e9cf720894382a305422dc0449, type: 3}
     - target: {fileID: 4531389029914423576, guid: fc6c13dca9e3dd345ace50ba92ad75cb, type: 3}
       propertyPath: m_Text
-      value: Yo
+      value: Pas de soucis Fei.
       objectReference: {fileID: 0}
     - target: {fileID: 5785007798646759555, guid: fc6c13dca9e3dd345ace50ba92ad75cb, type: 3}
       propertyPath: m_Name
@@ -3943,7 +3943,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c59c92d80ae470d46bdd9f659d6e9c83, type: 3}
     - target: {fileID: 4531389029914423576, guid: fc6c13dca9e3dd345ace50ba92ad75cb, type: 3}
       propertyPath: m_Text
-      value: Je peux changer ma taille
+      value: "Henrik occupe toi des boutons, j'ai une id\xE9e."
       objectReference: {fileID: 0}
     - target: {fileID: 5785007798646759555, guid: fc6c13dca9e3dd345ace50ba92ad75cb, type: 3}
       propertyPath: m_Name
@@ -6500,7 +6500,8 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 9e492819eaca426499bd3b5aa4d8ef76, type: 3}
     - target: {fileID: 4531389029914423576, guid: fc6c13dca9e3dd345ace50ba92ad75cb, type: 3}
       propertyPath: m_Text
-      value: "J'ai des ailes trop styl\xE9es"
+      value: "En effet, cela devient inqui\xE9tant. Il faut que nous sortions d'ici
+        !"
       objectReference: {fileID: 0}
     - target: {fileID: 5785007798646759555, guid: fc6c13dca9e3dd345ace50ba92ad75cb, type: 3}
       propertyPath: m_Name
@@ -8426,9 +8427,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 39730983}
     m_Modifications:
+    - target: {fileID: 4531389029914423576, guid: fc6c13dca9e3dd345ace50ba92ad75cb, type: 3}
+      propertyPath: m_Text
+      value: Cela va faire des semaines que nous n'avons plus de nouvelles du professeur
+        Javier...
+      objectReference: {fileID: 0}
     - target: {fileID: 5785007798646759555, guid: fc6c13dca9e3dd345ace50ba92ad75cb, type: 3}
       propertyPath: m_Name
       value: Dialog1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5785007798646759555, guid: fc6c13dca9e3dd345ace50ba92ad75cb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7246329654132501444, guid: fc6c13dca9e3dd345ace50ba92ad75cb, type: 3}
       propertyPath: m_Pivot.x
