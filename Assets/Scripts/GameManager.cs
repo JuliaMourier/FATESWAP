@@ -25,11 +25,13 @@ public class GameManager : MonoBehaviour
 
     // MENUS
     public GameObject gameOverMenuUI;
+    public GameObject endOfLevelMenuUI;
 
     public AudioSource swapSourceSound;
 
     // AUDIO
     public AudioClip gameOverAudioClip;
+    public AudioClip endOfLevelAudioClip;
     private AudioSource audioSource;
 
     // EXIT
@@ -54,7 +56,7 @@ public class GameManager : MonoBehaviour
 
     void Start() {
         // We invoke the swapCharacters() method repeatedly according to the swapDelay value
-        InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);
+        InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);     
     }
 
     //Check if the heroes are out of the map
@@ -73,11 +75,15 @@ public class GameManager : MonoBehaviour
         //TODO
     }
 
-    public void WinTheGame(Door door){
-        if(hasKey){
-            // display the text "Well done"
-           this.textEndLvl.enabled = true;
-           DeactivateCharacters();
+    public void WinTheGame(Door door) {
+        if(hasKey) {
+            Time.timeScale = 0f;
+            // Display the end-of-level menu and play the associated audio clip
+            this.endOfLevelMenuUI.SetActive(true);
+            audioSource.clip = endOfLevelAudioClip;
+            audioSource.loop = true;
+            audioSource.Play();
+            DeactivateCharacters();
         }
     }
 
@@ -105,6 +111,12 @@ public class GameManager : MonoBehaviour
         audioSource.loop = true;
         audioSource.Play();
         DeactivateCharacters();
+    }
+
+    // Load the next scene
+    public void LoadNextScene() {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     // Restart the current level
