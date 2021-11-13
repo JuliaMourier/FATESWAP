@@ -4987,6 +4987,14 @@ PrefabInstance:
       propertyPath: switchOpener
       value: 
       objectReference: {fileID: 1123148714}
+    - target: {fileID: 2668633390440631754, guid: 5d6df33bba57e644c8e4d508e67eb785, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 2668633390440631754, guid: 5d6df33bba57e644c8e4d508e67eb785, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d6df33bba57e644c8e4d508e67eb785, type: 3}
 --- !u!4 &1343301125 stripped
@@ -8263,6 +8271,14 @@ PrefabInstance:
       propertyPath: switchOpener
       value: 
       objectReference: {fileID: 759136430}
+    - target: {fileID: 2668633390440631754, guid: 5d6df33bba57e644c8e4d508e67eb785, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 2668633390440631754, guid: 5d6df33bba57e644c8e4d508e67eb785, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.42
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d6df33bba57e644c8e4d508e67eb785, type: 3}
 --- !u!1001 &3056977934928070614
