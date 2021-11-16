@@ -48,8 +48,8 @@ public class GameManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         // Initialization of the indexByCharacter dictionary
-        indexByCharacter.Add(Fei, 0);
-        indexByCharacter.Add(Henrik, 1);
+        indexByCharacter.Add(Henrik, 0);
+        indexByCharacter.Add(Fei, 1);
         indexByCharacter.Add(Victoria, 2);
         indexByCharacter.Add(Lucie, 3);
     }

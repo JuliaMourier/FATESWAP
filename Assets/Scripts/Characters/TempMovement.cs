@@ -60,11 +60,11 @@ public class TempMovement : MonoBehaviour
             switch(character.name) {
                 // Fei is controlled by default with the arrow keys
                 case "Fei":
-                    setControlsToJ1();
+                    setControlsToJ4();
                     break;
                 // Henrik is controlled by defautl with the ZQSD scheme
                 case "Henrik":
-                    setControlsToJ4();
+                    setControlsToJ1();
                     break;
                 // Victoria is controlled by default with IJLO scheme
                 case "Victoria":
