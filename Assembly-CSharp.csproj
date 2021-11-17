@@ -91,6 +91,7 @@
      <Compile Include="Assets\Scripts\Environment\Target.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Environment\Laser.cs" />
      <Compile Include="Assets\Scripts\Characters\Character.cs" />
      <Compile Include="Assets\Scripts\MultiplayerMode\PlayerListItem.cs" />
      <Compile Include="Assets\Scripts\MultiplayerMode\CreateAndJoinRooms.cs" />
@@ -112,7 +113,7 @@
      <Compile Include="Assets\Scripts\Environment\Collectables.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-     <Compile Include="Assets\Scripts\Environment\Laser.cs" />
+     <Compile Include="Assets\Scripts\Environment\Box.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

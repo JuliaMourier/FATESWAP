@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
     public Lives secondLive;
     public Lives thirdLive;
 
+    public SpriteRenderer key;
+
+    public SpriteRenderer note;
+
     // CHARACTERS
     public Character Lucie;
     public Character Victoria;
@@ -69,10 +73,15 @@ public class GameManager : MonoBehaviour
     // when a character find a collectable
     public void CollectableFound(Collectables collectable){
         hasKey = true;
+        key.color = Color.white;
         collectable.gameObject.SetActive(false);
         //Set the door's Color to black
         exit.color = Color.black;
-        //TODO
+    }
+
+    public void NoteFound(){
+        note.color = Color.white;
+        //TODO : get star
     }
 
     public void WinTheGame(Door door) {

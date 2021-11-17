@@ -323,6 +323,8 @@ MonoBehaviour:
   firstLive: {fileID: 2014685459}
   secondLive: {fileID: 1278909591}
   thirdLive: {fileID: 814122845}
+  key: {fileID: 6460853751359909233}
+  note: {fileID: 6460853751359909232}
   Lucie: {fileID: 867810721}
   Victoria: {fileID: 286168352}
   Fei: {fileID: 945933336}
@@ -5057,10 +5059,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6460853749809044100, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
       propertyPath: m_Name
-      value: Lives
+      value: HUD
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+--- !u!212 &6460853751359909232 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6037306206862184375, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+  m_PrefabInstance: {fileID: 6460853751359909231}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &6460853751359909233 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8634869518198550069, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+  m_PrefabInstance: {fileID: 6460853751359909231}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6768015983520768773
 PrefabInstance:
   m_ObjectHideFlags: 0
