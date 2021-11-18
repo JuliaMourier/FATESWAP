@@ -71,10 +71,8 @@ public class GameManager : MonoBehaviour
         if(CharactersOutOfMap()){
             HeroesTakeDamage();
         }
-        if(elapsedTime + 0.02 >= swapDelay){
-            elapsedTime = 0;
-        }
-            //Gives the position between the initial and final position to make a smooth transition
+       
+        //Gives the position between the initial and final position to make a smooth transition
         sliderSwap.value = elapsedTime;
         elapsedTime += Time.deltaTime; //increment the time
     }
@@ -168,6 +166,8 @@ public class GameManager : MonoBehaviour
     // Method to set the controls index for each character
     // The new index has to be different of the current one
     private void swapCharacters() {
+        //Reset the HUD slider for swap
+        elapsedTime = 0.0f;
         if(!isGameOver){
             swapSourceSound.Play(); // Play the sound of swap
         
