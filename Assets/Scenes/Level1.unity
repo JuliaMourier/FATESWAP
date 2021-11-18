@@ -329,13 +329,13 @@ MonoBehaviour:
   Victoria: {fileID: 286168352}
   Fei: {fileID: 945933336}
   Henrik: {fileID: 1151045411}
-  textEndLvl: {fileID: 0}
   gameOverMenuUI: {fileID: 1611730163}
   endOfLevelMenuUI: {fileID: 1506180236}
   swapSourceSound: {fileID: 1911661033}
   gameOverAudioClip: {fileID: 8300000, guid: 3e3e8dbad8f4aa048ba84ef1405af255, type: 3}
   endOfLevelAudioClip: {fileID: 8300000, guid: 2a5e3574c3016fb44b56a34272376d4f, type: 3}
   exit: {fileID: 823872368}
+  sliderSwap: {fileID: 530525747}
 --- !u!4 &393321800
 Transform:
   m_ObjectHideFlags: 0
@@ -446,6 +446,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &530525747 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9047395494296959154, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+  m_PrefabInstance: {fileID: 6460853751359909231}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &601165783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5013,6 +5024,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3328528663981646896, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.513
+      objectReference: {fileID: 0}
+    - target: {fileID: 3328528663981646896, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.76600003
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860976814459344989, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 468
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112657193906867949, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4112657193906867949, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4984107779309553078, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 985635236}
+    - target: {fileID: 6460853749347452029, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.36499995
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460853749347452029, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.86600006
+      objectReference: {fileID: 0}
     - target: {fileID: 6460853749809044099, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -5060,6 +5103,22 @@ PrefabInstance:
     - target: {fileID: 6460853749809044100, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460853750221517305, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.25400007
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460853750221517305, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.86600006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460853750545787443, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.86100006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460853750545787443, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.86600006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
@@ -5130,7 +5189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6768015982698997866, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}

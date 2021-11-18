@@ -11,7 +11,7 @@ public class Box : MonoBehaviour
         m_rigidbody = GetComponent<Rigidbody2D>();
     }
     private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.Equals(Henrik.gameObject)){ //if only one character can switch the switch, check if the collision is dur to this character
+        if(other.gameObject.Equals(Henrik.gameObject) || (other.gameObject.GetComponent<Box>() != null)){ //if only one character can switch the switch, check if the collision is dur to this character
             if(Henrik.isPowerActivate){ //if Henrik is capable of switch the switch
                 m_rigidbody.mass = 1;
             }
@@ -35,7 +35,7 @@ public class Box : MonoBehaviour
             yield return null; //do nothing while waiting
         }
 
-        m_rigidbody.mass = 999; //The switch is back to available
+        m_rigidbody.mass = 99; //The switch is back to available
 
     }
 }

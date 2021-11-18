@@ -24,9 +24,6 @@ public class GameManager : MonoBehaviour
     // COLLECTABLES
     public bool hasKey {get; private set;} = false;
 
-    // TEXTS
-    public Text textEndLvl;
-
     // MENUS
     public GameObject gameOverMenuUI;
     public GameObject endOfLevelMenuUI;
@@ -41,9 +38,13 @@ public class GameManager : MonoBehaviour
     // EXIT
     public SpriteRenderer exit;
 
+    public Slider sliderSwap;
+
     // SWAP SETTINGS
     private Dictionary<Character, int> indexByCharacter = new Dictionary<Character, int>();
     private float swapDelay = 15.0f;
+
+    private float elapsedTime = 0.0f;
 
     private bool isGameOver = false; //boolean for the state of the game
 
@@ -56,11 +57,13 @@ public class GameManager : MonoBehaviour
         indexByCharacter.Add(Fei, 1);
         indexByCharacter.Add(Victoria, 2);
         indexByCharacter.Add(Lucie, 3);
+        sliderSwap.maxValue = swapDelay;
     }
 
     void Start() {
         // We invoke the swapCharacters() method repeatedly according to the swapDelay value
-        InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);     
+        InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);  
+        
     }
 
     //Check if the heroes are out of the map
@@ -68,6 +71,12 @@ public class GameManager : MonoBehaviour
         if(CharactersOutOfMap()){
             HeroesTakeDamage();
         }
+        if(elapsedTime + 0.02 >= swapDelay){
+            elapsedTime = 0;
+        }
+            //Gives the position between the initial and final position to make a smooth transition
+        sliderSwap.value = elapsedTime;
+        elapsedTime += Time.deltaTime; //increment the time
     }
 
     // when a character find a collectable
@@ -199,6 +208,10 @@ public class GameManager : MonoBehaviour
         }
 
     }
+    
+        
+
+
 
 
 }
