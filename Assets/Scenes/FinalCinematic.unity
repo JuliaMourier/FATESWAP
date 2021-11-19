@@ -577,7 +577,8 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: d6b99e406aca5e841a214fe2e35d5983, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: Ce jeune enfant insouciant se nomme Javier.
+      value: "Javier est vaincu. Il se retrouve confront\xE9 \xE0 la r\xE9alit\xE9,\n
+        impuissant face \xE0 l'\xE9quipe qu'il avait pourtant cr\xE9\xE9e."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -646,9 +647,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 09847da523902e74b9b2f5fc988c6cdf, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "Le jeune Javier tomba sur une brique en pierre. Il perdit l'usage de
-        ses jambes et vit ses                          r\xEAves de devenir un super-h\xE9ros
-        s'envoler."
+      value: "Mais soudainement, une question apparue \xE0 l'esprit de Lucie..."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -743,6 +742,107 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838079828}
   m_CullTransparentMesh: 1
+--- !u!1 &873796750 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 951611150527845779, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+  m_PrefabInstance: {fileID: 1851764950}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &873796751
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873796750}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1f07105a97b45ec47929265fef79a913, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &932013784 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 951611150527845778, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -824,7 +924,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 443db9cfc49218b47994e35175da6225, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "La lumi\xE8re s'\xE9claira sur son visage p\xE2le. Il eut une r\xE9v\xE9lation."
+      value: La fin*
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -897,7 +997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "Alors il contr\xF4lerait comme Professeur X."
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -927,7 +1027,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
   m_PrefabInstance: {fileID: 1851764950}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 873796750}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f327ee8a7794d045819753ced0aa391, type: 3}
@@ -998,8 +1098,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 1849fe56f31ac644889cd92e8d3b9842, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "Il avait perdu sa joie de vivre... Jusqu'au jour o\xF9, alors qu'il
-        \xE9tait plong\xE9\n dans ses pens\xE9es les plus obscures,"
+      value: "\"O\xF9 est pass\xE9 le professeur Javier ?\""
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -1300,7 +1399,8 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 5e8b610b9ac25a7449b213211bce2c23, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: 
+      value: "Lucie, Victoria, Fei et Henrik d\xE9tiennent d\xE9sormais la FateSwap
+        originelle. \nIls comprennent enfin tout ce qui leur est arriv\xE9."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -1385,7 +1485,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: d090d3ac8442b104f9d87b83d398e9aa, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "S'il ne pouvait plus voler comme Magn\xE9to,"
+      value: "*rire machiav\xE9lique*"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -1458,8 +1558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "Javier se mit donc \xE0 \xE9tudier le potentiel incommensurable du
-        cerveau humain."
+      value: La (vraie) fin*
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -1532,8 +1631,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "Un beau jour, il fabriqua une cape magique capable de le faire voler
-        tr\xE8s haut dans le ciel."
+      value: "Javier leur explique alors ses motivations et son \xE9chec: ne pas
+        avoir r\xE9ussi \xE0 \xEAtre compatible pour\n faire partie de l'\xE9quipe.
+        Finalement, la seule chose que d\xE9sirait Javier..."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -1698,7 +1798,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Javier est un gar\xE7on timide, passionn\xE9 de super-h\xE9ros."
+  m_Text: "Nos quatre h\xE9ros, pris de piti\xE9 face \xE0 cet homme amoindri, l'aide
+    \xE0 se relever.\nIls savent qu'il est la cl\xE9 de tous les myst\xE8res qui
+    entourent leur p\xE9riple."
 --- !u!222 &2003641418
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1776,7 +1878,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: Et prit son envol.
+      value: "Il leur confie la puce responsable des changements intempestifs de
+        leurs esprits. \nIl les contr\xF4lait afin de ralentir leur progression vers
+        lui."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -1849,7 +1953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "D\xE9bordant d'enthousiasme, il monta sur le rebord de sa fen\xEAtre"
+      value: "... C'\xE9tait de devenir un super-h\xE9ros !"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}

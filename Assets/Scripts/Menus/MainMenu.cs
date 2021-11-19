@@ -22,4 +22,14 @@ public class MainMenu : MonoBehaviour
     { // Go to the nest scene inthe stack
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
     }
+
+    public void PlayLevel3()
+    { // Go to the nest scene inthe stack
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 5);
+    }
+
+    public void PlayLevel4()
+    { // Go to the nest scene inthe stack
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 7);
+    }
 }
