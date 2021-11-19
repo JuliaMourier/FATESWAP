@@ -20,12 +20,12 @@ public class Box : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D other) {
         StopAllCoroutines();
-        StartCoroutine(SetMassAfter20ms());
+        StartCoroutine(SetMassAfter1ms());
     }
 
-    private IEnumerator SetMassAfter20ms(){ 
+    private IEnumerator SetMassAfter1ms(){ 
 
-        float duration = 0.2f; //Duration of the disability
+        float duration = 0.01f; //Duration of the disability
         float elapsed = 0.0f;
 
         // wait

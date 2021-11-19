@@ -42,6 +42,7 @@ public class TempMovement : MonoBehaviour
         // Init the label sign/text above the character
         sign = new GameObject(character.name);
         sign.transform.rotation = Camera.main.transform.rotation;
+        sign.layer = LayerMask.NameToLayer("UI");
         tm = sign.AddComponent<TextMesh>();
         tm.color = new Color(1f, 0f, 0f);
         tm.fontStyle = FontStyle.Bold;
@@ -72,7 +73,7 @@ public class TempMovement : MonoBehaviour
                     break;
                 // Lucie is controlled by default with CVBSpace scheme
                 case "Lucie":
-                    setControlsToJ3();
+                    setControlsToJ1();
                     break;
             }
         }
