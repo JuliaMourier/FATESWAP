@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
 
     void Start() {
         // We invoke the swapCharacters() method repeatedly according to the swapDelay value
-        InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);     
+        InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);
     }
 
     //Check if the heroes are out of the map
@@ -111,25 +111,6 @@ public class GameManager : MonoBehaviour
         audioSource.loop = true;
         audioSource.Play();
         DeactivateCharacters();
-    }
-
-    // Load the next scene
-    public void LoadNextScene() {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    // Restart the current level
-    public void RestartLevel() {
-        isGameOver = false;
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    // Load the main menu scene
-    public void LoadMainMenu() {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
     }
     
     //Test if one of the character is out of the map
