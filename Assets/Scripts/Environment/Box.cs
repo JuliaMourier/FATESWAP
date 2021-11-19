@@ -35,7 +35,7 @@ public class Box : MonoBehaviour
             yield return null; //do nothing while waiting
         }
 
-        m_rigidbody.mass = 99; //The switch is back to available
+        m_rigidbody.mass = 29; //The switch is back to available
 
     }
 }
