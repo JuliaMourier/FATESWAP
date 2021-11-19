@@ -57,8 +57,6 @@ public class GameManager : MonoBehaviour
     void Start() {
         // We invoke the swapCharacters() method repeatedly according to the swapDelay value
         InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);
-        Debug.Log("------ GAME OVER VALUE ------");   
-        Debug.Log(isGameOver);  
     }
 
     //Check if the heroes are out of the map
