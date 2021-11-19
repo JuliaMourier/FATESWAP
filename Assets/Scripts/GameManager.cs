@@ -182,11 +182,7 @@ public class GameManager : MonoBehaviour
                     }
                 }
             }
-        
-            // We update the controls of each character according to its new assigned index
-            foreach (KeyValuePair<Character, int> entry in indexByCharacter) {
-                entry.Key.GetComponentInChildren<TempMovement>().swapControls(entry.Value);            
-            }
+       
         }
 
     }
