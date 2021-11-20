@@ -577,8 +577,8 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: d6b99e406aca5e841a214fe2e35d5983, type: 3}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
-      value: "Javier est vaincu. Il se retrouve confront\xE9 \xE0 la r\xE9alit\xE9,\n
-        impuissant face \xE0 l'\xE9quipe qu'il avait pourtant cr\xE9\xE9e."
+      value: "Javier est vaincu. Il se retrouve confront\xE9 \xE0 la r\xE9alit\xE9,\nimpuissant
+        face \xE0 l'\xE9quipe qu'il avait pourtant cr\xE9\xE9e."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -1245,16 +1245,6 @@ MonoBehaviour:
   - {fileID: 1186607176}
   - {fileID: 932013785}
   - {fileID: 1170241851}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &1621275261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,6 +1256,7 @@ GameObject:
   - component: {fileID: 1621275262}
   - component: {fileID: 1621275264}
   - component: {fileID: 1621275263}
+  - component: {fileID: 1621275265}
   m_Layer: 5
   m_Name: PressSpaceToContinue
   m_TagString: Untagged
@@ -1334,6 +1325,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621275261}
   m_CullTransparentMesh: 1
+--- !u!95 &1621275265
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621275261}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cbc9305de594d714bb337c13c2728a91, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1734648548
 PrefabInstance:
   m_ObjectHideFlags: 0
