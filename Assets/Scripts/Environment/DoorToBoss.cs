@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DoorToBoss : MonoBehaviour
+public class DoorToBoss : Door
 {
-    private void OnCollisionEnter2D(Collision2D other) {
+    protected override void OnDoorEntered()
+    {  
         SceneManager.LoadScene("MainScene");
     }
-
 }

@@ -550,6 +550,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38018b21995d0364f931cb8f6825089c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Lucie: {fileID: 514790743}
+  Victoria: {fileID: 1695068334}
+  Henrik: {fileID: 1192760595}
+  Fei: {fileID: 127426295}
 --- !u!1 &121640392
 GameObject:
   m_ObjectHideFlags: 0
@@ -2033,6 +2037,8 @@ MonoBehaviour:
   Victoria: {fileID: 1695068334}
   Fei: {fileID: 127426295}
   Henrik: {fileID: 1192760595}
+  listOfRobot:
+  - {fileID: 1113124094}
   gameOverMenuUI: {fileID: 1460514919}
   endOfLevelMenuUI: {fileID: 1460514918}
   swapSourceSound: {fileID: 2070768636}
@@ -3462,6 +3468,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d068a8d5d095ddb47a9358bee48388a2, type: 3}
+--- !u!114 &1113124094 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6270911354528397859, guid: d068a8d5d095ddb47a9358bee48388a2, type: 3}
+  m_PrefabInstance: {fileID: 1113124093}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d84592ef1d7f54daebebf384fa2b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1154917801
 GameObject:
   m_ObjectHideFlags: 0

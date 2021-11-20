@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     public Character Fei;
     public Character Henrik;
 
+    public List<Robot> listOfRobot;
+
     // COLLECTABLES
     public bool hasKey {get; private set;} = false;
 
@@ -127,6 +129,7 @@ public class GameManager : MonoBehaviour
         audioSource.loop = true;
         audioSource.Play();
         DeactivateCharacters();
+        DeactivateRobot();
     }
 
     // Load the next scene
@@ -161,6 +164,12 @@ public class GameManager : MonoBehaviour
         this.Fei.gameObject.SetActive(false);
         this.Victoria.gameObject.SetActive(false);
         this.Henrik.gameObject.SetActive(false);
+    }
+
+    private void DeactivateRobot(){
+        foreach(Robot robot in listOfRobot){
+            robot.Disable();
+        }
     }
 
     // Method to set the controls index for each character

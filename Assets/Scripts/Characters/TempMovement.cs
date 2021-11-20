@@ -187,9 +187,8 @@ public class TempMovement : MonoBehaviour
         axis = "Horizontal";
         powerKey = KeyCode.X;
         tm.text = "J4";
-        if(character.name == "Victoria"){
-            shootKey = KeyCode.W;
-        }
+        shootKey = KeyCode.W;
+        
         if(character.name == "Henrik"){
             switchPressKey = KeyCode.W;
         }
@@ -201,9 +200,8 @@ public class TempMovement : MonoBehaviour
         axis = "Joystick3Axis";
         powerKey = KeyCode.Joystick3Button0;
         tm.text = "J3";
-        if(character.name == "Victoria"){
-            shootKey = KeyCode.Joystick3Button2;
-        }
+        shootKey = KeyCode.Joystick3Button2;
+        
         if(character.name == "Henrik"){
             switchPressKey = KeyCode.Joystick3Button2;
         }
@@ -215,9 +213,8 @@ public class TempMovement : MonoBehaviour
         axis = "Joystick2Axis";
         powerKey = KeyCode.Joystick2Button0;
         tm.text = "J2";
-        if(character.name == "Victoria"){
-            shootKey = KeyCode.Joystick2Button2;
-        }
+        shootKey = KeyCode.Joystick2Button2;
+        
         if(character.name == "Henrik"){
             switchPressKey = KeyCode.Joystick2Button2;
         }
@@ -229,9 +226,8 @@ public class TempMovement : MonoBehaviour
         powerKey = KeyCode.Joystick1Button0;
         axis = "Joystick1Axis";
         tm.text = "J1";
-        if(character.name == "Victoria"){
-            shootKey = KeyCode.Joystick1Button2;
-        }
+        shootKey = KeyCode.Joystick1Button2;
+        
         if(character.name == "Henrik"){
             switchPressKey = KeyCode.Joystick1Button2;
         }

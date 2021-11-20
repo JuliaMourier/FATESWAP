@@ -4928,6 +4928,7 @@ MonoBehaviour:
   Victoria: {fileID: 227682822}
   Fei: {fileID: 507501169}
   Henrik: {fileID: 270395768}
+  listOfRobot: []
   gameOverMenuUI: {fileID: 0}
   endOfLevelMenuUI: {fileID: 0}
   swapSourceSound: {fileID: 125950869}
@@ -5459,6 +5460,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 6768015982698997867, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
+      propertyPath: Fei
+      value: 
+      objectReference: {fileID: 507501169}
+    - target: {fileID: 6768015982698997867, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
+      propertyPath: Lucie
+      value: 
+      objectReference: {fileID: 1625585603}
+    - target: {fileID: 6768015982698997867, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
+      propertyPath: Henrik
+      value: 
+      objectReference: {fileID: 270395768}
+    - target: {fileID: 6768015982698997867, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
+      propertyPath: Victoria
+      value: 
+      objectReference: {fileID: 227682822}
     - target: {fileID: 6768015982698997877, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
       propertyPath: m_SortingOrder
       value: 5
