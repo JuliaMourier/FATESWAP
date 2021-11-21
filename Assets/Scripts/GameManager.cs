@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
 
     private bool isGameOver = false; //boolean for the state of the game
 
+    public Robot boss = null;
+
     void Awake() {
         // Get and pass the AudioSource component to the audioSource attribute
         audioSource = GetComponent<AudioSource>();
@@ -175,9 +177,13 @@ public class GameManager : MonoBehaviour
     // Method to set the controls index for each character
     // The new index has to be different of the current one
     private void swapCharacters() {
+        
         //Reset the HUD slider for swap
         elapsedTime = 0.0f;
         if(!isGameOver){
+            if(boss != null){
+                boss.animator.SetTrigger("swap");
+            }
             swapSourceSound.Play(); // Play the sound of swap
         
             List<int> indexList;

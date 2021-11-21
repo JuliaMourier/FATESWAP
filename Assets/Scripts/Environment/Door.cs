@@ -4,39 +4,28 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    public Character Lucie;
-    public Character Victoria;
-    public Character Henrik;
-    public Character Fei;
+    public List<Character> characters;
+    private SpriteRenderer spriteRenderer;
 
     private int numberCharacterWhoEnteredTheDoor = 0;
 
+    private void Awake() {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     private void OnTriggerStay2D(Collider2D other) {
-        if(other.gameObject.Equals(Lucie.gameObject)){
-            if(Input.GetKey(Lucie.GetComponent<TempMovement>().shootKey)){
-                Lucie.gameObject.SetActive(false);
-                numberCharacterWhoEnteredTheDoor++;
+        if(spriteRenderer.color == Color.black){ //If door is open
+            foreach(Character character in characters){
+                if(other.gameObject.Equals(character.gameObject)){ //If its the character 
+                    if(Input.GetKey(character.GetComponent<TempMovement>().shootKey)){ //and he wants to go through the door
+                        character.gameObject.SetActive(false); //character enter
+                        numberCharacterWhoEnteredTheDoor++; //One character more is entered
+                    }
+                }
             }
         }
-        if(other.gameObject.Equals(Victoria.gameObject)){
-            if(Input.GetKey(Victoria.GetComponent<TempMovement>().shootKey)){
-                Victoria.gameObject.SetActive(false);
-                numberCharacterWhoEnteredTheDoor++;
-            }
-        }
-        if(other.gameObject.Equals(Henrik.gameObject)){
-            if(Input.GetKey(Henrik.GetComponent<TempMovement>().shootKey)){
-                Henrik.gameObject.SetActive(false);
-                numberCharacterWhoEnteredTheDoor++;
-            }
-        }
-        if(other.gameObject.Equals(Fei.gameObject)){
-            if(Input.GetKey(Fei.GetComponent<TempMovement>().shootKey)){
-                Fei.gameObject.SetActive(false);
-                numberCharacterWhoEnteredTheDoor++;
-            }
-        }
-        //if all characters hit the door
+
+        //if all characters have entered the door
         if(numberCharacterWhoEnteredTheDoor >= 4){
             OnDoorEntered();
         }

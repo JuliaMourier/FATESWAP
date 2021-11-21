@@ -653,7 +653,7 @@ PlayerSettings:
   cloudServicesEnabled:
     Analytics: 0
     Build: 0
-    Collab: 1
+    Collab: 0
     Game Performance: 0
     Purchasing: 0
     UDP: 0
@@ -671,11 +671,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 2
-  cloudProjectId: 291249c5-0234-442b-91b3-e01b57b347dc
+  cloudProjectId: a42f90ab-8345-4a45-99fd-dc1e562f7079
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: FateSwap
-  organizationId: pablomsnv
+  organizationId: octojul721
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   virtualTexturingSupportEnabled: 0
