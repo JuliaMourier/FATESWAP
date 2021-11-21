@@ -1,21 +1,23 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
-
 
 [RequireComponent(typeof(Rigidbody2D))]
 // THIS SCRIPT IS A TEMPORARY ONE USED FOR TESTING OR DEMO.
-public class TempMovement : MonoBehaviour
+public class TempMovementSolo : MonoBehaviour
 {
     // --- Attributes ---
 
     // Movement
-    public float speed = 1.0f; // Speed of the movement
+    public float speed = 1.4f; // Speed of the movement
     public float impulsionForce = 3.2f;
     private bool IsGrounded = true;
     public Transform top_left;
     public Transform bottom_right;
     public LayerMask Obstacles;
     private int jumpCount = 1;
+    [SerializeField] private GameObject Player1;
+    [SerializeField] private GameObject Player2;
+    [SerializeField] private GameObject Player3;
+    [SerializeField] private GameObject Player4;
     // Animator
     public Animator animator; // Animator for the different animations of the character => idle, walk, transfor, walkpower and idlepower
     public bool power { get; private set;} = false; // Parameter of the animator : true when the character is in the power state, false otherwise
@@ -23,80 +25,93 @@ public class TempMovement : MonoBehaviour
     
     // Character
     public Character character; // character who's moving
-    private GameObject sign; // Player label above the character head
-    private TextMesh tm; // Text of the label
 
     // Controllers
     private KeyCode jumpKey;
+    private KeyCode leftKey;
+    private KeyCode rightKey;
+    private KeyCode powerKey;
+    private KeyCode swap;
 
     private string axis;
-    private KeyCode powerKey;
 
-    public KeyCode shootKey {get; private set;}
-    public KeyCode switchPressKey{get; private set;}
-
+    public KeyCode shootKey { get; private set; }
+    public KeyCode switchPressKey { get; private set; }
 
 
     // Configure the controls for the beginning
     void Awake() {
-        // Init the label sign/text above the character
-        sign = new GameObject(character.name);
-        sign.transform.rotation = Camera.main.transform.rotation;
-        sign.layer = LayerMask.NameToLayer("UI");
-        tm = sign.AddComponent<TextMesh>();
-        tm.color = new Color(1f, 0f, 0f);
-        tm.fontStyle = FontStyle.Bold;
-        tm.alignment = TextAlignment.Center;
-        tm.anchor = TextAnchor.MiddleCenter;
-        tm.characterSize = 0.065f;
-        tm.fontSize = 30;
-
-        // The label is displayed during 3 seconds
-        // After that, we hide it
-        this.Invoke(nameof(hidePlayerLabel), 3f);
-
         //this.character = GetComponent<Character>();
+        
         if (character != null) {
             // We set different controllers according to the character name
             switch(character.name) {
                 // Fei is controlled by default with the arrow keys
                 case "Fei":
-                    setControlsToJ3();
+                    setControlsToArrowKeys();
+                    Player2.transform.parent = Player1.transform;
+                    Player3.transform.parent = Player1.transform;
+                    Player4.transform.parent = Player1.transform;
                     break;
                 // Henrik is controlled by defautl with the ZQSD scheme
                 case "Henrik":
-                    setControlsToJ4();
+                    setControlsToArrowKeys();
+                    Player2.transform.parent = Player1.transform;
+                    Player3.transform.parent = Player1.transform;
+                    Player4.transform.parent = Player1.transform;
                     break;
                 // Victoria is controlled by default with IJLO scheme
                 case "Victoria":
-                    setControlsToJ2();
+                    setControlsToArrowKeys();
+                    Player2.transform.parent = Player1.transform;
+                    Player3.transform.parent = Player1.transform;
+                    Player4.transform.parent = Player1.transform;
                     break;
                 // Lucie is controlled by default with CVBSpace scheme
                 case "Lucie":
-                    setControlsToJ1();
+                    setControlsToArrowKeys();
+                    Player2.transform.parent = Player1.transform;
+                    Player3.transform.parent = Player1.transform;
+                    Player4.transform.parent = Player1.transform;
                     break;
             }
         }
     }
 
-    void Update(){            
-        if(Input.GetAxis(axis) == 1){ // if the character goes right
+    void Update(){
+        // When a horizontal movement is detected (left or right)
+        if (Input.GetAxis(axis) == 1) {
             move = true;
             this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 0, this.transform.rotation.z));
             this.transform.Translate(Vector2.right * Time.deltaTime * speed);
             character.SetDirection(new Vector3(1, 0, 0)); //Direction to the right
 
-        } else if (Input.GetAxis(axis) == -1){ // if the character goes left
+        }
+        else if (Input.GetAxis(axis) == -1)
+        { // if the character goes left
             move = true;
             this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 180, this.transform.rotation.z));
             this.transform.Translate(Vector2.right * Time.deltaTime * speed);
             character.SetDirection(new Vector3(-1, 0, 0)); //Direction to the right
-        } else {
+        }
+        else
+        {
             // the character is not going left or right => no movement 
             move = false;
         }
+        if (Input.GetKeyDown(swap))
+        {
+            Player2.transform.parent = null;
+            Player1.transform.parent = Player2.transform;
+            Player4.transform.parent = Player2.transform;
+            Player3.transform.parent = Player2.transform;
+            Player2.SetActive(true);
+            Player1.SetActive(false);
+            Debug.Log("press");
+        }
 
-        // if the jumpKey is pressed : jump
+
+        // if the jumpKey is pressed and it's Lucie, you can jump and double jump
         if (character.name == "Lucie")
         {
         if (power){
@@ -106,7 +121,7 @@ public class TempMovement : MonoBehaviour
                     GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, impulsionForce), ForceMode2D.Impulse);
                 }
 
-            }
+            } // if it's not Lucie, you can jump once
             else if (Input.GetKeyDown(jumpKey) && IsGrounded)
             {
                 GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, impulsionForce), ForceMode2D.Impulse);
@@ -152,91 +167,65 @@ public class TempMovement : MonoBehaviour
         // send the parameters of the character state to the animator
         animator.SetBool("move", move);
         animator.SetBool("power", power);
-
-        // Update the label position above the character head
-        sign.transform.position = this.transform.position + Vector3.up * 0.4f;
     }
 
     // Swap the controls of the selected character according to the int value passed in argument
     public void swapControls(int index) {
         switch(index) {
             case 0:
-                setControlsToJ1();
+                setControlsToArrowKeys();
                 break;
             case 1:
-                setControlsToJ2();
+                setControlsToZQDEKeys();
                 break;
             case 2:
-                setControlsToJ3();
+                setControlsToIJLOKeys();
                 break;
             case 3:
-                setControlsToJ4();
+                setControlsToCVBSpaceKeys();
                 break;
         }
-
-        // We display the label in order to indicate to the player which character he controls
-        sign.SetActive(true);
-        // We display the label during 5 seconds, after that we hide it
-        this.Invoke(nameof(hidePlayerLabel), 5f);
     }
 
-    // Method to set controls to the KeyBoard
-    private void setControlsToJ4() {
+    // Method to set controls to the arrow keys
+    private void setControlsToArrowKeys() {
+        swap = KeyCode.RightControl;
         jumpKey = KeyCode.UpArrow;
         axis = "Horizontal";
         powerKey = KeyCode.X;
-        tm.text = "J4";
-        shootKey = KeyCode.W;
-        
-        if(character.name == "Henrik"){
+        if (character.name == "Victoria")
+        {
+            shootKey = KeyCode.W;
+        }
+        if (character.name == "Henrik")
+        {
             switchPressKey = KeyCode.W;
         }
     }
 
-    // Method to set controls to the third joystick
-    private void setControlsToJ3() {
-        jumpKey = KeyCode.Joystick3Button1;
-        axis = "Joystick3Axis";
-        powerKey = KeyCode.Joystick3Button0;
-        tm.text = "J3";
-        shootKey = KeyCode.Joystick3Button2;
-        
-        if(character.name == "Henrik"){
-            switchPressKey = KeyCode.Joystick3Button2;
-        }
+    // Method to set controls to the ZQDE keys
+    private void setControlsToZQDEKeys() {
+        jumpKey = KeyCode.Z;
+        leftKey = KeyCode.Q;
+        rightKey = KeyCode.D;
+        powerKey = KeyCode.E;
     }
 
-    // Method to set controls to the second joystick
-    private void setControlsToJ2() {
-        jumpKey = KeyCode.Joystick2Button1;
-        axis = "Joystick2Axis";
-        powerKey = KeyCode.Joystick2Button0;
-        tm.text = "J2";
-        shootKey = KeyCode.Joystick2Button2;
-        
-        if(character.name == "Henrik"){
-            switchPressKey = KeyCode.Joystick2Button2;
-        }
+    // Method to set controls to the IJLO keys
+    private void setControlsToIJLOKeys() {
+        jumpKey = KeyCode.I;
+        leftKey = KeyCode.J;
+        rightKey = KeyCode.L;
+        powerKey = KeyCode.O;
     }
 
-    // Method to set controls to the first joystick
-    private void setControlsToJ1() {
-        jumpKey = KeyCode.Joystick1Button1;
-        powerKey = KeyCode.Joystick1Button0;
-        axis = "Joystick1Axis";
-        tm.text = "J1";
-        shootKey = KeyCode.Joystick1Button2;
-        
-        if(character.name == "Henrik"){
-            switchPressKey = KeyCode.Joystick1Button2;
-        }
+    // Method to set controls to the CVBSpace keys
+    private void setControlsToCVBSpaceKeys() {
+        jumpKey = KeyCode.Space;
+        leftKey = KeyCode.V;
+        rightKey = KeyCode.B;
+        powerKey = KeyCode.C;
     }
-
-    // Method to hide the player label
-    private void hidePlayerLabel() {
-        sign.SetActive(false);
-    }
-
     /*
     public void OnTriggerExit2D(Collider2D collision)
     {
