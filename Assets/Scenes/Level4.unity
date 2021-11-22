@@ -2047,8 +2047,6 @@ MonoBehaviour:
   endOfLevelAudioClip: {fileID: 8300000, guid: 5ec400b27afd110409def87e6b1b2ead, type: 3}
   exit: {fileID: 82448853}
   sliderSwap: {fileID: 211449907}
-  swapDelay: 5
-  boss: {fileID: 0}
 --- !u!4 &167430763
 Transform:
   m_ObjectHideFlags: 0
