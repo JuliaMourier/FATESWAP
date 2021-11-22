@@ -23,7 +23,7 @@ public class OrderRobot : MonoBehaviour
             if(listOfRobots[i].isAlive == false){
                 if(i > check + 1){
                     check = 0;
-                    FindObjectOfType<GameManager>().Restart();
+                    FindObjectOfType<GameManager>().RestartLevel();
                 }
             }
         }
