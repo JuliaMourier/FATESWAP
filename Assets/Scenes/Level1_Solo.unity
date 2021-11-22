@@ -4385,7 +4385,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Henrik
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7043650443082357156, guid: 2c6d46df08977374282a812c4ebdcf8e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2c6d46df08977374282a812c4ebdcf8e, type: 3}
 --- !u!1001 &716082237292032391
 PrefabInstance:
