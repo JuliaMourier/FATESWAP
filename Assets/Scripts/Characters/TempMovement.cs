@@ -179,23 +179,23 @@ public class TempMovement : MonoBehaviour
         this.Invoke(nameof(hidePlayerLabel), 5f);
     }
 
-    // Method to set controls to the KeyBoard
+    // Method to set controls to the arrow keys
     private void setControlsToJ4() {
         jumpKey = KeyCode.UpArrow;
         axis = "Horizontal";
-        powerKey = KeyCode.X;
+        powerKey = KeyCode.RightShift;
         tm.text = "J4";
         if(character.name == "Victoria"){
-            shootKey = KeyCode.W;
+            shootKey = KeyCode.Space;
         }
         if(character.name == "Henrik"){
-            switchPressKey = KeyCode.W;
+            switchPressKey = KeyCode.Space;
         }
     }
 
-    // Method to set controls to the third joystick
+    // Method to set controls to the ZQDE keys
     private void setControlsToJ3() {
-        jumpKey = KeyCode.Joystick3Button1;
+        jumpKey = KeyCode.Joystick3Button3;
         axis = "Joystick3Axis";
         powerKey = KeyCode.Joystick3Button0;
         tm.text = "J3";
@@ -207,9 +207,9 @@ public class TempMovement : MonoBehaviour
         }
     }
 
-    // Method to set controls to the second joystick
+    // Method to set controls to the IJLO keys
     private void setControlsToJ2() {
-        jumpKey = KeyCode.Joystick2Button1;
+        jumpKey = KeyCode.Joystick2Button3;
         axis = "Joystick2Axis";
         powerKey = KeyCode.Joystick2Button0;
         tm.text = "J2";
@@ -221,9 +221,9 @@ public class TempMovement : MonoBehaviour
         }
     }
 
-    // Method to set controls to the first joystick
+    // Method to set controls to the CVBSpace keys
     private void setControlsToJ1() {
-        jumpKey = KeyCode.Joystick1Button1;
+        jumpKey = KeyCode.Joystick1Button3;
         powerKey = KeyCode.Joystick1Button0;
         axis = "Joystick1Axis";
         tm.text = "J1";
