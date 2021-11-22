@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
-public class GameManager : MonoBehaviour
+public class GameManagerSolo : MonoBehaviour
 {
     // LIVES
     public int lives = 3;
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public GameObject endOfLevelMenuUI;
 
     public AudioSource swapSourceSound;
-    public MainMenu mainMenu;
+
     // AUDIO
     public AudioClip gameOverAudioClip;
     public AudioClip endOfLevelAudioClip;
@@ -51,7 +51,6 @@ public class GameManager : MonoBehaviour
     private bool isGameOver = false; //boolean for the state of the game
 
     public Robot boss = null;
-    public bool solo = false;
 
     void Awake() {
         // Get and pass the AudioSource component to the audioSource attribute
@@ -62,10 +61,7 @@ public class GameManager : MonoBehaviour
         indexByCharacter.Add(Fei, 1);
         indexByCharacter.Add(Victoria, 2);
         indexByCharacter.Add(Lucie, 3);
-        if (!solo)
-        {
         sliderSwap.maxValue = swapDelay;
-        }
     }
 
     void Start() {
@@ -86,23 +82,12 @@ public class GameManager : MonoBehaviour
     }
 
     // when a character find a collectable
-    public void CollectableFound(Collectables collectable)
-    {
-        if (collectable.gameObject.name == "Key")
-        {
-            hasKey = true;
-            key.color = Color.white;
-            collectable.gameObject.SetActive(false);
-            //Set the door's Color to black
-            exit.color = Color.black;
-        }
-        if (collectable.gameObject.name == "Note")
-        {
-            note.color = Color.white;
-            collectable.gameObject.SetActive(false);
-            string scene = SceneManager.GetActiveScene().name;
-            //mainMenu.Cadenas(scene);
-        }
+    public void CollectableFound(Collectables collectable){
+        hasKey = true;
+        key.color = Color.white;
+        collectable.gameObject.SetActive(false);
+        //Set the door's Color to black
+        exit.color = Color.black;
     }
 
     public void NoteFound(){
