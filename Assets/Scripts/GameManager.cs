@@ -57,11 +57,7 @@ public class GameManager : MonoBehaviour
     void Awake() {
         // Get and pass the AudioSource component to the audioSource attribute
         audioSource = GetComponent<AudioSource>();
-        
-        if (!this.Lucie.gameObject.activeInHierarchy)
-        {
-            solo = true;
-        }
+        solo = !Lucie.gameObject.activeInHierarchy;        
         // Initialization of the indexByCharacter dictionary
         indexByCharacter.Add(Henrik, 0);
         indexByCharacter.Add(Fei, 1);
