@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
 
     // SWAP SETTINGS
     private Dictionary<Character, int> indexByCharacter = new Dictionary<Character, int>();
-    private float swapDelay = 15.0f;
+    public float swapDelay = 15.0f;
 
     private float elapsedTime = 0.0f;
 
@@ -181,9 +181,13 @@ public class GameManager : MonoBehaviour
         //Reset the HUD slider for swap
         elapsedTime = 0.0f;
         if(!isGameOver){
+<<<<<<< Updated upstream
             if(boss != null){
                 boss.animator.SetTrigger("swap");
             }
+=======
+            
+>>>>>>> Stashed changes
             swapSourceSound.Play(); // Play the sound of swap
         
             List<int> indexList;
