@@ -54,7 +54,7 @@ public class Switch : MonoBehaviour
     //Disable the switch for 0.5s
     private IEnumerator WaitUntilAvailable(){ 
 
-        float duration = 0.5f; //Duration of the disability
+        float duration = 0.7f; //Duration of the disability
         float elapsed = 0.0f;
 
         // wait

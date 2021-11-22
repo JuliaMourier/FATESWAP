@@ -11,17 +11,20 @@ public class GameManager : MonoBehaviour
     public Lives secondLive;
     public Lives thirdLive;
 
+    public SpriteRenderer key;
+
+    public SpriteRenderer note;
+
     // CHARACTERS
     public Character Lucie;
     public Character Victoria;
     public Character Fei;
     public Character Henrik;
 
+    public List<Robot> listOfRobot;
+
     // COLLECTABLES
     public bool hasKey {get; private set;} = false;
-
-    // TEXTS
-    public Text textEndLvl;
 
     // MENUS
     public GameObject gameOverMenuUI;
@@ -37,11 +40,17 @@ public class GameManager : MonoBehaviour
     // EXIT
     public SpriteRenderer exit;
 
+    public Slider sliderSwap;
+
     // SWAP SETTINGS
     private Dictionary<Character, int> indexByCharacter = new Dictionary<Character, int>();
     private float swapDelay = 15.0f;
 
+    private float elapsedTime = 0.0f;
+
     private bool isGameOver = false; //boolean for the state of the game
+
+    public Robot boss = null;
 
     void Awake() {
         // Get and pass the AudioSource component to the audioSource attribute
@@ -52,11 +61,13 @@ public class GameManager : MonoBehaviour
         indexByCharacter.Add(Fei, 1);
         indexByCharacter.Add(Victoria, 2);
         indexByCharacter.Add(Lucie, 3);
+        sliderSwap.maxValue = swapDelay;
     }
 
     void Start() {
         // We invoke the swapCharacters() method repeatedly according to the swapDelay value
-        InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);
+        InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);  
+        
     }
 
     //Check if the heroes are out of the map
@@ -64,15 +75,24 @@ public class GameManager : MonoBehaviour
         if(CharactersOutOfMap()){
             HeroesTakeDamage();
         }
+       
+        //Gives the position between the initial and final position to make a smooth transition
+        sliderSwap.value = elapsedTime;
+        elapsedTime += Time.deltaTime; //increment the time
     }
 
     // when a character find a collectable
     public void CollectableFound(Collectables collectable){
         hasKey = true;
+        key.color = Color.white;
         collectable.gameObject.SetActive(false);
         //Set the door's Color to black
         exit.color = Color.black;
-        //TODO
+    }
+
+    public void NoteFound(){
+        note.color = Color.white;
+        //TODO : get star
     }
 
     public void WinTheGame(Door door) {
@@ -111,6 +131,26 @@ public class GameManager : MonoBehaviour
         audioSource.loop = true;
         audioSource.Play();
         DeactivateCharacters();
+        DeactivateRobot();
+    }
+
+    // Load the next scene
+    public void LoadNextScene() {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    // Restart the current level
+    public void RestartLevel() {
+        isGameOver = false;
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    // Load the main menu scene
+    public void LoadMainMenu() {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
     }
     
     //Test if one of the character is out of the map
@@ -128,10 +168,22 @@ public class GameManager : MonoBehaviour
         this.Henrik.gameObject.SetActive(false);
     }
 
+    private void DeactivateRobot(){
+        foreach(Robot robot in listOfRobot){
+            robot.Disable();
+        }
+    }
+
     // Method to set the controls index for each character
     // The new index has to be different of the current one
     private void swapCharacters() {
+        
+        //Reset the HUD slider for swap
+        elapsedTime = 0.0f;
         if(!isGameOver){
+            if(boss != null){
+                boss.animator.SetTrigger("swap");
+            }
             swapSourceSound.Play(); // Play the sound of swap
         
             List<int> indexList;
@@ -163,10 +215,18 @@ public class GameManager : MonoBehaviour
                     }
                 }
             }
-       
+        
+            // We update the controls of each character according to its new assigned index
+            foreach (KeyValuePair<Character, int> entry in indexByCharacter) {
+                entry.Key.GetComponentInChildren<TempMovement>().swapControls(entry.Value);            
+            }
         }
 
     }
+    
+        
+
+
 
 
 }

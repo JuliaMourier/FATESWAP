@@ -4,9 +4,29 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D other) {
-        //if all characters hit the door
-        if(other.contactCount >= 5){
+    public List<Character> characters;
+    private SpriteRenderer spriteRenderer;
+
+    private int numberCharacterWhoEnteredTheDoor = 0;
+
+    private void Awake() {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void OnTriggerStay2D(Collider2D other) {
+        if(spriteRenderer.color == Color.black){ //If door is open
+            foreach(Character character in characters){
+                if(other.gameObject.Equals(character.gameObject)){ //If its the character 
+                    if(Input.GetKey(character.GetComponent<TempMovement>().shootKey)){ //and he wants to go through the door
+                        character.gameObject.SetActive(false); //character enter
+                        numberCharacterWhoEnteredTheDoor++; //One character more is entered
+                    }
+                }
+            }
+        }
+
+        //if all characters have entered the door
+        if(numberCharacterWhoEnteredTheDoor >= 4){
             OnDoorEntered();
         }
     }

@@ -14,7 +14,7 @@ public class RobotBody : MonoBehaviour
             }
         }
         //If the robot got hit by a fireball, he must die
-        if(robot.ennemi != null){
+        if(robot.ennemi != null && FindObjectOfType<Victoria>() != null){
             if(robot.ennemi == FindObjectOfType<Victoria>().gameObject){
                 if(collision.gameObject.layer == LayerMask.NameToLayer("Fireball")){
                     if(robot.isAlive){
@@ -32,6 +32,6 @@ public class RobotBody : MonoBehaviour
                 }
             }
         }
-        
     }
+
 }

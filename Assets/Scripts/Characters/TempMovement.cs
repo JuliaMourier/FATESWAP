@@ -42,6 +42,7 @@ public class TempMovement : MonoBehaviour
         // Init the label sign/text above the character
         sign = new GameObject(character.name);
         sign.transform.rotation = Camera.main.transform.rotation;
+        sign.layer = LayerMask.NameToLayer("UI");
         tm = sign.AddComponent<TextMesh>();
         tm.color = new Color(1f, 0f, 0f);
         tm.fontStyle = FontStyle.Bold;
@@ -60,11 +61,11 @@ public class TempMovement : MonoBehaviour
             switch(character.name) {
                 // Fei is controlled by default with the arrow keys
                 case "Fei":
-                    setControlsToJ4();
+                    setControlsToJ3();
                     break;
                 // Henrik is controlled by defautl with the ZQSD scheme
                 case "Henrik":
-                    setControlsToJ1();
+                    setControlsToJ4();
                     break;
                 // Victoria is controlled by default with IJLO scheme
                 case "Victoria":
@@ -72,7 +73,7 @@ public class TempMovement : MonoBehaviour
                     break;
                 // Lucie is controlled by default with CVBSpace scheme
                 case "Lucie":
-                    setControlsToJ3();
+                    setControlsToJ1();
                     break;
             }
         }
@@ -185,9 +186,8 @@ public class TempMovement : MonoBehaviour
         axis = "Horizontal";
         powerKey = KeyCode.X;
         tm.text = "J4";
-        if(character.name == "Victoria"){
-            shootKey = KeyCode.W;
-        }
+        shootKey = KeyCode.W;
+        
         if(character.name == "Henrik"){
             switchPressKey = KeyCode.W;
         }
@@ -199,9 +199,8 @@ public class TempMovement : MonoBehaviour
         axis = "Joystick3Axis";
         powerKey = KeyCode.Joystick3Button0;
         tm.text = "J3";
-        if(character.name == "Victoria"){
-            shootKey = KeyCode.Joystick3Button2;
-        }
+        shootKey = KeyCode.Joystick3Button2;
+        
         if(character.name == "Henrik"){
             switchPressKey = KeyCode.Joystick3Button2;
         }
@@ -213,9 +212,8 @@ public class TempMovement : MonoBehaviour
         axis = "Joystick2Axis";
         powerKey = KeyCode.Joystick2Button0;
         tm.text = "J2";
-        if(character.name == "Victoria"){
-            shootKey = KeyCode.Joystick2Button2;
-        }
+        shootKey = KeyCode.Joystick2Button2;
+        
         if(character.name == "Henrik"){
             switchPressKey = KeyCode.Joystick2Button2;
         }
@@ -227,9 +225,8 @@ public class TempMovement : MonoBehaviour
         powerKey = KeyCode.Joystick1Button0;
         axis = "Joystick1Axis";
         tm.text = "J1";
-        if(character.name == "Victoria"){
-            shootKey = KeyCode.Joystick1Button2;
-        }
+        shootKey = KeyCode.Joystick1Button2;
+        
         if(character.name == "Henrik"){
             switchPressKey = KeyCode.Joystick1Button2;
         }
