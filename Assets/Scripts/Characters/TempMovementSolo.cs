@@ -46,14 +46,14 @@ public class TempMovementSolo : MonoBehaviour
             // We set different controllers according to the character name
             switch(character.name) {
                 // Fei is controlled by default with the arrow keys
-                case "Fei":
+                case "Fei Solo":
                     setControlsToArrowKeys();
                     Player2.transform.parent = Player1.transform;
                     Player3.transform.parent = Player1.transform;
                     Player4.transform.parent = Player1.transform;
                     break;
                 // Henrik is controlled by defautl with the ZQSD scheme
-                case "Henrik":
+                case "Henrik Solo":
                     setControlsToArrowKeys();
                     Player2.transform.parent = Player1.transform;
                     Player3.transform.parent = Player1.transform;
@@ -67,7 +67,7 @@ public class TempMovementSolo : MonoBehaviour
                     Player4.transform.parent = Player1.transform;
                     break;
                 // Lucie is controlled by default with CVBSpace scheme
-                case "Lucie":
+                case "Lucie Solo":
                     setControlsToArrowKeys();
                     Player2.transform.parent = Player1.transform;
                     Player3.transform.parent = Player1.transform;
@@ -106,7 +106,6 @@ public class TempMovementSolo : MonoBehaviour
             Player3.transform.parent = Player2.transform;
             Player2.SetActive(true);
             Player1.SetActive(false);
-            Debug.Log("press");
         }
 
 

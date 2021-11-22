@@ -36,7 +36,6 @@ public class MainMenu : MonoBehaviour
     public void PlayLevel1Solo()
     { // Go to the nest scene inthe stack
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-        GetComponent<GameManager>().solo = true;
     }
 
     public void PlayLevel2Solo()

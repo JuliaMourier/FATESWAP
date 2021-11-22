@@ -6,31 +6,45 @@ public class Door : MonoBehaviour
 {
     public List<Character> characters;
     private SpriteRenderer spriteRenderer;
+    public GameManager GameManager;
 
     private int numberCharacterWhoEnteredTheDoor = 0;
 
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
+  
     }
 
     private void OnTriggerStay2D(Collider2D other) {
-        if(spriteRenderer.color == Color.black){ //If door is open
+        
+        if (spriteRenderer.color == Color.black){ //If door is open
+            if (GameManager.solo)
+            {
+                    if (Input.GetKey(KeyCode.W))
+                {
+                    this.gameObject.SetActive(false);
+                    OnDoorEntered();
+                }
+            }
+            else
+            {
+
             foreach(Character character in characters){
                 if(other.gameObject.Equals(character.gameObject)){ //If its the character 
-                    if(Input.GetKey(character.GetComponent<TempMovement>().shootKey)){ //and he wants to go through the door
+                    if(Input.GetKey(character.GetComponent<TempMovement>().shootKey))
+                        {//and he wants to go through the door
                         character.gameObject.SetActive(false); //character enter
                         numberCharacterWhoEnteredTheDoor++; //One character more is entered
                     }
                 }
             }
+            }
         }
-
-        //if all characters have entered the door
-        if(numberCharacterWhoEnteredTheDoor >= 4){
+        if (numberCharacterWhoEnteredTheDoor >= 4){
             OnDoorEntered();
         }
+        
     }
-
     //Open the door
     protected virtual void OnDoorEntered(){ //When the door is entered by all the characters
         FindObjectOfType<GameManager>().WinTheGame(this);
