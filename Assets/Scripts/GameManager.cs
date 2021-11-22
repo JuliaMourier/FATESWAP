@@ -52,13 +52,16 @@ public class GameManager : MonoBehaviour
 
     public Robot boss = null;
 
-    public bool solo { get; private set; } = true;
+    public bool solo { get; private set; } = false;
 
     void Awake() {
         // Get and pass the AudioSource component to the audioSource attribute
         audioSource = GetComponent<AudioSource>();
-        solo = !this.Lucie.gameObject.activeInHierarchy;        
-        Debug.Log(solo);
+        
+        if (!this.Lucie.gameObject.activeInHierarchy)
+        {
+            solo = true;
+        }
         // Initialization of the indexByCharacter dictionary
         indexByCharacter.Add(Henrik, 0);
         indexByCharacter.Add(Fei, 1);
