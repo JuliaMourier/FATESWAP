@@ -28,8 +28,7 @@ public class TempMovementSolo : MonoBehaviour
 
     // Controllers
     private KeyCode jumpKey;
-    private KeyCode leftKey;
-    private KeyCode rightKey;
+   
     private KeyCode powerKey;
     private KeyCode swap;
 
@@ -206,24 +205,21 @@ public class TempMovementSolo : MonoBehaviour
     // Method to set controls to the ZQDE keys
     private void setControlsToZQDEKeys() {
         jumpKey = KeyCode.Z;
-        leftKey = KeyCode.Q;
-        rightKey = KeyCode.D;
+
         powerKey = KeyCode.E;
     }
 
     // Method to set controls to the IJLO keys
     private void setControlsToIJLOKeys() {
         jumpKey = KeyCode.I;
-        leftKey = KeyCode.J;
-        rightKey = KeyCode.L;
+
         powerKey = KeyCode.O;
     }
 
     // Method to set controls to the CVBSpace keys
     private void setControlsToCVBSpaceKeys() {
         jumpKey = KeyCode.Space;
-        leftKey = KeyCode.V;
-        rightKey = KeyCode.B;
+
         powerKey = KeyCode.C;
     }
     /*
