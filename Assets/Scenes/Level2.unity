@@ -5569,6 +5569,7 @@ MonoBehaviour:
   sliderSwap: {fileID: 2130025292}
   swapDelay: 15
   boss: {fileID: 0}
+  solo: 0
 --- !u!4 &1558632570
 Transform:
   m_ObjectHideFlags: 0
@@ -5648,11 +5649,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7696761662435633129, guid: 056add8ea6282d1458ea5a91d8c40a79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.62
+      value: -8.45
       objectReference: {fileID: 0}
     - target: {fileID: 7696761662435633129, guid: 056add8ea6282d1458ea5a91d8c40a79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.76
+      value: -2.37
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 056add8ea6282d1458ea5a91d8c40a79, type: 3}
