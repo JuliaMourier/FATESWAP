@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
-public class GameManager : MonoBehaviour
+public class GameManagerSolo : MonoBehaviour
 {
     // LIVES
     public int lives = 3;
@@ -51,7 +51,6 @@ public class GameManager : MonoBehaviour
     private bool isGameOver = false; //boolean for the state of the game
 
     public Robot boss = null;
-    public bool solo = false;
 
     void Awake() {
         // Get and pass the AudioSource component to the audioSource attribute
@@ -62,10 +61,7 @@ public class GameManager : MonoBehaviour
         indexByCharacter.Add(Fei, 1);
         indexByCharacter.Add(Victoria, 2);
         indexByCharacter.Add(Lucie, 3);
-        if (!solo)
-        {
         sliderSwap.maxValue = swapDelay;
-        }
     }
 
     void Start() {
