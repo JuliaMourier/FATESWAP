@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public GameObject endOfLevelMenuUI;
 
     public AudioSource swapSourceSound;
-
+    public MainMenu mainMenu;
     // AUDIO
     public AudioClip gameOverAudioClip;
     public AudioClip endOfLevelAudioClip;
@@ -82,12 +82,23 @@ public class GameManager : MonoBehaviour
     }
 
     // when a character find a collectable
-    public void CollectableFound(Collectables collectable){
-        hasKey = true;
-        key.color = Color.white;
-        collectable.gameObject.SetActive(false);
-        //Set the door's Color to black
-        exit.color = Color.black;
+    public void CollectableFound(Collectables collectable)
+    {
+        if (collectable.gameObject.name == "Key")
+        {
+            hasKey = true;
+            key.color = Color.white;
+            collectable.gameObject.SetActive(false);
+            //Set the door's Color to black
+            exit.color = Color.black;
+        }
+        if (collectable.gameObject.name == "Note")
+        {
+            note.color = Color.white;
+            collectable.gameObject.SetActive(false);
+            string scene = SceneManager.GetActiveScene().name;
+            //mainMenu.Cadenas(scene);
+        }
     }
 
     public void NoteFound(){
