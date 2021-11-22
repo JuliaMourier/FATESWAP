@@ -7,6 +7,6 @@ public class DoorToBoss : Door
 {
     protected override void OnDoorEntered()
     {  
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("DialogBoss");
     }
 }

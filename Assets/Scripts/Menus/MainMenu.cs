@@ -40,22 +40,22 @@ public class MainMenu : MonoBehaviour
 
     public void PlayLevel1()
     { // Go to the nest scene inthe stack
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene("Dialog1");
     }
 
     public void PlayLevel2()
     { // Go to the nest scene inthe stack
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
+        SceneManager.LoadScene("Dialog2");
     }
 
     public void PlayLevel3()
     { // Go to the nest scene inthe stack
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 5);
+        SceneManager.LoadScene("Dialog3");
     }
 
     public void PlayLevel4()
     { // Go to the nest scene inthe stack
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 7);
+        SceneManager.LoadScene("Dialog4");
     }
 
     public void PlayLevel1Solo()

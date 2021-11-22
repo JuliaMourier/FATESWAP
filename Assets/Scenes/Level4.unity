@@ -1912,12 +1912,14 @@ MonoBehaviour:
   gameOverMenuUI: {fileID: 1460514919}
   endOfLevelMenuUI: {fileID: 1460514918}
   swapSourceSound: {fileID: 2070768636}
+  mainMenu: {fileID: 0}
   gameOverAudioClip: {fileID: 8300000, guid: 3e3e8dbad8f4aa048ba84ef1405af255, type: 3}
   endOfLevelAudioClip: {fileID: 8300000, guid: 5ec400b27afd110409def87e6b1b2ead, type: 3}
   exit: {fileID: 82448853}
   sliderSwap: {fileID: 211449907}
-  swapDelay: 5
+  swapDelay: 15
   boss: {fileID: 0}
+  solo: 0
 --- !u!4 &167430763
 Transform:
   m_ObjectHideFlags: 0

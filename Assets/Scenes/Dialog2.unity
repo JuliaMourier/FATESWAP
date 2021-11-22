@@ -2362,7 +2362,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 88a1f6e9cf720894382a305422dc0449, type: 3}
     - target: {fileID: 4531389029914423576, guid: fc6c13dca9e3dd345ace50ba92ad75cb, type: 3}
       propertyPath: m_Text
-      value: "Attends il semblerait qu'il y est quelque chose de bizarre avec ceux-l\xE0"
+      value: "Attends il semblerait qu'il y ait quelque chose de bizarre avec ceux-l\xE0"
       objectReference: {fileID: 0}
     - target: {fileID: 5785007798646759555, guid: fc6c13dca9e3dd345ace50ba92ad75cb, type: 3}
       propertyPath: m_Name
