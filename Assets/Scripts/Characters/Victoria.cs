@@ -31,7 +31,7 @@ public class Victoria : Character
 
     //Check if Victoria wants to throw a fireball
     private void Update() {
-        if(Input.GetKeyUp(GetComponent<TempMovement>().shootKey) && isCapableOfThrowingFireBalls){ //if her power are activates and she press X 
+        if(Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey) && isCapableOfThrowingFireBalls){ //if her power are activates and she press X 
             ThrowFireBall(); //throw
         }
     }
