@@ -4825,17 +4825,22 @@ MonoBehaviour:
   firstLive: {fileID: 0}
   secondLive: {fileID: 0}
   thirdLive: {fileID: 0}
+  key: {fileID: 0}
+  note: {fileID: 0}
   Lucie: {fileID: 0}
   Victoria: {fileID: 0}
   Fei: {fileID: 0}
   Henrik: {fileID: 0}
-  textEndLvl: {fileID: 0}
+  listOfRobot: []
   gameOverMenuUI: {fileID: 0}
   endOfLevelMenuUI: {fileID: 0}
   swapSourceSound: {fileID: 0}
   gameOverAudioClip: {fileID: 8300000, guid: 3e3e8dbad8f4aa048ba84ef1405af255, type: 3}
   endOfLevelAudioClip: {fileID: 0}
   exit: {fileID: 0}
+  sliderSwap: {fileID: 0}
+  swapDelay: 15
+  boss: {fileID: 0}
 --- !u!4 &1558632570
 Transform:
   m_ObjectHideFlags: 0
