@@ -181,6 +181,7 @@ public class TempMovement : MonoBehaviour
 
     // Method to set controls to the arrow keys
     private void setControlsToJ4() {
+        
         jumpKey = KeyCode.UpArrow;
         axis = "Horizontal";
         powerKey = KeyCode.RightShift;
