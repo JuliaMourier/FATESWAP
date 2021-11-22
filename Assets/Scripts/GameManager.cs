@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
 
     // SWAP SETTINGS
     private Dictionary<Character, int> indexByCharacter = new Dictionary<Character, int>();
-    private float swapDelay = 15.0f;
+    public float swapDelay = 15.0f;
 
     private float elapsedTime = 0.0f;
 
