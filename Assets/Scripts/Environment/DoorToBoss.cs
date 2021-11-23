@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class DoorToBoss : Door
 {
-    protected override void OnDoorEntered()
+    protected override void OnDoorEntered() 
     {  
-        SceneManager.LoadScene("DialogBoss");
+        SceneManager.LoadScene("DialogBoss"); //Load the scene of dialog of the boss scene
     }
 }

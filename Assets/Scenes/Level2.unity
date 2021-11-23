@@ -2320,6 +2320,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6768015982698997864, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
   m_PrefabInstance: {fileID: 360994631}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &360994633 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6768015982698997877, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
+  m_PrefabInstance: {fileID: 360994631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &390546624 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
@@ -5563,9 +5568,10 @@ MonoBehaviour:
   gameOverMenuUI: {fileID: 1860824969}
   endOfLevelMenuUI: {fileID: 1472425976}
   swapSourceSound: {fileID: 125950869}
+  mainMenu: {fileID: 0}
   gameOverAudioClip: {fileID: 8300000, guid: 3e3e8dbad8f4aa048ba84ef1405af255, type: 3}
   endOfLevelAudioClip: {fileID: 8300000, guid: 2a5e3574c3016fb44b56a34272376d4f, type: 3}
-  exit: {fileID: 0}
+  exit: {fileID: 360994633}
   sliderSwap: {fileID: 2130025292}
   swapDelay: 15
   boss: {fileID: 0}
