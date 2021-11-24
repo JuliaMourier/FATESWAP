@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
     // SCENE NAME
-    private string levelName = SceneManager.GetActiveScene().name;
+    private string levelName;
 
     // LIVES
     public int lives = 3;
@@ -62,6 +62,8 @@ public class GameManager : MonoBehaviour
     void Awake() {
         // Get and pass the AudioSource component to the audioSource attribute
         audioSource = GetComponent<AudioSource>();
+
+        levelName = SceneManager.GetActiveScene().name;
 
         // Initialization of the indexByCharacter dictionary
         indexByCharacter.Add(Henrik, 0);
