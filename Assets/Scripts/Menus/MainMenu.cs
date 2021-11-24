@@ -35,11 +35,6 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void PlayGame() {
-        // Go to the nest scene in the stack
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
     public void PlayLevel1Solo() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         GetComponent<GameManager>().solo = true;
