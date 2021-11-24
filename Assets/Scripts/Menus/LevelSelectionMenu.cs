@@ -16,7 +16,17 @@ public class LevelSelectionMenu : MonoBehaviour {
     }
 
     private void Update() {
+        UpdateLevelStatus();
         UpdateLevelImage();
+    }
+
+    // Update the level unlocked status
+    // If the previous level has a stars number greater than 0, the current level is unlocked
+    private void UpdateLevelStatus() {
+        int previousLevelIndex = int.Parse(gameObject.name) - 1;
+        if (PlayerPrefs.GetInt("StarsLevel" + previousLevelIndex) > 0) {
+            unlocked = true;
+        }
     }
 
     // Update the level UI corresponding to the level state (unlocked or not)

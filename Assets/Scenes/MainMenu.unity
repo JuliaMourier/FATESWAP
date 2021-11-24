@@ -3610,8 +3610,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cadenas1: {fileID: 0}
-  cadenas2: {fileID: 227586966}
-  cadenas3: {fileID: 2038275640}
+  cadenas2: {fileID: 0}
+  cadenas3: {fileID: 0}
   cadenas4: {fileID: 0}
 --- !u!1 &731273458
 GameObject:
@@ -4231,7 +4231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8403449504500025948, guid: 7c296ec62e716cf46bc789aa4604a428, type: 3}
       propertyPath: m_Name
-      value: Niv04
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8403449505843830925, guid: 7c296ec62e716cf46bc789aa4604a428, type: 3}
       propertyPath: m_text
@@ -8886,7 +8886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8403449504500025948, guid: 7c296ec62e716cf46bc789aa4604a428, type: 3}
       propertyPath: m_Name
-      value: Niv02
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8403449505843830925, guid: 7c296ec62e716cf46bc789aa4604a428, type: 3}
       propertyPath: m_text
@@ -10636,7 +10636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8403449504500025948, guid: 7c296ec62e716cf46bc789aa4604a428, type: 3}
       propertyPath: m_Name
-      value: Niv03
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8403449505843830925, guid: 7c296ec62e716cf46bc789aa4604a428, type: 3}
       propertyPath: m_text
@@ -11736,7 +11736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8403449504500025948, guid: 7c296ec62e716cf46bc789aa4604a428, type: 3}
       propertyPath: m_Name
-      value: Niv01
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8403449504537635365, guid: 7c296ec62e716cf46bc789aa4604a428, type: 3}
       propertyPath: m_IsActive
