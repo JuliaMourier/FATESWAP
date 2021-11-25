@@ -81,8 +81,11 @@ public class GameManager : MonoBehaviour
         }
        
         //Gives the position between the initial and final position to make a smooth transition
-        sliderSwap.value = elapsedTime;
-        elapsedTime += Time.deltaTime; //increment the time
+        if(!isGameOver){
+            sliderSwap.value = elapsedTime;
+            elapsedTime += Time.deltaTime; //increment the time
+        }
+        
     }
 
     // when a character find a collectable

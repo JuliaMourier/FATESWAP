@@ -18,7 +18,6 @@ public class RobotBody : MonoBehaviour
             if(robot.ennemi == FindObjectOfType<Victoria>().gameObject){
                 if(collision.gameObject.layer == LayerMask.NameToLayer("Fireball")){
                     if(robot.isAlive){
-                        robot.isAlive = false;
                         robot.RobotDie();
                     }
                 }
@@ -27,7 +26,6 @@ public class RobotBody : MonoBehaviour
         else {
             if(collision.gameObject.layer == LayerMask.NameToLayer("Fireball")){
                 if(robot.isAlive){
-                    robot.isAlive = false;
                     robot.RobotDie();            
                 }
             }

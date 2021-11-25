@@ -30,6 +30,13 @@
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
     <NoStdLib>true</NoStdLib>
@@ -68,7 +75,10 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Enemies\OrderRobot.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+     <Compile Include="Assets\Scripts\GameManagerSolo.cs" />
+     <Compile Include="Assets\Scripts\Characters\VictoriaSolo.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
@@ -120,7 +130,6 @@
      <Compile Include="Assets\Scripts\Environment\Collectables.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-     <Compile Include="Assets\Scripts\Enemies\OrderRobot.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -823,44 +832,54 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PhotonChat.csproj">
-      <Project>{4a56b5ce-21a4-0fef-8ca4-d174bb5c8e9e}</Project>
+      <Project>{CEB5564A-A421-EF0F-8CA4-D174BB5C8E9E}</Project>
       <Name>PhotonChat</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
-      <Project>{6cf66314-52df-dd70-c160-28b0b8a9a141}</Project>
+      <Project>{1463F66C-DF52-70DD-C160-28B0B8A9A141}</Project>
       <Name>PhotonUnityNetworking.Editor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
-      <Project>{ab30ccfe-490e-9c0b-3dd8-0a33d6a0f392}</Project>
+      <Project>{FECC30AB-0E49-0B9C-3DD8-0A33D6A0F392}</Project>
       <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{5d1da2d0-41fb-dbb8-7179-9e83dda9c8bb}</Project>
+      <Project>{D0A21D5D-FB41-B8DB-7179-9E83DDA9C8BB}</Project>
       <Name>PhotonRealtime</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
-      <Project>{b9dde90a-32bf-3cf2-51d7-15e3c279e8a2}</Project>
+      <Project>{0AE9DDB9-BF32-F23C-51D7-15E3C279E8A2}</Project>
       <Name>PunDemos.DemoHubEditor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{f52d8970-d9eb-b621-9215-ccc4b8f379d0}</Project>
+      <Project>{70892DF5-EBD9-21B6-9215-CCC4B8F379D0}</Project>
       <Name>PhotonUnityNetworking.Utilities</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{408ae106-3e89-c6f9-8900-b9bc2ec0b103}</Project>
+      <Project>{06E18A40-893E-F9C6-8900-B9BC2EC0B103}</Project>
       <Name>PhotonUnityNetworking</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{502e99ae-fad4-8a49-e129-1fab7f1e194e}</Project>
+      <Project>{AE992E50-D4FA-498A-E129-1FAB7F1E194E}</Project>
       <Name>PhotonUnityNetworking.Demos</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{0fd8733e-05ac-375a-49df-19e0fdf0956a}</Project>
+      <Project>{3E73D80F-AC05-5A37-49DF-19E0FDF0956A}</Project>
       <Name>PunDemos.DemoSlotcarEditor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
-      <Project>{49e05c69-31eb-01b5-57b3-86e90727ee16}</Project>
+      <Project>{695CE049-EB31-B501-57B3-86E90727EE16}</Project>
       <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

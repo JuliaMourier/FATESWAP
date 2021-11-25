@@ -46,9 +46,10 @@ public class Robot : MonoBehaviour
 
     //when robot dies launch the animation of explosion and deactivate the robot after 1s
     public void RobotDie(){
-        
         //Invoke("Disable", 1);
-        StartCoroutine(DeactivateRobot());
+        if(isAlive){
+            StartCoroutine(DeactivateRobot());
+        }
     }
 
     //deactivate the robot
@@ -58,6 +59,7 @@ public class Robot : MonoBehaviour
 
     // If we want to put less than 1s for the deactivation
     private IEnumerator DeactivateRobot(){
+        isAlive = false;
         animator.SetTrigger("boom");
         float duration = 1f;
         float elapsed = 0.0f;

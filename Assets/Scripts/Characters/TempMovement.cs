@@ -65,7 +65,7 @@ public class TempMovement : MonoBehaviour
                     break;
                 // Henrik is controlled by defautl with the ZQSD scheme
                 case "Henrik":
-                    setControlsToJ4();
+                    setControlsToJ1();
                     break;
                 // Victoria is controlled by default with IJLO scheme
                 case "Victoria":
@@ -73,7 +73,7 @@ public class TempMovement : MonoBehaviour
                     break;
                 // Lucie is controlled by default with CVBSpace scheme
                 case "Lucie":
-                    setControlsToJ1();
+                    setControlsToJ4();
                     break;
             }
         }
@@ -115,20 +115,7 @@ public class TempMovement : MonoBehaviour
         else if (Input.GetKeyDown(jumpKey)  && IsGrounded){
             GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, impulsionForce), ForceMode2D.Impulse);
         }
-        /*
-        if ((Input.GetButtonDown("Jump") && IsGrounded))
-        {
-            jumpKeyHeld = true;
-            // animator.SetBool("isJumping", true);
-
-            rb.AddForce(new Vector2(0, 2) * jumpForce * rb.mass, ForceMode2D.Impulse);
-            IsGrounded = false;
-        }
-        else if (Input.GetButtonUp("Jump"))
-        {
-            jumpKeyHeld = false;
-        }*/
-
+        
         // if the powerKey is pressed : launch the transform state of the animator 
         if (Input.GetKeyDown(powerKey)){
             animator.SetTrigger("transformation");
