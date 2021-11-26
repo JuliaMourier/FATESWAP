@@ -1,10 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    // SCENE NAME
+    private string levelName;
+
     // LIVES
     public int lives = 3;
     public Lives firstLive;
@@ -25,6 +30,12 @@ public class GameManager : MonoBehaviour
 
     // COLLECTABLES
     public bool hasKey {get; private set;} = false;
+
+    // STARS
+    private int currentStarsNumber = 0;
+    public Image starSliderImage;
+    public TextMeshProUGUI countdownText;
+    public int countdownTime;
 
     // MENUS
     public GameObject gameOverMenuUI;
@@ -57,6 +68,8 @@ public class GameManager : MonoBehaviour
         // Get and pass the AudioSource component to the audioSource attribute
         audioSource = GetComponent<AudioSource>();
 
+        levelName = SceneManager.GetActiveScene().name;
+
         // Initialization of the indexByCharacter dictionary
         indexByCharacter.Add(Henrik, 0);
         indexByCharacter.Add(Fei, 1);
@@ -70,14 +83,20 @@ public class GameManager : MonoBehaviour
 
     void Start() {
         // We invoke the swapCharacters() method repeatedly according to the swapDelay value
-        InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);  
-        
+        InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay); 
+        // Coroutine that handles the timer 
+        StartCoroutine(CountdownTimerToNull());
     }
 
     //Check if the heroes are out of the map
     public void Update(){
         if(CharactersOutOfMap()){
             HeroesTakeDamage();
+        }
+
+        // While the fill amount of the star slider is not null, we decrement it every second
+        if (starSliderImage.fillAmount > 0) {
+            starSliderImage.fillAmount -= 1.0f / countdownTime * Time.deltaTime;
         }
        
         //Gives the position between the initial and final position to make a smooth transition
@@ -100,19 +119,60 @@ public class GameManager : MonoBehaviour
         {
             note.color = Color.white;
             collectable.gameObject.SetActive(false);
-            string scene = SceneManager.GetActiveScene().name;
+            //string scene = levelName;
             //mainMenu.Cadenas(scene);
         }
     }
 
     public void NoteFound(){
         note.color = Color.white;
-        //TODO : get star
+        currentStarsNumber++;
+    }
+
+    IEnumerator CountdownTimerToNull() {
+        int remainingTime = countdownTime;
+        while (remainingTime > 0) {
+            countdownText.text = timeToString(remainingTime);
+            yield return new WaitForSeconds(1f);
+            remainingTime--;         
+        }
+        countdownText.text = timeToString(remainingTime);
+    }
+
+    // This method returns a given time (in second) to a formatted string with minutes and seconds
+    private string timeToString(int time) {
+        int minutes = 0;
+        int seconds = 0;
+        string secondsToString;
+        // Calculates the minutes and seconds according to the time value
+        if (time > 60) {
+            minutes = time/60;
+            seconds = time%60;
+        } else {
+            seconds = time;
+        }
+        // Add the character '0' before the seconds number if it is lower than 10
+        if (seconds < 10) {
+            secondsToString = "0" + seconds;
+        } else {
+            secondsToString = seconds.ToString();
+        }
+        // Returns the string result
+        return minutes + ":" + secondsToString;
     }
 
     public void WinTheGame(Door door) {
-        if(hasKey) {
+        if (hasKey) {
             Time.timeScale = 0f;
+            currentStarsNumber++;
+            if (starSliderImage.fillAmount > 0) {
+                currentStarsNumber++;
+            }
+            // If the current stars number for level is greater than the saved record (for this level), we update it
+            if (currentStarsNumber > PlayerPrefs.GetInt("Stars" + levelName)) {
+                PlayerPrefs.SetInt("Stars" + levelName, currentStarsNumber);
+            }
+
             // Display the end-of-level menu and play the associated audio clip
             this.endOfLevelMenuUI.SetActive(true);
             audioSource.clip = endOfLevelAudioClip;
@@ -134,13 +194,13 @@ public class GameManager : MonoBehaviour
             firstLive.LooseLive();
             GameOver(); //The heroes have lost all their lives
         }
-      
         lives--; //decrement the lives
     }
 
     // Game over : end of the level
     public void GameOver(){
         isGameOver = true;
+        currentStarsNumber = 0;
         this.gameOverMenuUI.SetActive(true);
         audioSource.clip = gameOverAudioClip;
         audioSource.loop = true;
@@ -159,7 +219,7 @@ public class GameManager : MonoBehaviour
     public void RestartLevel() {
         isGameOver = false;
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(levelName);
     }
 
     // Load the main menu scene
