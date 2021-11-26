@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -32,7 +34,8 @@ public class GameManager : MonoBehaviour
     // STARS
     private int currentStarsNumber = 0;
     public Image starSliderImage;
-    public float countdownTime;
+    public TextMeshProUGUI countdownText;
+    public int countdownTime;
 
     // MENUS
     public GameObject gameOverMenuUI;
@@ -80,8 +83,9 @@ public class GameManager : MonoBehaviour
 
     void Start() {
         // We invoke the swapCharacters() method repeatedly according to the swapDelay value
-        InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);  
-        
+        InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay); 
+        // Coroutine that handles the timer 
+        StartCoroutine(CountdownTimerToNull());
     }
 
     //Check if the heroes are out of the map
@@ -123,6 +127,38 @@ public class GameManager : MonoBehaviour
     public void NoteFound(){
         note.color = Color.white;
         currentStarsNumber++;
+    }
+
+    IEnumerator CountdownTimerToNull() {
+        int remainingTime = countdownTime;
+        while (remainingTime > 0) {
+            countdownText.text = timeToString(remainingTime);
+            yield return new WaitForSeconds(1f);
+            remainingTime--;         
+        }
+        countdownText.text = timeToString(remainingTime);
+    }
+
+    // This method returns a given time (in second) to a formatted string with minutes and seconds
+    private string timeToString(int time) {
+        int minutes = 0;
+        int seconds = 0;
+        string secondsToString;
+        // Calculates the minutes and seconds according to the time value
+        if (time > 60) {
+            minutes = time/60;
+            seconds = time%60;
+        } else {
+            seconds = time;
+        }
+        // Add the character '0' before the seconds number if it is lower than 10
+        if (seconds < 10) {
+            secondsToString = "0" + seconds;
+        } else {
+            secondsToString = seconds.ToString();
+        }
+        // Returns the string result
+        return minutes + ":" + secondsToString;
     }
 
     public void WinTheGame(Door door) {
