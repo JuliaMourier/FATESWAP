@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
 
     // STARS
     private int currentStarsNumber = 0;
+    public Image starSliderImage;
+    public float countdownTime;
 
     // MENUS
     public GameObject gameOverMenuUI;
@@ -87,6 +89,11 @@ public class GameManager : MonoBehaviour
         if(CharactersOutOfMap()){
             HeroesTakeDamage();
         }
+
+        // While the fill amount of the star slider is not null, we decrement it every second
+        if (starSliderImage.fillAmount > 0) {
+            starSliderImage.fillAmount -= 1.0f / countdownTime * Time.deltaTime;
+        }
        
         //Gives the position between the initial and final position to make a smooth transition
         sliderSwap.value = elapsedTime;
@@ -121,8 +128,11 @@ public class GameManager : MonoBehaviour
     public void WinTheGame(Door door) {
         if (hasKey) {
             Time.timeScale = 0f;
-            // If the current stars number for level is greater than the saved record (for this level), we update it
             currentStarsNumber++;
+            if (starSliderImage.fillAmount > 0) {
+                currentStarsNumber++;
+            }
+            // If the current stars number for level is greater than the saved record (for this level), we update it
             if (currentStarsNumber > PlayerPrefs.GetInt("Stars" + levelName)) {
                 PlayerPrefs.SetInt("Stars" + levelName, currentStarsNumber);
             }
