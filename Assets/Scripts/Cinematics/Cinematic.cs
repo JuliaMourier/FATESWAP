@@ -10,14 +10,14 @@ public class Cinematic : MonoBehaviour
 
     private int index = 0;
     
-    public void Next(){
+    public void Next(){ //Display the next image (or scene) of the cinematic
         index++;
-        if(listOfImages.Count > index){
-            listOfImages[index - 1].Deactivate();
-            listOfImages[index].Activate();
+        if(listOfImages.Count > index){ //If there is a next image
+            listOfImages[index - 1].Deactivate(); //Deactivate previous image
+            listOfImages[index].Activate(); //Activate the next one
         }
         else {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //LOad next scene
         }
     }
 }

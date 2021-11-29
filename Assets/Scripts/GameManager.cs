@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
         indexByCharacter.Add(Lucie, 3);
         if (!solo)
         {
-        sliderSwap.maxValue = swapDelay;
+            sliderSwap.maxValue = swapDelay;
         }
     }
 
