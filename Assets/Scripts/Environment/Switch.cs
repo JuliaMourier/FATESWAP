@@ -9,7 +9,7 @@ public class Switch : MonoBehaviour
 
     private bool isSwitchedOn = false; //State of the switch
     private bool available = true; //Availability of the switch
-
+    public GameManager GameManager;
     public Character theOneWhoCanSwitch; //If there is only one person who can switch the attribute is filled, else anyone can switch
 
 
@@ -24,10 +24,28 @@ public class Switch : MonoBehaviour
             }
         }
         else {
-            if(other.gameObject.Equals(theOneWhoCanSwitch.gameObject)){ //if only one character can switch the switch, check if the collision is dur to this character
-                if(available && theOneWhoCanSwitch.isPowerActivate && Input.GetKey(theOneWhoCanSwitch.GetComponent<TempMovementSolo>().switchPressKey)){ //if Henrik is capable of switch the switch
-                    available = false; //Disable the switch
-                    SwitchOn(); //Launch the change of state
+            if (GameManager.solo)
+            {
+
+                if (other.gameObject.Equals(theOneWhoCanSwitch.gameObject))
+                { //if only one character can switch the switch, check if the collision is dur to this character
+                    if (available && theOneWhoCanSwitch.isPowerActivate && Input.GetKey(theOneWhoCanSwitch.GetComponent<TempMovementSolo>().switchPressKey))
+                    { //if Henrik is capable of switch the switch
+                        available = false; //Disable the switch
+                        SwitchOn(); //Launch the change of state
+                    }
+                }
+            }
+            else
+            {
+
+                if (other.gameObject.Equals(theOneWhoCanSwitch.gameObject))
+                { //if only one character can switch the switch, check if the collision is dur to this character
+                    if (available && theOneWhoCanSwitch.isPowerActivate && Input.GetKey(theOneWhoCanSwitch.GetComponent<TempMovement>().switchPressKey))
+                    { //if Henrik is capable of switch the switch
+                        available = false; //Disable the switch
+                        SwitchOn(); //Launch the change of state
+                    }
                 }
             }
         }

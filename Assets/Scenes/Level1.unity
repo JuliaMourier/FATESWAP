@@ -243,6 +243,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 8e337817a787b4d49a62715e154c6a30, type: 3}
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 393321799}
+    - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: theOneWhoCanSwitch
       value: 
       objectReference: {fileID: 1151045411}
@@ -361,7 +365,6 @@ MonoBehaviour:
   sliderSwap: {fileID: 530525747}
   swapDelay: 15
   boss: {fileID: 0}
-  solo: 0
 --- !u!4 &393321800
 Transform:
   m_ObjectHideFlags: 0
@@ -2058,6 +2061,10 @@ PrefabInstance:
       propertyPath: movement
       value: 
       objectReference: {fileID: 286168354}
+    - target: {fileID: 1064990879981977151, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 393321799}
     - target: {fileID: 1064990881085756130, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
       propertyPath: m_Name
       value: Victoria
@@ -3428,6 +3435,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: c0e84da5ca61e844e8216c0461090ed7, type: 3}
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 393321799}
+    - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: theOneWhoCanSwitch
       value: 
       objectReference: {fileID: 0}
@@ -4618,6 +4629,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 8e337817a787b4d49a62715e154c6a30, type: 3}
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 393321799}
+    - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: theOneWhoCanSwitch
       value: 
       objectReference: {fileID: 1151045411}
@@ -5139,6 +5154,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 944846935}
     m_Modifications:
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 393321799}
+    - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: theOneWhoCanSwitch
       value: 
       objectReference: {fileID: 1151045411}
@@ -5619,6 +5638,10 @@ PrefabInstance:
       propertyPath: Victoria
       value: 
       objectReference: {fileID: 286168352}
+    - target: {fileID: 6768015982698997867, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 393321799}
     - target: {fileID: 6768015982698997867, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
       propertyPath: characters.Array.size
       value: 4
