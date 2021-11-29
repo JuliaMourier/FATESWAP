@@ -85,11 +85,12 @@ public class GameManager : MonoBehaviour
 
     void Start() {
         // We invoke the swapCharacters() method repeatedly according to the swapDelay value
-        InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay); 
-        // Coroutine that handles the timer 
-        StartCoroutine(CountdownTimerToNull());
         if (!solo)
         {
+            InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay); 
+        // Coroutine that handles the timer 
+        StartCoroutine(CountdownTimerToNull());
+       
             InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);
         }
     }
@@ -99,10 +100,12 @@ public class GameManager : MonoBehaviour
         if(CharactersOutOfMap()){
             HeroesTakeDamage();
         }
-
+        if (!solo)
+        {
         // While the fill amount of the star slider is not null, we decrement it every second
         if (starSliderImage.fillAmount > 0) {
             starSliderImage.fillAmount -= 1.0f / countdownTime * Time.deltaTime;
+        }
         }
        
         //Gives the position between the initial and final position to make a smooth transition
@@ -300,10 +303,14 @@ public class GameManager : MonoBehaviour
                     }
                 }
             }
-        
+
             // We update the controls of each character according to its new assigned index
-            foreach (KeyValuePair<Character, int> entry in indexByCharacter) {
-                entry.Key.GetComponentInChildren<TempMovement>().swapControls(entry.Value);            
+            if (!solo)
+            {
+                foreach (KeyValuePair<Character, int> entry in indexByCharacter)
+                {
+                    entry.Key.GetComponentInChildren<TempMovement>().swapControls(entry.Value);
+                }
             }
         }
 
