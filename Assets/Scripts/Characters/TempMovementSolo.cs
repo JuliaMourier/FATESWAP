@@ -106,6 +106,7 @@ public class TempMovementSolo : MonoBehaviour
             Player3.transform.parent = Player2.transform;
             Player2.SetActive(true);
             Player1.SetActive(false);
+            Debug.Log("press");
         }
 
 
