@@ -1422,6 +1422,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1064990879981977151, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1558632569}
     - target: {fileID: 1064990881085756149, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2809,6 +2813,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1558632569}
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: theOneWhoCanSwitch
       value: 
@@ -5192,6 +5200,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1558632569}
     - target: {fileID: 3056977934308329338, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: m_Name
       value: HiddenSwitch
@@ -5369,6 +5381,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1558632569}
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: theOneWhoCanSwitch
       value: 
@@ -5565,6 +5581,9 @@ MonoBehaviour:
   - {fileID: 1968351912}
   - {fileID: 1041059582}
   - {fileID: 545926775}
+  starSliderImage: {fileID: 2130025293}
+  countdownText: {fileID: 1891797436}
+  countdownTime: 30
   gameOverMenuUI: {fileID: 1860824969}
   endOfLevelMenuUI: {fileID: 1472425976}
   swapSourceSound: {fileID: 125950869}
@@ -5575,7 +5594,6 @@ MonoBehaviour:
   sliderSwap: {fileID: 2130025292}
   swapDelay: 15
   boss: {fileID: 0}
-  solo: 0
 --- !u!4 &1558632570
 Transform:
   m_ObjectHideFlags: 0
@@ -5936,6 +5954,17 @@ PrefabInstance:
       objectReference: {fileID: 1625585604}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 164a33f92f0dd7246adf1de1240d842a, type: 3}
+--- !u!114 &1891797436 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2069699422639963237, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+  m_PrefabInstance: {fileID: 2130025286}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1968351912 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4232223167055939054, guid: f4fb5d58d4e83b74d879738f00e89a4d, type: 3}
@@ -6297,6 +6326,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2130025293 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9202354814329248379, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+  m_PrefabInstance: {fileID: 2130025286}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2132716597
