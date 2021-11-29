@@ -12,14 +12,25 @@ public class Switch : MonoBehaviour
     public GameManager GameManager;
     public Character theOneWhoCanSwitch; //If there is only one person who can switch the attribute is filled, else anyone can switch
 
+    private Character[] characters;
+
+    private void Awake() {
+        characters = FindObjectsOfType<Character>();
+    }
 
     private void OnTriggerStay2D(Collider2D other) {
         //if the character hit the switch
         if(theOneWhoCanSwitch == null){
             if(other.gameObject.layer == LayerMask.NameToLayer("Characters")){ //if anyone can switch the switch no parameter theOneWhoCanSwitch is specified
-                if(available){
-                    available = false; //Disable the switch
-                    SwitchOn(); //Launch the change of state
+                foreach(Character character in characters){ //Test for each character
+                    if(other.gameObject.Equals(character.gameObject)){ //If its the character 
+                        if(Input.GetKey(character.GetComponent<TempMovement>().shootKey)){ //and he wants to go through the door
+                            if(available){
+                                available = false; //Disable the switch
+                                SwitchOn(); //Launch the change of state
+                            }
+                        }
+                    }
                 }
             }
         }

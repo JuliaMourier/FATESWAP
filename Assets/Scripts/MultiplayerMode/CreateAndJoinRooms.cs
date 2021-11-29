@@ -4,9 +4,13 @@ using UnityEngine;
 using Photon.Pun;
 using UnityEngine.UI;
 using Photon.Realtime;
+using UnityEngine.SceneManagement;
+
 
 public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 {
+
+
     //--- Name for the room --- //
     //when create a room
     public InputField createLobby;
@@ -38,12 +42,61 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     //Prefab item for the player (name of the player)
     public GameObject playerListItemPrefab;
 
+    private int countRooms = 0;
+
+    
+    private void Start(){ 
+        if (!PhotonNetwork.IsConnected)
+        {
+            PhotonNetwork.GameVersion = "FATESWAP0.0.1";
+            PhotonNetwork.PhotonServerSettings.AppSettings.AppVersion = "FATESWAP0.0.1";
+            PhotonNetwork.ConnectUsingSettings();
+        }
+        else
+            PhotonNetwork.JoinLobby();
+    }
+
+    // When connected, join the lobby
+    public override void OnConnectedToMaster()
+    {
+        PhotonNetwork.JoinLobby();
+    }
+
+    //When the lobby is joined, the loading is complete so we load the next scene in the stack
+    public override void OnJoinedLobby()
+    {
+        Debug.Log("Lobby Joined");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    
+    private void Update() {
+        if(PhotonNetwork.CountOfRooms != countRooms){
+            Debug.Log(PhotonNetwork.CountOfRooms);
+            Debug.Log(PhotonNetwork.CountOfPlayersInRooms);
+
+            countRooms = PhotonNetwork.CountOfRooms;
+        }
+    }
+
+    public override void OnEnable()
+    {
+        base.OnEnable();
+    }
+    public override void OnDisable()
+    {
+        base.OnDisable();
+    }
+
 
     //Allow a player to create a room thanks to photon
     public void CreateRoom(){
         GetUserName();
         if(createLobby.text != ""){
-            PhotonNetwork.CreateRoom(createLobby.text.ToUpper()); //Create room (upper case to avoid players errors))
+            RoomOptions options = new RoomOptions();
+            options.MaxPlayers = 4;
+            options.IsOpen = true;
+            options.IsVisible = true;
+            PhotonNetwork.CreateRoom(createLobby.text.ToUpper(), options); //Create room (upper case to avoid players errors))
         }
         Debug.Log("Create : " + PhotonNetwork.CountOfRooms); 
     }
@@ -96,9 +149,29 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         ErrorMenu.SetActive(true); //Active the popup
         errorMessage.text = "Room could not be joined : \n" + message; //Error message add in the popup
     }
+
+    public override void OnCreateRoomFailed(short returnCode, string message)
+    {
+        ErrorMenu.SetActive(true); //Active the popup
+        errorMessage.text = "Room could not be created : \n" + message; //Error message add in the popup
+    }
+
     
     //When the room list updates itself, display the current rooms
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
+    {
+        base.OnRoomListUpdate(roomList);
+
+        Debug.Log("List update, nb rooms : " + roomList.Count);
+        foreach(Transform transform in roomListContent){ //Destroy the preexisting rooms
+            Destroy(transform.gameObject);
+        }
+        for(int i = 0; i < roomList.Count; i++){ //Display the current rooms
+            Instantiate(roomListItemPrefab, roomListContent).GetComponent<RoomListItem>().SetUp(roomList[i]);
+        }
+    }
+
+    public void MyOnRoomListUpdate(List<RoomInfo> roomList)
     {
         Debug.Log("List update, nb rooms : " + roomList.Count);
         foreach(Transform transform in roomListContent){ //Destroy the preexisting rooms
@@ -112,8 +185,9 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     //When a player enter the room display the new player name in the list and update the number of players currently in the room
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
+        base.OnPlayerEnteredRoom(newPlayer);
         Debug.Log("player list updated");
-        //UpdateNumberOfPlayer();
+        UpdateNumberOfPlayer();
         Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
     }
 
@@ -129,6 +203,10 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     public void UpdateNumberOfPlayer(){
         roomName.text = PhotonNetwork.CurrentRoom.Name + " " + PhotonNetwork.CountOfPlayers + "/4"; //Name the room + number of players
+    }
+
+    public void Test(List<RoomInfo> infos){
+        Debug.Log(infos);
     }
 }
 

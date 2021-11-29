@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
         indexByCharacter.Add(Lucie, 3);
         if (!solo)
         {
-        sliderSwap.maxValue = swapDelay;
+            sliderSwap.maxValue = swapDelay;
         }
     }
 
@@ -108,7 +108,7 @@ public class GameManager : MonoBehaviour
         
        
         //Gives the position between the initial and final position to make a smooth transition
-        if (!solo)
+        if (!solo && !isGameOver)
         {
             sliderSwap.value = elapsedTime;
             elapsedTime += Time.deltaTime; //increment the time

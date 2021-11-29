@@ -10,7 +10,14 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 {
     // Connexion to Photon Network
     private void Start(){ 
-        PhotonNetwork.ConnectUsingSettings();
+        if (!PhotonNetwork.IsConnected)
+        {
+            PhotonNetwork.GameVersion = "FATESWAP0.0.1";
+            PhotonNetwork.PhotonServerSettings.AppSettings.AppVersion = "FATESWAP0.0.1";
+            PhotonNetwork.ConnectUsingSettings();
+        }
+        else
+            PhotonNetwork.JoinLobby();
     }
 
     // When connected, join the lobby
@@ -23,6 +30,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     public override void OnJoinedLobby()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
 
 }
