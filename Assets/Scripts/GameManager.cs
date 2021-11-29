@@ -62,7 +62,8 @@ public class GameManager : MonoBehaviour
     private bool isGameOver = false; //boolean for the state of the game
 
     public Robot boss = null;
-    public bool solo = false;
+
+    public bool solo { get; private set; } = false;
 
     void Awake() {
         // Get and pass the AudioSource component to the audioSource attribute
@@ -70,6 +71,7 @@ public class GameManager : MonoBehaviour
 
         levelName = SceneManager.GetActiveScene().name;
 
+        solo = !Lucie.gameObject.activeInHierarchy;        
         // Initialization of the indexByCharacter dictionary
         indexByCharacter.Add(Henrik, 0);
         indexByCharacter.Add(Fei, 1);
@@ -86,6 +88,10 @@ public class GameManager : MonoBehaviour
         InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay); 
         // Coroutine that handles the timer 
         StartCoroutine(CountdownTimerToNull());
+        if (!solo)
+        {
+            InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);
+        }
     }
 
     //Check if the heroes are out of the map
@@ -100,8 +106,11 @@ public class GameManager : MonoBehaviour
         }
        
         //Gives the position between the initial and final position to make a smooth transition
-        sliderSwap.value = elapsedTime;
-        elapsedTime += Time.deltaTime; //increment the time
+        if (!solo)
+        {
+            sliderSwap.value = elapsedTime;
+            elapsedTime += Time.deltaTime; //increment the time
+        }
     }
 
     // when a character find a collectable
@@ -251,6 +260,7 @@ public class GameManager : MonoBehaviour
 
     // Method to set the controls index for each character
     // The new index has to be different of the current one
+
     private void swapCharacters() {
         
         //Reset the HUD slider for swap
