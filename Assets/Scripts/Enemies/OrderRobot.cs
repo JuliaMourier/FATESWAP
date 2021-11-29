@@ -28,7 +28,6 @@ public class OrderRobot : MonoBehaviour
 
         if(!listOfRobots[check].isAlive && check < listOfRobots.Count){ //If the correct robot have been slained    
             if(check < hintColors.Count){
-                Debug.Log(check);
                 hintColors[check].SetActive(true);
             }
             check++;

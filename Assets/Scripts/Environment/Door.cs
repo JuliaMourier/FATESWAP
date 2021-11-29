@@ -6,7 +6,6 @@ public class Door : MonoBehaviour
 {
     public List<Character> characters;
     private SpriteRenderer spriteRenderer;
-    public GameManager GameManager;
 
     private int numberCharacterWhoEnteredTheDoor = 0;
 
@@ -18,7 +17,7 @@ public class Door : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other) {
         
         if (spriteRenderer.color == Color.black){ //If door is open
-            if (GameManager.solo)
+            if (FindObjectOfType<GameManager>().solo)
             {
                     if (Input.GetKey(KeyCode.W))
                 {

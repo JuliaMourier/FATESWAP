@@ -85,11 +85,12 @@ public class GameManager : MonoBehaviour
 
     void Start() {
         // We invoke the swapCharacters() method repeatedly according to the swapDelay value
+        StartCoroutine(CountdownTimerToNull());
+
         if (!solo)
         {
             InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay); 
         // Coroutine that handles the timer 
-        StartCoroutine(CountdownTimerToNull());
        
             InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);
         }

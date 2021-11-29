@@ -15,7 +15,6 @@ public class Victoria : Character
 
     public float durationDisabilityFireBall = 0.5f; //duration of disability of the power throwing fireballs
 
-    public GameManager GameManager;
     //When power is activated allow Victoria to throw fire balls
     public override void OnPowerActivate()
     {
@@ -32,7 +31,7 @@ public class Victoria : Character
 
     //Check if Victoria wants to throw a fireball
     private void Update() {
-        if (GameManager.solo)
+        if (FindObjectOfType<GameManager>().solo)
         {
         if(Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey) && isCapableOfThrowingFireBalls){ //if her power are activates and she press X 
             ThrowFireBall(); //throw
