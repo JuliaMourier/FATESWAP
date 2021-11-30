@@ -5408,7 +5408,7 @@ RectTransform:
   - {fileID: 1478982741}
   - {fileID: 62334601}
   - {fileID: 515528644}
-  - {fileID: 727379046}
+  - {fileID: 0}
   m_Father: {fileID: 1259124755}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9271,7 +9271,7 @@ RectTransform:
   - {fileID: 1837963027}
   - {fileID: 596686248}
   - {fileID: 409015392}
-  - {fileID: 1461450130}
+  - {fileID: 0}
   m_Father: {fileID: 1259124755}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
