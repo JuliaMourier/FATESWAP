@@ -34,6 +34,13 @@ public class LevelSelectionMenu : MonoBehaviour {
         PlayerPrefs.SetInt("StarsLevel0", 3);
     }
 
+    public void NewGameSolo()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 14);
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetInt("StarsLevel0", 3);
+    }
+
     // Update the level unlocked status
     // If the previous level has a stars number greater than 0, the current level is unlocked
     private void UpdateLevelStatus() {

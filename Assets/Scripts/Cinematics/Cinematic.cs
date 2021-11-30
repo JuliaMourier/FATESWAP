@@ -17,6 +17,7 @@ public class Cinematic : MonoBehaviour
             listOfImages[index].Activate(); //Activate the next one
         }
         else {
+            Debug.Log(SceneManager.GetActiveScene().buildIndex + 1);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //LOad next scene
         }
     }

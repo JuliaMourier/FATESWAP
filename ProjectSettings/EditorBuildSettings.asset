@@ -51,6 +51,42 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: 3a01070db10ad144d907f400a6f9fe6d
   - enabled: 1
-    path: Assets/Scenes/Level1_Solo.unity
+    path: Assets/Scenes/Solo/IntroCinematic_Solo.unity
+    guid: bc2026e129465af4bb97497ad816e67c
+  - enabled: 1
+    path: Assets/Scenes/Solo/Dialog1_Solo.unity
+    guid: 04631e34a94d57d44aaa89fd130f29ae
+  - enabled: 1
+    path: Assets/Scenes/Solo/Level1_Solo.unity
     guid: f1b3a7b6c4cfb864795d4b97593229a1
+  - enabled: 1
+    path: Assets/Scenes/Solo/Dialog2_Solo.unity
+    guid: b59be82bca6afca468daf3d298b3efbe
+  - enabled: 1
+    path: Assets/Scenes/Solo/Level2_solo.unity
+    guid: 3e97e421822b97f4099036d127152a24
+  - enabled: 1
+    path: Assets/Scenes/Solo/Dialog3_Solo.unity
+    guid: 164bc96c5ed8869498637606c615db1a
+  - enabled: 1
+    path: Assets/Scenes/Solo/Level3_Solo.unity
+    guid: e6c17ce88bfa57249941073d58c7776f
+  - enabled: 1
+    path: Assets/Scenes/Solo/Dialog4_Solo.unity
+    guid: 349a2bdc56359d8408929f421d7413ec
+  - enabled: 1
+    path: Assets/Scenes/Solo/Level4_Solo.unity
+    guid: bf04da394057ac54e91def0295a4c5bd
+  - enabled: 1
+    path: Assets/Scenes/Solo/DialogBoss_Solo.unity
+    guid: aba5eb2b2b7c13449b4918068af5d98a
+  - enabled: 1
+    path: Assets/Scenes/Solo/BossScene_Solo.unity
+    guid: 0616de3d709a98f4d990307b27031032
+  - enabled: 1
+    path: Assets/Scenes/Solo/FinalCinematic_Solo.unity
+    guid: 976d3353a74de354cbeba7641330f681
+  - enabled: 1
+    path: Assets/Scenes/Solo/Credits_Solo.unity
+    guid: 152d086d85d54ed4486f411751af441c
   m_configObjects: {}
