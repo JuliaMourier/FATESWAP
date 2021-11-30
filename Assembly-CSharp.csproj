@@ -139,10 +139,13 @@
     <Compile Include="Assets\Scripts\Environment\Collectables.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Assets\Scripts\MultiplayerMode\CharacterMulti.cs" />
     <Compile Include="Assets\Scripts\MultiplayerMode\Spawner.cs" />
     <Compile Include="Assets\Scripts\Menus\LoadingMenu.cs" />
     <Compile Include="Assets\MainMenuSolo.cs" />
+=======
+>>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
