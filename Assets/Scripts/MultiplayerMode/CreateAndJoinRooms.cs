@@ -42,6 +42,8 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     //Prefab item for the player (name of the player)
     public GameObject playerListItemPrefab;
 
+    public GameObject findRoomMenu;
+
     private int countRooms = 0;
 
     
@@ -68,25 +70,6 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         Debug.Log("Lobby Joined");
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    
-    private void Update() {
-        if(PhotonNetwork.CountOfRooms != countRooms){
-            Debug.Log(PhotonNetwork.CountOfRooms);
-            Debug.Log(PhotonNetwork.CountOfPlayersInRooms);
-
-            countRooms = PhotonNetwork.CountOfRooms;
-        }
-    }
-
-    public override void OnEnable()
-    {
-        base.OnEnable();
-    }
-    public override void OnDisable()
-    {
-        base.OnDisable();
-    }
-
 
     //Allow a player to create a room thanks to photon
     public void CreateRoom(){
@@ -171,17 +154,6 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         }
     }
 
-    public void MyOnRoomListUpdate(List<RoomInfo> roomList)
-    {
-        Debug.Log("List update, nb rooms : " + roomList.Count);
-        foreach(Transform transform in roomListContent){ //Destroy the preexisting rooms
-            Destroy(transform.gameObject);
-        }
-        for(int i = 0; i < roomList.Count; i++){ //Display the current rooms
-            Instantiate(roomListItemPrefab, roomListContent).GetComponent<RoomListItem>().SetUp(roomList[i]);
-        }
-    }
-
     //When a player enter the room display the new player name in the list and update the number of players currently in the room
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
@@ -205,8 +177,9 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         roomName.text = PhotonNetwork.CurrentRoom.Name + " " + PhotonNetwork.CountOfPlayers + "/4"; //Name the room + number of players
     }
 
-    public void Test(List<RoomInfo> infos){
-        Debug.Log(infos);
+    public void CloseListRoomAndOpen(){
+        findRoomMenu.SetActive(false);
+        PlayerListMenu.SetActive(true);
     }
 }
 

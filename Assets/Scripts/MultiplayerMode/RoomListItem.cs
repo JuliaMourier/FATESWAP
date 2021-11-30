@@ -12,6 +12,7 @@ public class RoomListItem : MonoBehaviourPunCallbacks
     //Text for the item : name of the room
     public Text nameOfRoom;
 
+
     //information about the current room
     RoomInfo roomInfo;
 
@@ -27,5 +28,7 @@ public class RoomListItem : MonoBehaviourPunCallbacks
     //When the player click on this room item button, join the room corresponding to its name
     public void OnClick(){
         PhotonNetwork.JoinRoom(nameOfRoom.text);
+        GameObject.Find("FindRoomMenu").SetActive(false);
+        GameObject.Find("Canvas").transform.Find("ListOfPlayerMenu").gameObject.SetActive(true);
     } 
 }

@@ -3687,10 +3687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50cea992bc726554dab89cf4bff9e286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cadenas1: {fileID: 0}
-  cadenas2: {fileID: 0}
-  cadenas3: {fileID: 0}
-  cadenas4: {fileID: 0}
 --- !u!1 &731273458
 GameObject:
   m_ObjectHideFlags: 0
@@ -5324,16 +5320,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124689225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 0.016176457, y: 0.016176457, z: 0.016176457}
   m_Children: []
-  m_Father: {fileID: 1318727163}
-  m_RootOrder: 5
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -72.99999, y: -905}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1124689227
@@ -5360,6 +5356,7 @@ MonoBehaviour:
   roomName: {fileID: 1915597396}
   playerListContent: {fileID: 1034284099}
   playerListItemPrefab: {fileID: 1473714507834432602, guid: 6664d7b9824df45439521a6f3d7b7f86, type: 3}
+  findRoomMenu: {fileID: 164981728}
 --- !u!1 &1158644023
 GameObject:
   m_ObjectHideFlags: 0
@@ -5389,10 +5386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50cea992bc726554dab89cf4bff9e286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cadenas1: {fileID: 0}
-  cadenas2: {fileID: 0}
-  cadenas3: {fileID: 0}
-  cadenas4: {fileID: 0}
 --- !u!224 &1158644025
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5408,7 +5401,7 @@ RectTransform:
   - {fileID: 1478982741}
   - {fileID: 62334601}
   - {fileID: 515528644}
-  - {fileID: 0}
+  - {fileID: 2055054739}
   m_Father: {fileID: 1259124755}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5828,7 +5821,7 @@ RectTransform:
   m_Children:
   - {fileID: 653052426}
   m_Father: {fileID: 1318727163}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6505,7 +6498,6 @@ RectTransform:
   - {fileID: 957503639}
   - {fileID: 1912079280}
   - {fileID: 1564561172}
-  - {fileID: 1124689226}
   - {fileID: 1395272814}
   - {fileID: 1225483567}
   - {fileID: 1609716547}
@@ -6530,10 +6522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50cea992bc726554dab89cf4bff9e286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cadenas1: {fileID: 0}
-  cadenas2: {fileID: 0}
-  cadenas3: {fileID: 0}
-  cadenas4: {fileID: 0}
 --- !u!1 &1320383816
 GameObject:
   m_ObjectHideFlags: 0
@@ -7192,7 +7180,7 @@ RectTransform:
   - {fileID: 1114445706}
   - {fileID: 35886473}
   m_Father: {fileID: 1318727163}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8082,10 +8070,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50cea992bc726554dab89cf4bff9e286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cadenas1: {fileID: 0}
-  cadenas2: {fileID: 0}
-  cadenas3: {fileID: 0}
-  cadenas4: {fileID: 0}
 --- !u!1 &1505232078
 GameObject:
   m_ObjectHideFlags: 0
@@ -8876,7 +8860,7 @@ RectTransform:
   m_Children:
   - {fileID: 2069417233}
   m_Father: {fileID: 1318727163}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9225,10 +9209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50cea992bc726554dab89cf4bff9e286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cadenas1: {fileID: 0}
-  cadenas2: {fileID: 0}
-  cadenas3: {fileID: 0}
-  cadenas4: {fileID: 0}
 --- !u!114 &1679171045 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8403449504500025927, guid: 7c296ec62e716cf46bc789aa4604a428, type: 3}
@@ -9271,7 +9251,7 @@ RectTransform:
   - {fileID: 1837963027}
   - {fileID: 596686248}
   - {fileID: 409015392}
-  - {fileID: 0}
+  - {fileID: 330047351}
   m_Father: {fileID: 1259124755}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9292,10 +9272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50cea992bc726554dab89cf4bff9e286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cadenas1: {fileID: 0}
-  cadenas2: {fileID: 0}
-  cadenas3: {fileID: 0}
-  cadenas4: {fileID: 0}
 --- !u!1 &1689465040
 GameObject:
   m_ObjectHideFlags: 0
@@ -11364,6 +11340,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fbc65e71958fb34ea6446999a86baaa, type: 3}
+--- !u!224 &2055054739 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8505085643821789194, guid: 2fbc65e71958fb34ea6446999a86baaa, type: 3}
+  m_PrefabInstance: {fileID: 2055054738}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2069417232
 GameObject:
   m_ObjectHideFlags: 0
