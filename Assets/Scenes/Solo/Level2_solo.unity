@@ -2793,6 +2793,7 @@ MonoBehaviour:
   - {fileID: 1968351912}
   key: {fileID: 1658758269}
   hiddenSwitch: {fileID: 1361675709}
+  hintColors: []
 --- !u!1001 &577497253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5353,6 +5354,10 @@ PrefabInstance:
       propertyPath: GameManager
       value: 
       objectReference: {fileID: 1558632569}
+    - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: theOneWhoCanSwitch
+      value: 
+      objectReference: {fileID: 270395768}
     - target: {fileID: 3056977934308329338, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: m_Name
       value: HiddenSwitch
