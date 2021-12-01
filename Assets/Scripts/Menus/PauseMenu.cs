@@ -4,7 +4,6 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-    public AudioSource audioSource;
 
     // If ESCAPE is pressed and depending on the GameIsPaused value,
     // it calls either the Resume() method or the Pause() method
@@ -24,7 +23,6 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
-        audioSource.Play();
     }
 
     // Pause the game
@@ -32,7 +30,6 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
-        audioSource.Pause();
     }
 
     public void ResetGameIsPausedValue() {

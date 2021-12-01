@@ -1,10 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioMixer musicMixer;
+    public AudioMixer soundsMixer;
+
+    void Start() {
+        LoadVolumeValues();
+    }
+
+    // Init the the volume values with the saved values
+    private void LoadVolumeValues() {
+        float musicVolume = PlayerPrefs.GetFloat("musicVolume");
+        musicMixer.SetFloat("musicVolume", musicVolume);
+        float soundsVolume = PlayerPrefs.GetFloat("soundsVolume");
+        soundsMixer.SetFloat("soundsVolume", soundsVolume);
+    }
+
     public void ExitGame(){ //Quit the game
         Application.Quit();
     }
