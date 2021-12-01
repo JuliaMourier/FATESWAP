@@ -98,7 +98,6 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
         PhotonNetwork.JoinRandomRoom();
         Debug.Log("Random Join : " + PhotonNetwork.CountOfRooms); 
-
     }
 
     //When a room is joined, redirect the player to the player list menu (TODO wait until 4 players) and name the room
@@ -107,7 +106,9 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         Debug.Log("Joined, Count of rooms : " + PhotonNetwork.CountOfRooms); 
         OnlineMenu.SetActive(false); //deactivate the current menu
         PlayerListMenu.SetActive(true); //activate the menu of the list of players in the room
-        roomName.text = PhotonNetwork.CurrentRoom.Name; //Name the room + number of players
+        if(roomName.text == "Room Name"){
+            roomName.text = PhotonNetwork.CurrentRoom.Name; //Name the room + number of players
+        }
         foreach(Transform transform in playerListContent){
             Destroy(transform.gameObject);
         }
@@ -158,7 +159,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         base.OnPlayerEnteredRoom(newPlayer);
-        Debug.Log("player list updated");
+        Debug.Log("player list updated " + PhotonNetwork.CountOfPlayers);
         UpdateNumberOfPlayer();
         Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
     }
@@ -173,13 +174,17 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         }
     }
 
+    
+
     public void UpdateNumberOfPlayer(){
         roomName.text = PhotonNetwork.CurrentRoom.Name + " " + PhotonNetwork.CountOfPlayers + "/4"; //Name the room + number of players
+        if(PhotonNetwork.CountOfPlayers == 4){
+            StartGame();
+        }
     }
 
-    public void CloseListRoomAndOpen(){
-        findRoomMenu.SetActive(false);
-        PlayerListMenu.SetActive(true);
+    public void StartGame(){
+        SceneManager.LoadScene("Level1");
     }
 }
 
