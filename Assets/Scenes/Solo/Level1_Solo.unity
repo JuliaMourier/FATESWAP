@@ -324,7 +324,7 @@ MonoBehaviour:
   Fei: {fileID: 945933336}
   Henrik: {fileID: 1151045411}
   listOfRobot: []
-  starSliderImage: {fileID: 1069164675}
+  starSliderImage: {fileID: 1156065597}
   countdownText: {fileID: 1069164674}
   countdownTime: 30
   gameOverMenuUI: {fileID: 1611730163}
@@ -2080,17 +2080,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1069164675 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8962187328764450, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
-  m_PrefabInstance: {fileID: 1069164673}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1123148714 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
@@ -2116,6 +2105,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52dadff74720e6444a82a81cfb7a75f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1156065597 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9202354814329248379, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+  m_PrefabInstance: {fileID: 1069164673}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1179186685 stripped

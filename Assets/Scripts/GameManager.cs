@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
 
         levelName = SceneManager.GetActiveScene().name;
 
-        solo = !Lucie.gameObject.activeInHierarchy;        
+        solo = !Lucie.gameObject.activeInHierarchy;
         // Initialization of the indexByCharacter dictionary
         indexByCharacter.Add(Henrik, 0);
         indexByCharacter.Add(Fei, 1);

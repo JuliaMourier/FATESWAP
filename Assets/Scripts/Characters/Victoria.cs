@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Victoria : Character
 {
-
+    
     private bool isCapableOfThrowingFireBalls = false; //is she capable of throwing fireballs
 
     public GameObject fireBallPrefab; //fireBall prefab
@@ -15,6 +15,12 @@ public class Victoria : Character
 
     public float durationDisabilityFireBall = 0.5f; //duration of disability of the power throwing fireballs
 
+    public bool solo = false;
+
+    void Start()
+    {
+        solo = FindObjectOfType<GameManager>().solo;
+    }
     //When power is activated allow Victoria to throw fire balls
     public override void OnPowerActivate()
     {
@@ -31,9 +37,9 @@ public class Victoria : Character
 
     //Check if Victoria wants to throw a fireball
     private void Update() {
-        if (FindObjectOfType<GameManager>().solo)
+        if (solo)
         {
-        if(Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey) && isCapableOfThrowingFireBalls){ //if her power are activates and she press X 
+        if(((Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey)) ||(Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey2))) && isCapableOfThrowingFireBalls){ //if her power are activates and she press X 
             ThrowFireBall(); //throw
         }
         }

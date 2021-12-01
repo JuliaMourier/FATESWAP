@@ -35,7 +35,9 @@ public class TempMovementSolo : MonoBehaviour
     private string axis;
 
     public KeyCode shootKey { get; private set; }
+    public KeyCode shootKey2 { get; private set; }
     public KeyCode switchPressKey { get; private set; }
+    public KeyCode switchPressKey2 { get; private set; }
 
 
     // Configure the controls for the beginning
@@ -79,14 +81,14 @@ public class TempMovementSolo : MonoBehaviour
 
     void Update(){
         // When a horizontal movement is detected (left or right)
-        if (Input.GetAxis(axis) == 1) {
+        if (Input.GetAxis(axis) == 1 || Input.GetAxis("Joystick1Axis") == 1) {
             move = true;
             this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 0, this.transform.rotation.z));
             this.transform.Translate(Vector2.right * Time.deltaTime * speed);
             character.SetDirection(new Vector3(1, 0, 0)); //Direction to the right
 
         }
-        else if (Input.GetAxis(axis) == -1)
+        else if (Input.GetAxis(axis) == -1 || Input.GetAxis("Joystick1Axis") == -1)
         { // if the character goes left
             move = true;
             this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 180, this.transform.rotation.z));
@@ -98,7 +100,7 @@ public class TempMovementSolo : MonoBehaviour
             // the character is not going left or right => no movement 
             move = false;
         }
-        if (Input.GetKeyDown(swap))
+        if (Input.GetKeyDown(swap) || Input.GetKeyDown("joystick button 3"))
         {
             Player2.transform.parent = null;
             Player1.transform.parent = Player2.transform;
@@ -113,19 +115,19 @@ public class TempMovementSolo : MonoBehaviour
         if (character.name == "Lucie")
         {
         if (power){
-                if (Input.GetKeyDown(jumpKey) && (jumpCount != 0))
+                if ((Input.GetKeyDown(jumpKey) || Input.GetKeyDown("joystick button 1")) && (jumpCount != 0))
                 {
                     jumpCount -= 1;
                     GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, impulsionForce), ForceMode2D.Impulse);
                 }
 
             } // if it's not Lucie, you can jump once
-            else if (Input.GetKeyDown(jumpKey) && IsGrounded)
+            else if ((Input.GetKeyDown(jumpKey) || Input.GetKeyDown("joystick button 1")) && IsGrounded)
             {
                 GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, impulsionForce), ForceMode2D.Impulse);
             }
         }
-        else if (Input.GetKeyDown(jumpKey)  && IsGrounded){
+        else if ((Input.GetKeyDown(jumpKey) || Input.GetKeyDown("joystick button 1")) && IsGrounded){
             GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, impulsionForce), ForceMode2D.Impulse);
         }
         /*
@@ -143,7 +145,7 @@ public class TempMovementSolo : MonoBehaviour
         }*/
 
         // if the powerKey is pressed : launch the transform state of the animator 
-        if (Input.GetKeyDown(powerKey)){
+        if (Input.GetKeyDown(powerKey) || Input.GetKeyDown("joystick button 0")){
             animator.SetTrigger("transformation");
             power = !power;
             if(power) {
@@ -193,10 +195,12 @@ public class TempMovementSolo : MonoBehaviour
         powerKey = KeyCode.X;
         if (character.name == "Victoria")
         {
+            shootKey2 = KeyCode.Joystick1Button2;
             shootKey = KeyCode.W;
         }
         if (character.name == "Henrik")
         {
+            switchPressKey2 = KeyCode.Joystick1Button2;
             switchPressKey = KeyCode.W;
         }
     }
