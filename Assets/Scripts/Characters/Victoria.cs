@@ -16,10 +16,13 @@ public class Victoria : Character
     public float durationDisabilityFireBall = 0.5f; //duration of disability of the power throwing fireballs
 
     public bool solo = false;
+    private bool multi = false;
 
     void Start()
     {
         solo = FindObjectOfType<GameManager>().solo;
+        multi = FindObjectOfType<GameManager>().multi;
+
     }
     //When power is activated allow Victoria to throw fire balls
     public override void OnPowerActivate()
@@ -39,15 +42,20 @@ public class Victoria : Character
     private void Update() {
         if (solo)
         {
-        if(((Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey)) ||(Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey2))) && isCapableOfThrowingFireBalls){ //if her power are activates and she press X 
-            ThrowFireBall(); //throw
+            if(((Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey)) ||(Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey2))) && isCapableOfThrowingFireBalls){ //if her power are activates and she press X 
+                ThrowFireBall(); //throw
+            }
         }
-        }
+        else if(multi){
+            if (Input.GetKeyUp(GetComponent<MovementMultiplayerMode>().shootKey) && isCapableOfThrowingFireBalls)
+            { //if her power are activates and she press X 
+                ThrowFireBall(); //throw
+            }
+        }    
         else {
             if (Input.GetKeyUp(GetComponent<TempMovement>().shootKey) && isCapableOfThrowingFireBalls)
             { //if her power are activates and she press X 
                 ThrowFireBall(); //throw
-
             }
         }
     }

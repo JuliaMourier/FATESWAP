@@ -2820,6 +2820,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1064990879981977151, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1064990881085756130, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
       propertyPath: m_Name
       value: Victoria
@@ -3846,7 +3850,8 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6768015982698997867, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
 --- !u!4 &1301043345 stripped
 Transform:

@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
     public Robot boss = null;
 
     public bool solo { get; private set; } = false;
+    public bool multi = false;
 
     void Awake() {
         // Get and pass the AudioSource component to the audioSource attribute
@@ -72,13 +73,25 @@ public class GameManager : MonoBehaviour
 
         solo = !Lucie.gameObject.activeInHierarchy;
         // Initialization of the indexByCharacter dictionary
-        indexByCharacter.Add(Henrik, 0);
-        indexByCharacter.Add(Fei, 1);
-        indexByCharacter.Add(Victoria, 2);
-        indexByCharacter.Add(Lucie, 3);
+        if(!multi){
+            indexByCharacter.Add(Henrik, 0);
+            indexByCharacter.Add(Fei, 1);
+            indexByCharacter.Add(Victoria, 2);
+            indexByCharacter.Add(Lucie, 3);
+        }
+        else {
+            Henrik = GameObject.Find("Henrik(Clone)").GetComponent<Character>();
+            Victoria = GameObject.Find("Victoria(Clone)").GetComponent<Victoria>();
+            Lucie = GameObject.Find("Lucie(Clone)").GetComponent<Character>();
+            Fei = GameObject.Find("Fei(Clone)").GetComponent<Fei>();
+        }
+        
         if (!solo)
         {
             sliderSwap.maxValue = swapDelay;
+        }
+        if(solo){
+            sliderSwap.gameObject.SetActive(false);
         }
     }
 
@@ -86,12 +99,12 @@ public class GameManager : MonoBehaviour
         // We invoke the swapCharacters() method repeatedly according to the swapDelay value
         StartCoroutine(CountdownTimerToNull());
 
-        if (!solo)
-        {
+        if (!solo && !multi)
+        {   
             InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay); 
         // Coroutine that handles the timer 
        
-            InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);
+            //InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);
         }
     }
 
@@ -305,7 +318,7 @@ public class GameManager : MonoBehaviour
             }
 
             // We update the controls of each character according to its new assigned index
-            if (!solo)
+            if (!solo && !multi)
             {
                 foreach (KeyValuePair<Character, int> entry in indexByCharacter)
                 {
