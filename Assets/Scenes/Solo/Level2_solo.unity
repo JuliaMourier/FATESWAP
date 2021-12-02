@@ -1509,6 +1509,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1064990881085756130, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
   m_PrefabInstance: {fileID: 227682821}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &227682824 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1064990881085756143, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
+  m_PrefabInstance: {fileID: 227682821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &227682825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1064990881565168502, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
@@ -1537,12 +1542,12 @@ MonoBehaviour:
   bottom_right: {fileID: 227682826}
   Obstacles:
     serializedVersion: 2
-    m_Bits: 1344
+    m_Bits: 1088
   Player1: {fileID: 227682823}
   Player2: {fileID: 1625585604}
   Player3: {fileID: 1106167863}
   Player4: {fileID: 507501170}
-  animator: {fileID: 507501175}
+  animator: {fileID: 227682824}
   character: {fileID: 227682822}
 --- !u!1001 &265091048
 PrefabInstance:
@@ -2516,6 +2521,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1813225986487402544, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.255
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813225986487402544, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813225987525284305, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813225987525284305, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.427
+      objectReference: {fileID: 0}
     - target: {fileID: 1813225988275286179, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -2527,6 +2548,18 @@ PrefabInstance:
     - target: {fileID: 1813225988275286179, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813225988275286180, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
+      propertyPath: m_Size.x
+      value: 0.6723961
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813225988275286180, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.08932974
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813225988275286180, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.050000012
       objectReference: {fileID: 0}
     - target: {fileID: 1813225988275286189, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
       propertyPath: m_IsActive
@@ -2621,7 +2654,7 @@ MonoBehaviour:
   bottom_right: {fileID: 507501172}
   Obstacles:
     serializedVersion: 2
-    m_Bits: 1344
+    m_Bits: 1088
   Player1: {fileID: 507501170}
   Player2: {fileID: 227682823}
   Player3: {fileID: 1625585604}
@@ -2793,6 +2826,7 @@ MonoBehaviour:
   - {fileID: 1968351912}
   key: {fileID: 1658758269}
   hiddenSwitch: {fileID: 1361675709}
+  hintColors: []
 --- !u!1001 &577497253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5192,7 +5226,7 @@ MonoBehaviour:
   bottom_right: {fileID: 1106167864}
   Obstacles:
     serializedVersion: 2
-    m_Bits: 1344
+    m_Bits: 1088
   Player1: {fileID: 1106167863}
   Player2: {fileID: 507501170}
   Player3: {fileID: 227682823}
@@ -5353,6 +5387,10 @@ PrefabInstance:
       propertyPath: GameManager
       value: 
       objectReference: {fileID: 1558632569}
+    - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: theOneWhoCanSwitch
+      value: 
+      objectReference: {fileID: 270395768}
     - target: {fileID: 3056977934308329338, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: m_Name
       value: HiddenSwitch
@@ -5884,7 +5922,7 @@ MonoBehaviour:
   bottom_right: {fileID: 1625585605}
   Obstacles:
     serializedVersion: 2
-    m_Bits: 1344
+    m_Bits: 1088
   Player1: {fileID: 1625585604}
   Player2: {fileID: 1106167863}
   Player3: {fileID: 507501170}

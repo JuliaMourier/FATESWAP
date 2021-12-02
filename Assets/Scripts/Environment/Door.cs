@@ -19,7 +19,7 @@ public class Door : MonoBehaviour
         if (spriteRenderer.color == Color.black){ //If door is open
             if (FindObjectOfType<GameManager>().solo)
             {
-                    if (Input.GetKey(KeyCode.W))
+                    if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Joystick1Button2))
                 {
                     this.gameObject.SetActive(false);
                     OnDoorEntered();

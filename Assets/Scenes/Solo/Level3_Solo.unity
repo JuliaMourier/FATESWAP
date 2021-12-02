@@ -268,6 +268,10 @@ PrefabInstance:
       propertyPath: Player4
       value: 
       objectReference: {fileID: 1993690767}
+    - target: {fileID: 601165788, guid: c96fe75ac1ec77b4e82c26d67c750b5b, type: 3}
+      propertyPath: Obstacles.m_Bits
+      value: 1088
+      objectReference: {fileID: 0}
     - target: {fileID: 860425276886731972, guid: c96fe75ac1ec77b4e82c26d67c750b5b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -562,6 +566,10 @@ PrefabInstance:
       propertyPath: Player4
       value: 
       objectReference: {fileID: 140991882}
+    - target: {fileID: 796891583, guid: 2c6d46df08977374282a812c4ebdcf8e, type: 3}
+      propertyPath: Obstacles.m_Bits
+      value: 1088
+      objectReference: {fileID: 0}
     - target: {fileID: 7043650443082357157, guid: 2c6d46df08977374282a812c4ebdcf8e, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2561,7 +2569,7 @@ MonoBehaviour:
   bottom_right: {fileID: 598683421}
   Obstacles:
     serializedVersion: 2
-    m_Bits: 1344
+    m_Bits: 1088
   Player1: {fileID: 598683420}
   Player2: {fileID: 1993690767}
   Player3: {fileID: 140991882}
@@ -5446,7 +5454,7 @@ MonoBehaviour:
   bottom_right: {fileID: 489939984}
   Obstacles:
     serializedVersion: 2
-    m_Bits: 1344
+    m_Bits: 1088
   Player1: {fileID: 1993690767}
   Player2: {fileID: 140991882}
   Player3: {fileID: 1978727753}

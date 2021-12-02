@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         levelName = SceneManager.GetActiveScene().name;
 
-        solo = !Lucie.gameObject.activeInHierarchy;        
+        solo = !Lucie.gameObject.activeInHierarchy;
         // Initialization of the indexByCharacter dictionary
         indexByCharacter.Add(Henrik, 0);
         indexByCharacter.Add(Fei, 1);
@@ -224,6 +224,7 @@ public class GameManager : MonoBehaviour
     public void LoadNextScene() {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     // Restart the current level

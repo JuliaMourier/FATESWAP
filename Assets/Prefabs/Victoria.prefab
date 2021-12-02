@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064990880427854245}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.37, y: -0.466, z: -0.5284072}
+  m_LocalPosition: {x: 0.207, y: -0.461, z: -0.5284072}
   m_LocalScale: {x: 1.5384616, y: 1.5384616, z: 1.5384616}
   m_Children: []
   m_Father: {fileID: 1064990881085756149}
@@ -72,9 +72,7 @@ GameObject:
   - component: {fileID: 1064990881085756138}
   - component: {fileID: 1064990881085756139}
   - component: {fileID: 1064990881085756136}
-  - component: {fileID: 1064990881085756137}
   - component: {fileID: 1064990881085756143}
-  - component: {fileID: 1064990881085756140}
   - component: {fileID: 1064990879981977151}
   - component: {fileID: 1064990881085756141}
   m_Layer: 8
@@ -199,22 +197,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1064990881085756137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064990881085756130}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8e8d01fcb3bf484588dbd0365fa1776, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1.4
-  impulsionForce: 3.2
-  animator: {fileID: 1064990881085756143}
-  character: {fileID: 1064990879981977151}
 --- !u!95 &1064990881085756143
 Animator:
   serializedVersion: 3
@@ -234,22 +216,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!58 &1064990881085756140
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064990881085756130}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.08684558, y: -0.32}
-  serializedVersion: 2
-  m_Radius: 0.30654758
 --- !u!114 &1064990879981977151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,10 +228,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9ae635fe0213847852e0670ab0b8c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPowerActivate: 0
   fireBallPrefab: {fileID: 4204989419185486378, guid: 7e3425ef60d3c874fbdbff9ec01b0821, type: 3}
   hand: {fileID: 1064990879693642513}
   animator: {fileID: 1064990881085756143}
   durationDisabilityFireBall: 0.5
+  solo: 0
 --- !u!114 &1064990881085756141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,7 +279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064990881565168503}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2, y: -0.434, z: -0.5284072}
+  m_LocalPosition: {x: -0.119, y: -0.348, z: -0.5284072}
   m_LocalScale: {x: 1.5384616, y: 1.5384616, z: 1.5384616}
   m_Children: []
   m_Father: {fileID: 1064990881085756149}

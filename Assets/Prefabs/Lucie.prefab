@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7696761661247190740}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.334, y: -0.468, z: -0.5284072}
+  m_LocalPosition: {x: 0.237, y: -0.463, z: -0.5284072}
   m_LocalScale: {x: 1.5384616, y: 1.5384616, z: 1.5384616}
   m_Children: []
   m_Father: {fileID: 7696761662435633129}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7696761662100237880}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.168, y: -0.445, z: -0.5284072}
+  m_LocalPosition: {x: -0.127, y: -0.359, z: -0.5284072}
   m_LocalScale: {x: 1.5384616, y: 1.5384616, z: 1.5384616}
   m_Children: []
   m_Father: {fileID: 7696761662435633129}
@@ -72,10 +72,8 @@ GameObject:
   - component: {fileID: 7696761662435633126}
   - component: {fileID: 7696761662435633127}
   - component: {fileID: 7696761662435633124}
-  - component: {fileID: 7696761662435633125}
   - component: {fileID: 7696761662435633122}
   - component: {fileID: 7696761661994946784}
-  - component: {fileID: 7696761662435633120}
   - component: {fileID: 7696761662435633128}
   m_Layer: 8
   m_Name: Lucie
@@ -198,22 +196,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7696761662435633125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7696761662435633121}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8e8d01fcb3bf484588dbd0365fa1776, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  impulsionForce: 3.2
-  animator: {fileID: 7696761662435633122}
-  character: {fileID: 7696761661994946784}
 --- !u!95 &7696761662435633122
 Animator:
   serializedVersion: 3
@@ -245,22 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52dadff74720e6444a82a81cfb7a75f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &7696761662435633120
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7696761662435633121}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.08684558, y: -0.32}
-  serializedVersion: 2
-  m_Radius: 0.30654758
+  isPowerActivate: 0
 --- !u!114 &7696761662435633128
 MonoBehaviour:
   m_ObjectHideFlags: 0
