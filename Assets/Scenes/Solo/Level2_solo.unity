@@ -2945,6 +2945,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1558632569}
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: switchSound
+      value: 
+      objectReference: {fileID: 666285140}
+    - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: theOneWhoCanSwitch
       value: 
       objectReference: {fileID: 270395768}
@@ -2998,6 +3002,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+--- !u!82 &666285140 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4689455018735236424, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+  m_PrefabInstance: {fileID: 666285139}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &720690748 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2668633389615660128, guid: 5d6df33bba57e644c8e4d508e67eb785, type: 3}
@@ -5562,6 +5571,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1558632569}
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: switchSound
+      value: 
+      objectReference: {fileID: 1497013640}
+    - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: theOneWhoCanSwitch
       value: 
       objectReference: {fileID: 270395768}
@@ -5615,6 +5628,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+--- !u!82 &1497013640 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4689455018735236424, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+  m_PrefabInstance: {fileID: 1497013639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1558632567
 GameObject:
   m_ObjectHideFlags: 0
@@ -5766,6 +5784,8 @@ MonoBehaviour:
   mainMenu: {fileID: 0}
   gameOverAudioClip: {fileID: 8300000, guid: 3e3e8dbad8f4aa048ba84ef1405af255, type: 3}
   endOfLevelAudioClip: {fileID: 8300000, guid: 2a5e3574c3016fb44b56a34272376d4f, type: 3}
+  noteSound: {fileID: 0}
+  keySound: {fileID: 0}
   exit: {fileID: 360994633}
   sliderSwap: {fileID: 2130025292}
   swapDelay: 15

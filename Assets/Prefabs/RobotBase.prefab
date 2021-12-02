@@ -119,9 +119,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d84592ef1d7f54daebebf384fa2b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ennemi: {fileID: 0}
   animator: {fileID: 0}
   initialDirection: {x: 0, y: 0}
   speed: 0
+  isAlive: 1
+  explosionSound: {fileID: 0}
 --- !u!1 &4748376834668156947
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,6 +195,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a653e3a89bc0ad142bfe5f67363f7307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  robot: {fileID: 0}
+  forPunch: {fileID: 0}
+  againstPunch: {fileID: 0}
 --- !u!1 &7443301287427350855
 GameObject:
   m_ObjectHideFlags: 0

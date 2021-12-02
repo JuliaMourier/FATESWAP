@@ -6,11 +6,15 @@ public class RobotBody : MonoBehaviour
 {
 
     public Robot robot;
+    public AudioSource forPunch;
+    public AudioSource againstPunch;
+
     // If a character enter in collision with the robot body the heroes must take a damage
     private void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.layer == LayerMask.NameToLayer("Characters")){
             if(robot.isAlive){
-                FindObjectOfType<GameManager>().HeroesTakeDamage();            
+                FindObjectOfType<GameManager>().HeroesTakeDamage();
+                againstPunch.Play();
             }
         }
         //If the robot got hit by a fireball, he must die
@@ -19,6 +23,7 @@ public class RobotBody : MonoBehaviour
                 if(collision.gameObject.layer == LayerMask.NameToLayer("Fireball")){
                     if(robot.isAlive){
                         robot.RobotDie();
+                        forPunch.Play();
                     }
                 }
             }
@@ -26,7 +31,8 @@ public class RobotBody : MonoBehaviour
         else {
             if(collision.gameObject.layer == LayerMask.NameToLayer("Fireball")){
                 if(robot.isAlive){
-                    robot.RobotDie();            
+                    robot.RobotDie();
+                    forPunch.Play();
                 }
             }
         }
