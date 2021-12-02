@@ -44,9 +44,10 @@ public class Victoria : Character
     private void Update() {
         if (solo)
         {
-        if(((Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey)) ||(Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey2))) && isCapableOfThrowingFireBalls){ //if her power are activates and she press X 
-            ThrowFireBall(); //throw
-                fireballSound.Play();
+            if(((Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey)) ||(Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey2))) && isCapableOfThrowingFireBalls){ //if her power are activates and she press X 
+                ThrowFireBall(); //throw
+                    fireballSound.Play();
+            }
         }
         else if(multi){
             if (Input.GetKeyUp(GetComponent<MovementMultiplayerMode>().shootKey) && isCapableOfThrowingFireBalls)

@@ -3055,7 +3055,7 @@ MonoBehaviour:
   note: {fileID: 421579867}
   Lucie: {fileID: 355234006}
   Victoria: {fileID: 1964039796}
-  Fei: {fileID: 1713576242}
+  Fei: {fileID: 1713576239}
   Henrik: {fileID: 1077693058}
   listOfRobot:
   - {fileID: 1012257037}
@@ -3079,6 +3079,7 @@ MonoBehaviour:
   sliderSwap: {fileID: 1877332005}
   swapDelay: 15
   boss: {fileID: 2104919476}
+  multi: 0
 --- !u!4 &967740388
 Transform:
   m_ObjectHideFlags: 0
@@ -8205,17 +8206,6 @@ MonoBehaviour:
   Player4: {fileID: 1077693057}
   animator: {fileID: 1713576240}
   character: {fileID: 1713576239}
---- !u!114 &1713576242 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1813225988275286185, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
-  m_PrefabInstance: {fileID: 1713576235}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713576236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52dadff74720e6444a82a81cfb7a75f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1736322998
 GameObject:
   m_ObjectHideFlags: 0

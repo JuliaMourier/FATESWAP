@@ -7,32 +7,17 @@ public class Spawner : MonoBehaviour
 {
     public List<GameObject> playerPrefabs;
     public List<Transform> charactersPosition;
-    // Start is called before the first frame update
-    public void Start()
+
+    public GameObject GameManager;
+
+
+    // Instantiate the good character for each player
+    public void Awake()
     {
-        int index = (int) PhotonNetwork.LocalPlayer.CustomProperties["number"];
-        Debug.Log(PhotonNetwork.LocalPlayer.CustomProperties["number"]);
+        int index = (int) PhotonNetwork.LocalPlayer.CustomProperties["number"] - 1; //index of the player
         PhotonNetwork.Instantiate(playerPrefabs[index].name, charactersPosition[index].position, Quaternion.identity);
-/*
-        if(GameObject.Find("Luciem(Clone)") == null){
-            PhotonNetwork.Instantiate(playerPrefabs[0].name, charactersPosition[0].position, Quaternion.identity);
+        if(index == 3){
+            GameManager.SetActive(true);
         }
-        else {
-            if(GameObject.Find("Feim(Clone)") == null){
-                PhotonNetwork.Instantiate(playerPrefabs[1].name, charactersPosition[1].position, Quaternion.identity);
-            }
-            else {
-                if(GameObject.Find("Victoriam(Clone)") == null){
-                    PhotonNetwork.Instantiate(playerPrefabs[2].name, charactersPosition[2].position, Quaternion.identity);
-                }
-                else {
-                    if(GameObject.Find("Henrikm(Clone)") == null){
-                        PhotonNetwork.Instantiate(playerPrefabs[3].name, charactersPosition[3].position, Quaternion.identity);
-                    }
-                }
-            }
-        }*/
-       // foreach(Player player in PhotonNetwork.CurrentRoom.PlayerList){ player.CustomProperties["number"]
-        //}
     }
 }

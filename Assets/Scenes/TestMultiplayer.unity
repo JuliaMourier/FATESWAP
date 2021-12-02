@@ -608,6 +608,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SwitchAll
       objectReference: {fileID: 0}
+    - target: {fileID: 3056977934308329338, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3056977934308329339, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -670,6 +674,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9df1736271f7d84fba5cb2d0730bd4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &406769781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 406769783}
+  - component: {fileID: 406769782}
+  m_Layer: 0
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &406769782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406769781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71224902dcb1eb4185e5801e2b39859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameManager: {fileID: 957187722}
+--- !u!4 &406769783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406769781}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.687476, y: 0.46421862, z: -0.4426782}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &480222067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,7 +1259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7760244886835089725, guid: b06f1d1d7116eff41b0d55d72cd70055, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b06f1d1d7116eff41b0d55d72cd70055, type: 3}
@@ -1278,6 +1326,10 @@ PrefabInstance:
     - target: {fileID: 540184220261412663, guid: 678430501f2d76740bfd3f443d28f754, type: 3}
       propertyPath: m_Name
       value: PlateformTarget
+      objectReference: {fileID: 0}
+    - target: {fileID: 540184220261412663, guid: 678430501f2d76740bfd3f443d28f754, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 678430501f2d76740bfd3f443d28f754, type: 3}
@@ -1424,6 +1476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Note
       objectReference: {fileID: 0}
+    - target: {fileID: 7644794726445847844, guid: 3d8f4a78faf12834d8c5c97d59152a23, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7644794726445847847, guid: 3d8f4a78faf12834d8c5c97d59152a23, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1501,6 +1557,10 @@ PrefabInstance:
     - target: {fileID: 3056977934308329338, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: m_Name
       value: SwitchPassage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056977934308329338, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3056977934308329339, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: m_RootOrder
@@ -1737,6 +1797,50 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5001166391936173571, guid: 421ad1f87b3cb104db223987b3b6f40c, type: 3}
   m_PrefabInstance: {fileID: 955530218}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &955530221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5001166392013636730, guid: 421ad1f87b3cb104db223987b3b6f40c, type: 3}
+  m_PrefabInstance: {fileID: 955530218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &955530222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955530221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 1
+  m_UseLocal: 1
+--- !u!114 &955530223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955530221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 955530222}
+  sceneViewId: 1
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &957187722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,7 +1858,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &957187723
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1959,6 +2063,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 6768015982698997865, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6768015982698997866, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -2025,6 +2133,10 @@ PrefabInstance:
     - target: {fileID: 3056977934308329338, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: m_Name
       value: SwitchDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056977934308329338, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3056977934308329339, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: m_RootOrder
@@ -2138,13 +2250,14 @@ MonoBehaviour:
   playerPrefabs:
   - {fileID: 3482051979065156352, guid: f4cc798758e5001498c4309b5713d046, type: 3}
   - {fileID: 3103716101566794336, guid: 18d45dc909c62744892f8797201f14ff, type: 3}
-  - {fileID: 4684605797763757384, guid: b8e99e583a6bb4e4d9580e2c70adab0d, type: 3}
   - {fileID: 4805553582481487995, guid: 27e9e70f88651944ea202055f4fa03eb, type: 3}
+  - {fileID: 4684605797763757384, guid: b8e99e583a6bb4e4d9580e2c70adab0d, type: 3}
   charactersPosition:
   - {fileID: 1100889419}
   - {fileID: 256526500}
-  - {fileID: 320839317}
   - {fileID: 177713273}
+  - {fileID: 320839317}
+  GameManager: {fileID: 957187722}
 --- !u!1 &1134345832
 GameObject:
   m_ObjectHideFlags: 0
@@ -3765,6 +3878,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key
       objectReference: {fileID: 0}
+    - target: {fileID: 8822753907589750110, guid: f47aeec3aad26d2468d3de169bdec008, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f47aeec3aad26d2468d3de169bdec008, type: 3}
 --- !u!4 &1427719683 stripped
@@ -3802,6 +3919,10 @@ PrefabInstance:
     - target: {fileID: 3056977934308329338, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: m_Name
       value: SwitchTarget
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056977934308329338, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3056977934308329339, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: m_RootOrder
@@ -3919,6 +4040,10 @@ PrefabInstance:
     - target: {fileID: 2668633389615660129, guid: 5d6df33bba57e644c8e4d508e67eb785, type: 3}
       propertyPath: m_Name
       value: PlateformPassage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2668633389615660129, guid: 5d6df33bba57e644c8e4d508e67eb785, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2668633390220148388, guid: 5d6df33bba57e644c8e4d508e67eb785, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5478,6 +5603,10 @@ PrefabInstance:
     - target: {fileID: 2668633389615660129, guid: 5d6df33bba57e644c8e4d508e67eb785, type: 3}
       propertyPath: m_Name
       value: PlateformDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2668633389615660129, guid: 5d6df33bba57e644c8e4d508e67eb785, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2668633390220148388, guid: 5d6df33bba57e644c8e4d508e67eb785, type: 3}
       propertyPath: m_LocalPosition.x

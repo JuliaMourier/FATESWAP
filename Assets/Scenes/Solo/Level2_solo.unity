@@ -2620,17 +2620,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1813225988275286186, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
---- !u!114 &507501169 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1813225988275286185, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
-  m_PrefabInstance: {fileID: 507501168}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507501170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52dadff74720e6444a82a81cfb7a75f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &507501170 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1813225988275286189, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
@@ -5778,7 +5767,7 @@ MonoBehaviour:
   note: {fileID: 2130025287}
   Lucie: {fileID: 1625585603}
   Victoria: {fileID: 227682822}
-  Fei: {fileID: 507501169}
+  Fei: {fileID: 507501174}
   Henrik: {fileID: 270395768}
   listOfRobot:
   - {fileID: 200688117}
@@ -5802,6 +5791,7 @@ MonoBehaviour:
   sliderSwap: {fileID: 2130025292}
   swapDelay: 15
   boss: {fileID: 0}
+  multi: 0
 --- !u!4 &1558632570
 Transform:
   m_ObjectHideFlags: 0

@@ -9,9 +9,7 @@ public class Collectables : MonoBehaviour
         if(other.gameObject.layer == LayerMask.NameToLayer("Characters")){
             CollectableFound();
         }
-    }
-        
-  
+    }  
 
     // Call gameManager function
     protected virtual void CollectableFound(){

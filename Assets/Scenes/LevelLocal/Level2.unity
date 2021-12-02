@@ -2488,7 +2488,7 @@ PrefabInstance:
     - target: {fileID: 6768015982698997867, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
       propertyPath: characters.Array.data[0]
       value: 
-      objectReference: {fileID: 507501169}
+      objectReference: {fileID: 0}
     - target: {fileID: 6768015982698997867, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
       propertyPath: characters.Array.data[1]
       value: 
@@ -2824,24 +2824,25 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
---- !u!114 &507501169 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1813225988275286185, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
-  m_PrefabInstance: {fileID: 507501168}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507501170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52dadff74720e6444a82a81cfb7a75f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &507501170 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1813225988275286189, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
   m_PrefabInstance: {fileID: 507501168}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &507501171 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1813225988275286178, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
+  m_PrefabInstance: {fileID: 507501168}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507501170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e0263eeed5d6040b0aff290232776b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &545926775 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6644316412033157495, guid: 241923c1681cc7d4a85782689c2165a5, type: 3}
@@ -7919,7 +7920,7 @@ MonoBehaviour:
   note: {fileID: 1852010084}
   Lucie: {fileID: 1625585603}
   Victoria: {fileID: 227682822}
-  Fei: {fileID: 507501169}
+  Fei: {fileID: 507501171}
   Henrik: {fileID: 270395768}
   listOfRobot:
   - {fileID: 200688117}
@@ -7943,6 +7944,7 @@ MonoBehaviour:
   sliderSwap: {fileID: 2130025292}
   swapDelay: 15
   boss: {fileID: 0}
+  multi: 0
 --- !u!4 &1558632570
 Transform:
   m_ObjectHideFlags: 0

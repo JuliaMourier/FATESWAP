@@ -2853,6 +2853,7 @@ MonoBehaviour:
   sliderSwap: {fileID: 1731881974}
   swapDelay: 15
   boss: {fileID: 2104919476}
+  multi: 0
 --- !u!4 &967740388
 Transform:
   m_ObjectHideFlags: 0
@@ -6290,7 +6291,7 @@ MonoBehaviour:
   - {fileID: 8242032025791293910}
   - {fileID: 7442072206324692383}
   - {fileID: 1747054416921839553}
-  - {fileID: 6086900890795999118}
+  - {fileID: 0}
 --- !u!1 &1516205894
 GameObject:
   m_ObjectHideFlags: 0
@@ -10070,13 +10071,13 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
 --- !u!114 &6086900890795999118 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1813225988275286185, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1813225988275286178, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
   m_PrefabInstance: {fileID: 6086900890795999117}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630876981}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52dadff74720e6444a82a81cfb7a75f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 45e0263eeed5d6040b0aff290232776b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &7442072206324692382
