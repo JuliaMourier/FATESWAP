@@ -1754,7 +1754,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &957187723
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1876,9 +1876,9 @@ MonoBehaviour:
   listOfRobot:
   - {fileID: 1968911523}
   - {fileID: 1772853418}
-  starSliderImage: {fileID: 0}
-  countdownText: {fileID: 0}
-  countdownTime: 0
+  starSliderImage: {fileID: 1333648712}
+  countdownText: {fileID: 1333648711}
+  countdownTime: 120
   gameOverMenuUI: {fileID: 955530220}
   endOfLevelMenuUI: {fileID: 955530219}
   swapSourceSound: {fileID: 726747861}
@@ -1889,6 +1889,7 @@ MonoBehaviour:
   sliderSwap: {fileID: 1333648705}
   swapDelay: 15
   boss: {fileID: 0}
+  multi: 1
 --- !u!4 &957187725
 Transform:
   m_ObjectHideFlags: 0
@@ -3677,6 +3678,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ce1232d5c5fafc4780c905ac3f2994b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1333648711 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2069699422639963237, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+  m_PrefabInstance: {fileID: 1333648704}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1333648712 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9202354814329248379, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+  m_PrefabInstance: {fileID: 1333648704}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1427719682

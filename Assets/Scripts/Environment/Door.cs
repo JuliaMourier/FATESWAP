@@ -8,16 +8,25 @@ public class Door : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private int numberCharacterWhoEnteredTheDoor = 0;
+    private bool solo = false;
+    private bool multi = false;
 
     private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
-  
+        solo = FindObjectOfType<GameManager>().solo;
+        multi = FindObjectOfType<GameManager>().multi;
+        if(multi){
+            characters.Add(GameObject.Find("Feim(Clone)").GetComponent<Fei>());
+            characters.Add(GameObject.Find("Victoriam(Clone)").GetComponent<Victoria>());
+            characters.Add(GameObject.Find("Luciem(Clone)").GetComponent<Character>());
+            characters.Add(GameObject.Find("Henrikm(Clone)").GetComponent<Character>());
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other) {
         
         if (spriteRenderer.color == Color.black){ //If door is open
-            if (FindObjectOfType<GameManager>().solo)
+            if (solo)
             {
                     if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Joystick1Button2))
                 {
@@ -25,18 +34,29 @@ public class Door : MonoBehaviour
                     OnDoorEntered();
                 }
             }
-            else
-            {
-
-            foreach(Character character in characters){
-                if(other.gameObject.Equals(character.gameObject)){ //If its the character 
-                    if(Input.GetKey(character.GetComponent<TempMovement>().shootKey))
-                        {//and he wants to go through the door
-                        character.gameObject.SetActive(false); //character enter
-                        numberCharacterWhoEnteredTheDoor++; //One character more is entered
+            else if(multi){
+                foreach(Character character in characters){
+                    if(other.gameObject.Equals(character.gameObject)){ //If its the character 
+                        if(Input.GetKey(character.GetComponent<MovementMultiplayerMode>().shootKey))
+                            {//and he wants to go through the door
+                            character.gameObject.SetActive(false); //character enter
+                            numberCharacterWhoEnteredTheDoor++; //One character more is entered
+                        }
                     }
                 }
             }
+            else
+            {
+
+                foreach(Character character in characters){
+                    if(other.gameObject.Equals(character.gameObject)){ //If its the character 
+                        if(Input.GetKey(character.GetComponent<TempMovement>().shootKey))
+                            {//and he wants to go through the door
+                            character.gameObject.SetActive(false); //character enter
+                            numberCharacterWhoEnteredTheDoor++; //One character more is entered
+                        }
+                    }
+                }
             }
         }
         if (numberCharacterWhoEnteredTheDoor >= 4){
