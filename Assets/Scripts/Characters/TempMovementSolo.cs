@@ -81,6 +81,7 @@ public class TempMovementSolo : MonoBehaviour
 
     void Update(){
         // When a horizontal movement is detected (left or right)
+        
         if (Input.GetAxis(axis) == 1 || Input.GetAxis("Joystick1Axis") == 1) {
             move = true;
             this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 0, this.transform.rotation.z));
@@ -156,9 +157,11 @@ public class TempMovementSolo : MonoBehaviour
         }
         if (Physics2D.OverlapArea(top_left.position, bottom_right.position, Obstacles))
         {
+    
             IsGrounded = true;
             if (character.name == "Lucie")
             {
+                Debug.Log("Lucie");
                 jumpCount = 1;
             }
         }
