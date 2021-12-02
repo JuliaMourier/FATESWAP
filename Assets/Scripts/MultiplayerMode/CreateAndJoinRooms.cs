@@ -44,7 +44,9 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     public GameObject findRoomMenu;
 
-    private int countRooms = 0;
+    
+
+    private int countPlayers = 0;
 
     
     private void Start(){ 
@@ -68,6 +70,8 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     public override void OnJoinedLobby()
     {
         Debug.Log("Lobby Joined");
+        PhotonNetwork.AutomaticallySyncScene = true;
+
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -152,7 +156,9 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         }
         for(int i = 0; i < roomList.Count; i++){ //Display the current rooms
             Instantiate(roomListItemPrefab, roomListContent).GetComponent<RoomListItem>().SetUp(roomList[i]);
+            
         }
+
     }
 
     //When a player enter the room display the new player name in the list and update the number of players currently in the room
@@ -162,6 +168,14 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         Debug.Log("player list updated " + PhotonNetwork.CountOfPlayers);
         UpdateNumberOfPlayer();
         Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
+    }
+
+     private void Update() {
+        if(PhotonNetwork.CurrentRoom != null){
+            if(PhotonNetwork.CurrentRoom.PlayerCount == 4){
+                StartGame();
+            }
+        }
     }
 
     // Gets the username contained in the input Player Username and gives it to PhotonNetwork
@@ -177,14 +191,11 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     
 
     public void UpdateNumberOfPlayer(){
-        roomName.text = PhotonNetwork.CurrentRoom.Name + " " + PhotonNetwork.CountOfPlayers + "/4"; //Name the room + number of players
-        if(PhotonNetwork.CountOfPlayers == 4){
-            StartGame();
-        }
+        roomName.text = PhotonNetwork.CurrentRoom.Name + " " + PhotonNetwork.CurrentRoom.PlayerCount  + "/4"; //Name the room + number of players
     }
 
     public void StartGame(){
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("TestMultiplayer");
     }
 }
 

@@ -68,7 +68,6 @@ public class GameManager : MonoBehaviour
     void Awake() {
         // Get and pass the AudioSource component to the audioSource attribute
         audioSource = GetComponent<AudioSource>();
-
         levelName = SceneManager.GetActiveScene().name;
 
         solo = !Lucie.gameObject.activeInHierarchy;        

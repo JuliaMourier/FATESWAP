@@ -18,7 +18,7 @@ public class TempMovement : MonoBehaviour
     private int jumpCount = 1;
     // Animator
     public Animator animator; // Animator for the different animations of the character => idle, walk, transfor, walkpower and idlepower
-    public bool power { get; private set;} = false; // Parameter of the animator : true when the character is in the power state, false otherwise
+    public bool power {get; private set;} = false; // Parameter of the animator : true when the character is in the power state, false otherwise
     public bool move {get; private set;} // Parameter of the animator : true when the player press a key to move, false otherwise
     
     // Character
