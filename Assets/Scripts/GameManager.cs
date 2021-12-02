@@ -103,9 +103,9 @@ public class GameManager : MonoBehaviour
         }
 
         // While the fill amount of the star slider is not null, we decrement it every second
-        /*if (starSliderImage.fillAmount > 0) {
+        if (starSliderImage.fillAmount > 0) {
             starSliderImage.fillAmount -= 1.0f / countdownTime * Time.deltaTime;
-        }*/
+        }
         
        
         //Gives the position between the initial and final position to make a smooth transition

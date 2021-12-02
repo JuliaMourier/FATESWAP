@@ -1542,7 +1542,7 @@ MonoBehaviour:
   bottom_right: {fileID: 227682826}
   Obstacles:
     serializedVersion: 2
-    m_Bits: 1344
+    m_Bits: 1088
   Player1: {fileID: 227682823}
   Player2: {fileID: 1625585604}
   Player3: {fileID: 1106167863}
@@ -2654,7 +2654,7 @@ MonoBehaviour:
   bottom_right: {fileID: 507501172}
   Obstacles:
     serializedVersion: 2
-    m_Bits: 1344
+    m_Bits: 1088
   Player1: {fileID: 507501170}
   Player2: {fileID: 227682823}
   Player3: {fileID: 1625585604}
@@ -5226,7 +5226,7 @@ MonoBehaviour:
   bottom_right: {fileID: 1106167864}
   Obstacles:
     serializedVersion: 2
-    m_Bits: 1344
+    m_Bits: 1088
   Player1: {fileID: 1106167863}
   Player2: {fileID: 507501170}
   Player3: {fileID: 227682823}
@@ -5922,7 +5922,7 @@ MonoBehaviour:
   bottom_right: {fileID: 1625585605}
   Obstacles:
     serializedVersion: 2
-    m_Bits: 1344
+    m_Bits: 1088
   Player1: {fileID: 1625585604}
   Player2: {fileID: 1106167863}
   Player3: {fileID: 507501170}
