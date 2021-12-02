@@ -14,6 +14,8 @@ public class Switch : MonoBehaviour
 
     private Character[] characters;
 
+    public AudioSource switchSound;
+
     private void Awake() {
         characters = FindObjectsOfType<Character>();
     }
@@ -47,6 +49,16 @@ public class Switch : MonoBehaviour
                     }
                 }
             }
+            else if(GameManager.multi){
+                if (other.gameObject.Equals(theOneWhoCanSwitch.gameObject))
+                { //if only one character can switch the switch, check if the collision is dur to this character
+                    if (available && theOneWhoCanSwitch.isPowerActivate && (Input.GetKey(theOneWhoCanSwitch.GetComponent<MovementMultiplayerMode>().switchPressKey) || Input.GetKey(theOneWhoCanSwitch.GetComponent<TempMovementSolo>().switchPressKey2)))
+                    { //if Henrik is capable of switch the switch
+                        available = false; //Disable the switch
+                        SwitchOn(); //Launch the change of state
+                    }
+                }
+            }
             else
             {
 
@@ -65,7 +77,8 @@ public class Switch : MonoBehaviour
 
     //Switch the sprite of the switch and its state attribute
     private void SwitchOn(){
-        if(isSwitchedOn){
+        switchSound.Play();
+        if (isSwitchedOn){
             GetComponent<SpriteRenderer>().sprite = switchOff;
         }
         else {

@@ -11,6 +11,7 @@ public class Robot : MonoBehaviour
     private Vector2 direction; //Direction of the robot
     private bool robotMove = false; //is robot moving
     public bool isAlive = true; //is robot alive, set to false when dies
+    public AudioSource explosionSound;//Explosion sound
 
     // initialisation of the direction of the robot
     private void Awake(){
@@ -60,6 +61,7 @@ public class Robot : MonoBehaviour
     // If we want to put less than 1s for the deactivation
     private IEnumerator DeactivateRobot(){
         isAlive = false;
+        explosionSound.Play();
         animator.SetTrigger("boom");
         float duration = 1f;
         float elapsed = 0.0f;

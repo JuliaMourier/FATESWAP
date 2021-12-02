@@ -119,6 +119,8 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         foreach(Player p in PhotonNetwork.PlayerList){ //Fill the players name in the room
             Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(p); //Display the list of the player currently in the room
         }
+
+        PhotonNetwork.LocalPlayer.CustomProperties["number"] = (int)PhotonNetwork.CurrentRoom.PlayerCount;
     }
 
     //Leave the room when click on back button
@@ -161,10 +163,11 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     }
 
+    
     //When a player enter the room display the new player name in the list and update the number of players currently in the room
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        newPlayer.CustomProperties["number"] = PhotonNetwork.CurrentRoom.PlayerCount;
+        
         base.OnPlayerEnteredRoom(newPlayer);
         Debug.Log("player list updated " + PhotonNetwork.CountOfPlayers + "player " + newPlayer.CustomProperties["number"]);
         UpdateNumberOfPlayer();

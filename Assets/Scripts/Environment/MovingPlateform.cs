@@ -11,12 +11,15 @@ public class MovingPlateform : MonoBehaviour
 
     // Check the state of the switch and compare with the state of the plateform => Order the changement if needed
     private void Update() { 
-        if(switchOpener.GetSwitchState() && !isOpened){ //if the switch tell to open and its not already openen => launch the opening
-            Open();
+        if(switchOpener != null){
+            if(switchOpener.GetSwitchState() && !isOpened){ //if the switch tell to open and its not already openen => launch the opening
+                Open();
+            }
+            if(!switchOpener.GetSwitchState() && isOpened){//if the switch tell to clode and its not already closed => launch the closure
+                Close();
+            }
         }
-        if(!switchOpener.GetSwitchState() && isOpened){//if the switch tell to clode and its not already closed => launch the closure
-            Close();
-        }
+        
     }
 
     //Launch the animation of opening after stopping anny other animation
