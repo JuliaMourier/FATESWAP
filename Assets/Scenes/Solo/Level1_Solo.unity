@@ -2176,6 +2176,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce1232d5c5fafc4780c905ac3f2994b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1302803047 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4689455018735236424, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+  m_PrefabInstance: {fileID: 3056977934928070614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!212 &1315959989 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 8822753907589750105, guid: f47aeec3aad26d2468d3de169bdec008, type: 3}
@@ -2266,6 +2271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   robot: {fileID: 1179186685}
+  forPunchSound2: {fileID: 0}
 --- !u!4 &1343301125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2668633389615660128, guid: 5d6df33bba57e644c8e4d508e67eb785, type: 3}
@@ -5002,6 +5008,10 @@ PrefabInstance:
       propertyPath: GameManager
       value: 
       objectReference: {fileID: 393321799}
+    - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: switchSound
+      value: 
+      objectReference: {fileID: 1302803047}
     - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: theOneWhoCanSwitch
       value: 

@@ -74,37 +74,34 @@ public class GameManager : MonoBehaviour
         // Get and pass the AudioSource component to the audioSource attribute
         audioSource = GetComponent<AudioSource>();
         levelName = SceneManager.GetActiveScene().name;
+        
+    }
 
+    void Start() {
+        if(multi) {
+            Lucie = GameObject.Find("Luciem(Clone)").GetComponent<Character>();
+            Fei = GameObject.Find("Feim(Clone)").GetComponent<Fei>();
+            Henrik = GameObject.Find("Henrikm(Clone)").GetComponent<Character>();
+            Victoria = GameObject.Find("Victoriam(Clone)").GetComponent<Victoria>();
+        }
+        
         solo = !Lucie.gameObject.activeInHierarchy;
-        // Initialization of the indexByCharacter dictionary
-        if(!multi){
-            indexByCharacter.Add(Henrik, 0);
-            indexByCharacter.Add(Fei, 1);
-            indexByCharacter.Add(Victoria, 2);
-            indexByCharacter.Add(Lucie, 3);
-        }
-        else {
-            Henrik = GameObject.Find("Henrik(Clone)").GetComponent<Character>();
-            Victoria = GameObject.Find("Victoria(Clone)").GetComponent<Victoria>();
-            Lucie = GameObject.Find("Lucie(Clone)").GetComponent<Character>();
-            Fei = GameObject.Find("Fei(Clone)").GetComponent<Fei>();
-        }
         
         if (!solo)
         {
             sliderSwap.maxValue = swapDelay;
+            // We invoke the swapCharacters() method repeatedly according to the swapDelay value
+            StartCoroutine(CountdownTimerToNull());
         }
-        if(solo){
-            sliderSwap.gameObject.SetActive(false);
-        }
-    }
-
-    void Start() {
-        // We invoke the swapCharacters() method repeatedly according to the swapDelay value
-        StartCoroutine(CountdownTimerToNull());
+       
+        
 
         if (!solo && !multi)
         {   
+            indexByCharacter.Add(Henrik, 0);
+            indexByCharacter.Add(Fei, 1);
+            indexByCharacter.Add(Victoria, 2);
+            indexByCharacter.Add(Lucie, 3);
             InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay); 
         // Coroutine that handles the timer 
        
@@ -117,16 +114,15 @@ public class GameManager : MonoBehaviour
         if(CharactersOutOfMap()){
             HeroesTakeDamage();
         }
-
-        // While the fill amount of the star slider is not null, we decrement it every second
-        if (starSliderImage.fillAmount > 0) {
-            starSliderImage.fillAmount -= 1.0f / countdownTime * Time.deltaTime;
-        }
-        
-       
-        //Gives the position between the initial and final position to make a smooth transition
         if (!solo && !isGameOver)
         {
+            // While the fill amount of the star slider is not null, we decrement it every second
+            if (starSliderImage.fillAmount > 0) {
+                starSliderImage.fillAmount -= 1.0f / countdownTime * Time.deltaTime;
+            }
+            
+        
+            //Gives the position between the initial and final position to make a smooth transition
             sliderSwap.value = elapsedTime;
             elapsedTime += Time.deltaTime; //increment the time
         }
@@ -260,9 +256,12 @@ public class GameManager : MonoBehaviour
     
     //Test if one of the character is out of the map
     private bool CharactersOutOfMap(){
-        if(Lucie.transform.position.y < -5 || Victoria.transform.position.y < -5 || Fei.transform.position.y < -5 || Henrik.transform.position.y < -5 ){
-            return true;
+        if(Lucie && Victoria && Henrik && Fei){
+            if(Lucie.transform.position.y < -5 || Victoria.transform.position.y < -5 || Fei.transform.position.y < -5 || Henrik.transform.position.y < -5 ){
+                return true;
+            }
         }
+        
         return false;
     }
 

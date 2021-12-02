@@ -1,7 +1,6 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-// THIS SCRIPT IS A TEMPORARY ONE USED FOR TESTING OR DEMO.
 public class TempMovementSolo : MonoBehaviour
 {
     // --- Attributes ---
@@ -42,54 +41,27 @@ public class TempMovementSolo : MonoBehaviour
 
     // Configure the controls for the beginning
     void Awake() {
-        //this.character = GetComponent<Character>();
+        this.character = GetComponent<Character>();
         
         if (character != null) {
-            // We set different controllers according to the character name
-            switch(character.name) {
-                // Fei is controlled by default with the arrow keys
-                case "Fei":
-                    setControlsToArrowKeys();
-                    Player2.transform.parent = Player1.transform;
-                    Player3.transform.parent = Player1.transform;
-                    Player4.transform.parent = Player1.transform;
-                    break;
-                // Henrik is controlled by defautl with the ZQSD scheme
-                case "Henrik":
-                    setControlsToArrowKeys();
-                    Player2.transform.parent = Player1.transform;
-                    Player3.transform.parent = Player1.transform;
-                    Player4.transform.parent = Player1.transform;
-                    break;
-                // Victoria is controlled by default with IJLO scheme
-                case "Victoria":
-                    setControlsToArrowKeys();
-                    Player2.transform.parent = Player1.transform;
-                    Player3.transform.parent = Player1.transform;
-                    Player4.transform.parent = Player1.transform;
-                    break;
-                // Lucie is controlled by default with CVBSpace scheme
-                case "Lucie":
-                    setControlsToArrowKeys();
-                    Player2.transform.parent = Player1.transform;
-                    Player3.transform.parent = Player1.transform;
-                    Player4.transform.parent = Player1.transform;
-                    break;
-            }
+            setControlsToArrowKeys();
+            Player2.transform.parent = Player1.transform;
+            Player3.transform.parent = Player1.transform;
+            Player4.transform.parent = Player1.transform;
         }
     }
 
     void Update(){
         // When a horizontal movement is detected (left or right)
         
-        if (Input.GetAxis(axis) == 1 || Input.GetAxis("Joystick1Axis") == 1) {
+        if (Input.GetAxis("Horizontal") == 1) {
             move = true;
             this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 0, this.transform.rotation.z));
             this.transform.Translate(Vector2.right * Time.deltaTime * speed);
             character.SetDirection(new Vector3(1, 0, 0)); //Direction to the right
 
         }
-        else if (Input.GetAxis(axis) == -1 || Input.GetAxis("Joystick1Axis") == -1)
+        else if (Input.GetAxis("Horizontal") == -1)
         { // if the character goes left
             move = true;
             this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 180, this.transform.rotation.z));
@@ -101,7 +73,7 @@ public class TempMovementSolo : MonoBehaviour
             // the character is not going left or right => no movement 
             move = false;
         }
-        if (Input.GetKeyDown(swap) || Input.GetKeyDown("joystick button 3"))
+        if (Input.GetKeyDown(swap) || Input.GetKeyDown(KeyCode.Joystick1Button3))
         {
             Player2.transform.parent = null;
             Player1.transform.parent = Player2.transform;
@@ -116,37 +88,25 @@ public class TempMovementSolo : MonoBehaviour
         if (character.name == "Lucie")
         {
         if (power){
-                if ((Input.GetKeyDown(jumpKey) || Input.GetKeyDown("joystick button 1")) && (jumpCount != 0))
+                if ((Input.GetKeyDown(jumpKey) || Input.GetKeyDown(KeyCode.Joystick1Button1)) && (jumpCount != 0))
                 {
                     jumpCount -= 1;
                     GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, impulsionForce), ForceMode2D.Impulse);
                 }
 
             } // if it's not Lucie, you can jump once
-            else if ((Input.GetKeyDown(jumpKey) || Input.GetKeyDown("joystick button 1")) && IsGrounded)
+            else if ((Input.GetKeyDown(jumpKey) || Input.GetKeyDown(KeyCode.Joystick1Button1)) && IsGrounded)
             {
                 GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, impulsionForce), ForceMode2D.Impulse);
             }
         }
-        else if ((Input.GetKeyDown(jumpKey) || Input.GetKeyDown("joystick button 1")) && IsGrounded){
+        else if ((Input.GetKeyDown(jumpKey) || Input.GetKeyDown(KeyCode.Joystick1Button1)) && IsGrounded){
             GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, impulsionForce), ForceMode2D.Impulse);
         }
-        /*
-        if ((Input.GetButtonDown("Jump") && IsGrounded))
-        {
-            jumpKeyHeld = true;
-            // animator.SetBool("isJumping", true);
 
-            rb.AddForce(new Vector2(0, 2) * jumpForce * rb.mass, ForceMode2D.Impulse);
-            IsGrounded = false;
-        }
-        else if (Input.GetButtonUp("Jump"))
-        {
-            jumpKeyHeld = false;
-        }*/
 
         // if the powerKey is pressed : launch the transform state of the animator 
-        if (Input.GetKeyDown(powerKey) || Input.GetKeyDown("joystick button 0")){
+        if (Input.GetKeyDown(powerKey) || Input.GetKeyDown(KeyCode.Joystick1Button0)){
             animator.SetTrigger("transformation");
             power = !power;
             if(power) {
@@ -172,23 +132,6 @@ public class TempMovementSolo : MonoBehaviour
         animator.SetBool("power", power);
     }
 
-    // Swap the controls of the selected character according to the int value passed in argument
-    public void swapControls(int index) {
-        switch(index) {
-            case 0:
-                setControlsToArrowKeys();
-                break;
-            case 1:
-                setControlsToZQDEKeys();
-                break;
-            case 2:
-                setControlsToIJLOKeys();
-                break;
-            case 3:
-                setControlsToCVBSpaceKeys();
-                break;
-        }
-    }
 
     // Method to set controls to the arrow keys
     private void setControlsToArrowKeys() {
@@ -196,53 +139,10 @@ public class TempMovementSolo : MonoBehaviour
         jumpKey = KeyCode.UpArrow;
         axis = "Horizontal";
         powerKey = KeyCode.X;
-        if (character.name == "Victoria")
-        {
-            shootKey2 = KeyCode.Joystick1Button2;
-            shootKey = KeyCode.W;
-        }
-        if (character.name == "Henrik")
-        {
-            switchPressKey2 = KeyCode.Joystick1Button2;
-            switchPressKey = KeyCode.W;
-        }
+        shootKey2 = KeyCode.Joystick1Button2;
+        shootKey = KeyCode.W;
+        switchPressKey2 = KeyCode.Joystick1Button2;
+        switchPressKey = KeyCode.W;
+        
     }
-
-    // Method to set controls to the ZQDE keys
-    private void setControlsToZQDEKeys() {
-        jumpKey = KeyCode.Z;
-
-        powerKey = KeyCode.E;
-    }
-
-    // Method to set controls to the IJLO keys
-    private void setControlsToIJLOKeys() {
-        jumpKey = KeyCode.I;
-
-        powerKey = KeyCode.O;
-    }
-
-    // Method to set controls to the CVBSpace keys
-    private void setControlsToCVBSpaceKeys() {
-        jumpKey = KeyCode.Space;
-
-        powerKey = KeyCode.C;
-    }
-    /*
-    public void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 6 ^collision.gameObject.layer == 8)
-        {
-            IsGrounded = false;
-            // animator.SetBool("isJumping", true);
-        }
-    }
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 6 ^ collision.gameObject.layer == 8)
-        {
-            IsGrounded = true;
-            // animator.SetBool("isJumping", false);
-        }
-    }*/
 }
