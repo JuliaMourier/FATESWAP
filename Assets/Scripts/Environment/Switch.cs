@@ -14,6 +14,8 @@ public class Switch : MonoBehaviour
 
     private Character[] characters;
 
+    public AudioSource switchSound;
+
     private void Awake() {
         characters = FindObjectsOfType<Character>();
     }
@@ -65,7 +67,8 @@ public class Switch : MonoBehaviour
 
     //Switch the sprite of the switch and its state attribute
     private void SwitchOn(){
-        if(isSwitchedOn){
+        switchSound.Play();
+        if (isSwitchedOn){
             GetComponent<SpriteRenderer>().sprite = switchOff;
         }
         else {

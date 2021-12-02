@@ -4,6 +4,8 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public AudioSource pauseSound;
+    public AudioSource unpauseSound;
 
     // If ESCAPE is pressed and depending on the GameIsPaused value,
     // it calls either the Resume() method or the Pause() method
@@ -11,8 +13,10 @@ public class PauseMenu : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape)) {
             if (GameIsPaused) {
+                unpauseSound.Play();
                 Resume();
             } else {
+                pauseSound.Play();
                 Pause();
             }
         }

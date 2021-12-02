@@ -17,6 +17,8 @@ public class Victoria : Character
 
     public bool solo = false;
 
+    public AudioSource fireballSound;
+
     void Start()
     {
         solo = FindObjectOfType<GameManager>().solo;
@@ -41,13 +43,14 @@ public class Victoria : Character
         {
         if(((Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey)) ||(Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey2))) && isCapableOfThrowingFireBalls){ //if her power are activates and she press X 
             ThrowFireBall(); //throw
+                fireballSound.Play();
         }
         }
         else {
             if (Input.GetKeyUp(GetComponent<TempMovement>().shootKey) && isCapableOfThrowingFireBalls)
             { //if her power are activates and she press X 
                 ThrowFireBall(); //throw
-
+                fireballSound.Play();
             }
         }
     }

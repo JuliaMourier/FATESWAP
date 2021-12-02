@@ -47,6 +47,8 @@ public class GameManager : MonoBehaviour
     public AudioClip gameOverAudioClip;
     public AudioClip endOfLevelAudioClip;
     private AudioSource audioSource;
+    public AudioSource noteSound;
+    public AudioSource keySound;
 
     // EXIT
     public SpriteRenderer exit;
@@ -120,6 +122,7 @@ public class GameManager : MonoBehaviour
     {
         if (collectable.gameObject.name == "Key")
         {
+            keySound.Play();
             hasKey = true;
             key.color = Color.white;
             collectable.gameObject.SetActive(false);
@@ -128,6 +131,7 @@ public class GameManager : MonoBehaviour
         }
         if (collectable.gameObject.name == "Note")
         {
+            noteSound.Play();
             note.color = Color.white;
             collectable.gameObject.SetActive(false);
             //string scene = levelName;

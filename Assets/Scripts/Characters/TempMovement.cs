@@ -35,6 +35,11 @@ public class TempMovement : MonoBehaviour
     public KeyCode shootKey {get; private set;}
     public KeyCode switchPressKey{get; private set;}
 
+    // Audio
+    public AudioSource jumpSound;
+    public AudioSource powerupSound;
+    public AudioSource powerdownSound;
+
 
 
     // Configure the controls for the beginning
@@ -103,16 +108,19 @@ public class TempMovement : MonoBehaviour
                 if (Input.GetKeyDown(jumpKey) && (jumpCount != 0))
                 {
                     jumpCount -= 1;
+                    jumpSound.Play();
                     GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, impulsionForce), ForceMode2D.Impulse);
                 }
 
             }
             else if (Input.GetKeyDown(jumpKey) && IsGrounded)
             {
+                jumpSound.Play();
                 GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, impulsionForce), ForceMode2D.Impulse);
             }
         }
         else if (Input.GetKeyDown(jumpKey)  && IsGrounded){
+            jumpSound.Play();
             GetComponent<Rigidbody2D>().AddForce(new Vector3(0f, impulsionForce), ForceMode2D.Impulse);
         }
         
@@ -121,8 +129,10 @@ public class TempMovement : MonoBehaviour
             animator.SetTrigger("transformation");
             power = !power;
             if(power) {
+                powerupSound.Play();
                 character.OnPowerActivate();
             } else {
+                powerdownSound.Play();
                 character.OnPowerDeactivate();
             }
         }
