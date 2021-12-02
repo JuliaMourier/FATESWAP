@@ -352,6 +352,7 @@ MonoBehaviour:
   Fei: {fileID: 8419285735754072430}
   Henrik: {fileID: 1151045411}
   listOfRobot: []
+  noteNumber: 1
   starSliderImage: {fileID: 1069164675}
   countdownText: {fileID: 1069164674}
   countdownTime: 30
@@ -501,6 +502,7 @@ MonoBehaviour:
   Fei: {fileID: 0}
   Henrik: {fileID: 1151045411}
   listOfRobot: []
+  noteNumber: 0
   starSliderImage: {fileID: 0}
   countdownText: {fileID: 0}
   countdownTime: 0

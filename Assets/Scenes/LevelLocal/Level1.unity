@@ -643,6 +643,7 @@ MonoBehaviour:
   listOfRobot:
   - {fileID: 1179186685}
   - {fileID: 1412884486}
+  noteNumber: 1
   starSliderImage: {fileID: 1495309371}
   countdownText: {fileID: 1495309370}
   countdownTime: 30

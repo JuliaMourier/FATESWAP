@@ -7928,6 +7928,7 @@ MonoBehaviour:
   - {fileID: 1968351912}
   - {fileID: 1041059582}
   - {fileID: 545926775}
+  noteNumber: 2
   starSliderImage: {fileID: 2130025293}
   countdownText: {fileID: 1891797436}
   countdownTime: 30

@@ -1910,6 +1910,7 @@ MonoBehaviour:
   Henrik: {fileID: 1192760595}
   listOfRobot:
   - {fileID: 1113124094}
+  noteNumber: 4
   starSliderImage: {fileID: 211449909}
   countdownText: {fileID: 211449908}
   countdownTime: 0
