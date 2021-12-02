@@ -79,7 +79,7 @@ public class TempMovement : MonoBehaviour
         }
     }
 
-    void Update(){            
+    void Update(){
         if(Input.GetAxis(axis) == 1){ // if the character goes right
             move = true;
             this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 0, this.transform.rotation.z));
