@@ -164,8 +164,9 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     //When a player enter the room display the new player name in the list and update the number of players currently in the room
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
+        newPlayer.CustomProperties["number"] = PhotonNetwork.CurrentRoom.PlayerCount;
         base.OnPlayerEnteredRoom(newPlayer);
-        Debug.Log("player list updated " + PhotonNetwork.CountOfPlayers);
+        Debug.Log("player list updated " + PhotonNetwork.CountOfPlayers + "player " + newPlayer.CustomProperties["number"]);
         UpdateNumberOfPlayer();
         Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
     }

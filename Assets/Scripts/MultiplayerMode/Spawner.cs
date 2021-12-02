@@ -5,10 +5,33 @@ using Photon.Pun;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject playerPrefab;
+    public List<GameObject> playerPrefabs;
+    public List<Transform> charactersPosition;
     // Start is called before the first frame update
     public void Start()
     {
-        PhotonNetwork.Instantiate(playerPrefab.name, transform.position, Quaternion.identity);
+        Debug.Log(PhotonNetwork.LocalPlayer.CustomProperties["number"]);
+        PhotonNetwork.Instantiate(playerPrefabs[0].name, charactersPosition[0].position, Quaternion.identity);
+/*
+        if(GameObject.Find("Luciem(Clone)") == null){
+            PhotonNetwork.Instantiate(playerPrefabs[0].name, charactersPosition[0].position, Quaternion.identity);
+        }
+        else {
+            if(GameObject.Find("Feim(Clone)") == null){
+                PhotonNetwork.Instantiate(playerPrefabs[1].name, charactersPosition[1].position, Quaternion.identity);
+            }
+            else {
+                if(GameObject.Find("Victoriam(Clone)") == null){
+                    PhotonNetwork.Instantiate(playerPrefabs[2].name, charactersPosition[2].position, Quaternion.identity);
+                }
+                else {
+                    if(GameObject.Find("Henrikm(Clone)") == null){
+                        PhotonNetwork.Instantiate(playerPrefabs[3].name, charactersPosition[3].position, Quaternion.identity);
+                    }
+                }
+            }
+        }*/
+       // foreach(Player player in PhotonNetwork.CurrentRoom.PlayerList){ player.CustomProperties["number"]
+        //}
     }
 }
