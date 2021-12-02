@@ -421,11 +421,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
-  - {fileID: 127426295}
+  - {fileID: 0}
   - {fileID: 1192760595}
   - {fileID: 514790743}
   - {fileID: 1695068334}
-  GameManager: {fileID: 167430762}
 --- !u!1 &121640392
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,13 +677,13 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
 --- !u!114 &127426295 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1813225988275286185, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1813225988275286178, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
   m_PrefabInstance: {fileID: 127426294}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52dadff74720e6444a82a81cfb7a75f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 45e0263eeed5d6040b0aff290232776b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &130811550
@@ -1924,6 +1923,7 @@ MonoBehaviour:
   sliderSwap: {fileID: 211449907}
   swapDelay: 15
   boss: {fileID: 0}
+  multi: 0
 --- !u!4 &167430763
 Transform:
   m_ObjectHideFlags: 0

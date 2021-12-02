@@ -2042,7 +2042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3860976814459344989, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 630
+      value: 630.00006
       objectReference: {fileID: 0}
     - target: {fileID: 3860976814459344989, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3055,7 +3055,7 @@ MonoBehaviour:
   note: {fileID: 421579867}
   Lucie: {fileID: 355234006}
   Victoria: {fileID: 1964039796}
-  Fei: {fileID: 1713576242}
+  Fei: {fileID: 1713576239}
   Henrik: {fileID: 1077693058}
   listOfRobot:
   - {fileID: 1012257037}
@@ -3078,6 +3078,7 @@ MonoBehaviour:
   sliderSwap: {fileID: 1877332005}
   swapDelay: 15
   boss: {fileID: 2104919476}
+  multi: 0
 --- !u!4 &967740388
 Transform:
   m_ObjectHideFlags: 0
@@ -5019,8 +5020,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e575be4bb1cf04ea54f24143862129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundsMixer: {fileID: 24100000, guid: dafd78fa39d8a5d40b23186acc01463f, type: 2}
   musicMixer: {fileID: 24100000, guid: 114ac9b958359f945ae68ca54843216b, type: 2}
+  soundsMixer: {fileID: 24100000, guid: dafd78fa39d8a5d40b23186acc01463f, type: 2}
+  sound: {fileID: 0}
+  musicSlider: {fileID: 0}
+  soundsSlider: {fileID: 0}
 --- !u!114 &1156431653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5422,7 +5426,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1656363025}
-  audioSource: {fileID: 967740389}
 --- !u!114 &1354205462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6440,7 +6443,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characters:
   - {fileID: 1964039796}
-  GameManager: {fileID: 967740387}
 --- !u!1 &1516205894
 GameObject:
   m_ObjectHideFlags: 0
@@ -8203,17 +8205,6 @@ MonoBehaviour:
   Player4: {fileID: 1077693057}
   animator: {fileID: 1713576240}
   character: {fileID: 1713576239}
---- !u!114 &1713576242 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1813225988275286185, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
-  m_PrefabInstance: {fileID: 1713576235}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713576236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52dadff74720e6444a82a81cfb7a75f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1736322998
 GameObject:
   m_ObjectHideFlags: 0
