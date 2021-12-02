@@ -2839,6 +2839,7 @@ MonoBehaviour:
   - {fileID: 501467418}
   - {fileID: 855729044}
   - {fileID: 2104919476}
+  noteNumber: 5
   starSliderImage: {fileID: 391112119}
   countdownText: {fileID: 1408033207}
   countdownTime: 30
@@ -4713,8 +4714,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e575be4bb1cf04ea54f24143862129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundsMixer: {fileID: 24100000, guid: dafd78fa39d8a5d40b23186acc01463f, type: 2}
   musicMixer: {fileID: 24100000, guid: 114ac9b958359f945ae68ca54843216b, type: 2}
+  soundsMixer: {fileID: 24100000, guid: dafd78fa39d8a5d40b23186acc01463f, type: 2}
+  sound: {fileID: 0}
+  musicSlider: {fileID: 0}
+  soundsSlider: {fileID: 0}
 --- !u!114 &1156431653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5245,7 +5249,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1656363025}
-  audioSource: {fileID: 967740389}
 --- !u!114 &1354205462
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
 
     // COLLECTABLES
     public bool hasKey {get; private set;} = false;
+    private bool isNoteFound = false;
+    public int noteNumber;
 
     // STARS
     private int currentStarsNumber = 0;
@@ -130,14 +132,9 @@ public class GameManager : MonoBehaviour
         {
             note.color = Color.white;
             collectable.gameObject.SetActive(false);
-            //string scene = levelName;
-            //mainMenu.Cadenas(scene);
+            currentStarsNumber++;
+            isNoteFound = true;
         }
-    }
-
-    public void NoteFound(){
-        note.color = Color.white;
-        currentStarsNumber++;
     }
 
     IEnumerator CountdownTimerToNull() {
@@ -182,6 +179,10 @@ public class GameManager : MonoBehaviour
             // If the current stars number for level is greater than the saved record (for this level), we update it
             if (currentStarsNumber > PlayerPrefs.GetInt("Stars" + levelName)) {
                 PlayerPrefs.SetInt("Stars" + levelName, currentStarsNumber);
+            }
+            // TODO
+            if (isNoteFound) {
+                PlayerPrefs.SetString("Note" + noteNumber.ToString(), "true");
             }
 
             // Display the end-of-level menu and play the associated audio clip

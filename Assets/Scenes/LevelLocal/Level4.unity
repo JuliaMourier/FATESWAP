@@ -425,7 +425,6 @@ MonoBehaviour:
   - {fileID: 1192760595}
   - {fileID: 514790743}
   - {fileID: 1695068334}
-  GameManager: {fileID: 167430762}
 --- !u!1 &121640392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,6 +1910,7 @@ MonoBehaviour:
   Henrik: {fileID: 1192760595}
   listOfRobot:
   - {fileID: 1113124094}
+  noteNumber: 4
   starSliderImage: {fileID: 211449909}
   countdownText: {fileID: 211449908}
   countdownTime: 0
