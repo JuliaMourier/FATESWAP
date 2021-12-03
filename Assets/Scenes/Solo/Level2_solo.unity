@@ -5043,7 +5043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -456.2, y: 316}
+  m_AnchoredPosition: {x: -341.5, y: 236}
   m_SizeDelta: {x: 24, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &928855901
@@ -6574,7 +6574,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -522.5, y: 316}
+  m_AnchoredPosition: {x: -391.3, y: 235.99998}
   m_SizeDelta: {x: 24, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1116777776
@@ -6942,7 +6942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -721, y: 316}
+  m_AnchoredPosition: {x: -540.5, y: 235.99998}
   m_SizeDelta: {x: 24, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1415240960
@@ -7128,7 +7128,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -7241,7 +7241,7 @@ MonoBehaviour:
   noteNumber: 2
   starSliderImage: {fileID: 2130025293}
   countdownText: {fileID: 1891797436}
-  countdownTime: 30
+  countdownTime: 120
   gameOverMenuUI: {fileID: 1860824969}
   endOfLevelMenuUI: {fileID: 1472425976}
   gameOverAudioClip: {fileID: 8300000, guid: 3e3e8dbad8f4aa048ba84ef1405af255, type: 3}
@@ -7694,7 +7694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -654, y: 316}
+  m_AnchoredPosition: {x: -491.2, y: 235.99998}
   m_SizeDelta: {x: 24, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1702541638
@@ -9019,7 +9019,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -587, y: 316}
+  m_AnchoredPosition: {x: -441, y: 235.99998}
   m_SizeDelta: {x: 24, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2116343184

@@ -5491,12 +5491,11 @@ MonoBehaviour:
   countdownTime: 30
   gameOverMenuUI: {fileID: 1086558888}
   endOfLevelMenuUI: {fileID: 1006006577}
-  swapSourceSound: {fileID: 1903682310}
-  mainMenu: {fileID: 0}
   gameOverAudioClip: {fileID: 8300000, guid: 3e3e8dbad8f4aa048ba84ef1405af255, type: 3}
   endOfLevelAudioClip: {fileID: 8300000, guid: 2a5e3574c3016fb44b56a34272376d4f, type: 3}
   noteSound: {fileID: 421647539}
   keySound: {fileID: 1364977772}
+  swapSourceSound: {fileID: 1903682310}
   exit: {fileID: 700635}
   sliderSwap: {fileID: 113467958}
   swapDelay: 15
@@ -6055,11 +6054,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7051517751146259239, guid: 29e7cc6984cbfdc4f9a76e69a6a27cef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.23
+      value: -3.71
       objectReference: {fileID: 0}
     - target: {fileID: 7051517751146259239, guid: 29e7cc6984cbfdc4f9a76e69a6a27cef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.57
+      value: -0.74
       objectReference: {fileID: 0}
     - target: {fileID: 7051517751146259239, guid: 29e7cc6984cbfdc4f9a76e69a6a27cef, type: 3}
       propertyPath: m_LocalPosition.z

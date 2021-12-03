@@ -104,14 +104,12 @@ public class GameManager : MonoBehaviour
         if(CharactersOutOfMap()){
             HeroesTakeDamage();
         }
+        // While the fill amount of the star slider is not null, we decrement it every second
+        if (starSliderImage.fillAmount > 0) {
+            starSliderImage.fillAmount -= 1.0f / countdownTime * Time.deltaTime;
+        }
         if (!solo && !isGameOver)
         {
-            // While the fill amount of the star slider is not null, we decrement it every second
-            if (starSliderImage.fillAmount > 0) {
-                starSliderImage.fillAmount -= 1.0f / countdownTime * Time.deltaTime;
-            }
-            
-        
             //Gives the position between the initial and final position to make a smooth transition
             sliderSwap.value = elapsedTime;
             elapsedTime += Time.deltaTime; //increment the time

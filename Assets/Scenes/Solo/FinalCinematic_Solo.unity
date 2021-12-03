@@ -512,7 +512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 838079830}
   story: {fileID: 2003641417}
-  nextSlide: {fileID: 155133382}
+  nextSlide: {fileID: 1908835700}
 --- !u!1001 &577222355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -575,7 +575,7 @@ PrefabInstance:
     - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: nextSlide
       value: 
-      objectReference: {fileID: 155133382}
+      objectReference: {fileID: 1908835700}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -649,7 +649,7 @@ PrefabInstance:
     - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: nextSlide
       value: 
-      objectReference: {fileID: 155133382}
+      objectReference: {fileID: 1908835700}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -930,7 +930,7 @@ PrefabInstance:
     - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: nextSlide
       value: 
-      objectReference: {fileID: 155133382}
+      objectReference: {fileID: 1908835700}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1003,7 +1003,7 @@ PrefabInstance:
     - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: nextSlide
       value: 
-      objectReference: {fileID: 155133382}
+      objectReference: {fileID: 1908835700}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1112,7 +1112,7 @@ PrefabInstance:
     - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: nextSlide
       value: 
-      objectReference: {fileID: 155133382}
+      objectReference: {fileID: 1908835700}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1427,7 +1427,7 @@ PrefabInstance:
     - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: nextSlide
       value: 
-      objectReference: {fileID: 155133382}
+      objectReference: {fileID: 1908835700}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1517,7 +1517,7 @@ PrefabInstance:
     - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: nextSlide
       value: 
-      objectReference: {fileID: 155133382}
+      objectReference: {fileID: 1908835700}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1590,7 +1590,7 @@ PrefabInstance:
     - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: nextSlide
       value: 
-      objectReference: {fileID: 155133382}
+      objectReference: {fileID: 1908835700}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1667,7 +1667,7 @@ PrefabInstance:
     - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: nextSlide
       value: 
-      objectReference: {fileID: 155133382}
+      objectReference: {fileID: 1908835700}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2045,7 +2045,7 @@ PrefabInstance:
     - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: nextSlide
       value: 
-      objectReference: {fileID: 155133382}
+      objectReference: {fileID: 1908835700}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2124,7 +2124,7 @@ PrefabInstance:
     - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: nextSlide
       value: 
-      objectReference: {fileID: 155133382}
+      objectReference: {fileID: 1908835700}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 

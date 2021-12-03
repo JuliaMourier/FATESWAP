@@ -1462,9 +1462,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1171813971742821920, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -112
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171813971742821920, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 194
+      objectReference: {fileID: 0}
     - target: {fileID: 1882918447463716296, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578120832607824299, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -111.999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578120832607824299, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 158.39996
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725261184450704794, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -111.999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725261184450704794, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 194
       objectReference: {fileID: 0}
     - target: {fileID: 3328528663981646896, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1476,7 +1500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3860976814459344989, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 630
+      value: 630.00006
       objectReference: {fileID: 0}
     - target: {fileID: 3860976814459344989, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2369,15 +2393,14 @@ MonoBehaviour:
   noteNumber: 5
   starSliderImage: {fileID: 421579873}
   countdownText: {fileID: 421579872}
-  countdownTime: 30
+  countdownTime: 100
   gameOverMenuUI: {fileID: 771482753}
   endOfLevelMenuUI: {fileID: 1386121259}
-  swapSourceSound: {fileID: 1390693716}
-  mainMenu: {fileID: 0}
   gameOverAudioClip: {fileID: 8300000, guid: 3e3e8dbad8f4aa048ba84ef1405af255, type: 3}
   endOfLevelAudioClip: {fileID: 8300000, guid: 2a5e3574c3016fb44b56a34272376d4f, type: 3}
   noteSound: {fileID: 703329491}
   keySound: {fileID: 72644714}
+  swapSourceSound: {fileID: 1390693716}
   exit: {fileID: 1502380888}
   sliderSwap: {fileID: 1877332005}
   swapDelay: 15
@@ -2412,7 +2435,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

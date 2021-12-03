@@ -1841,7 +1841,7 @@ MonoBehaviour:
   noteNumber: 4
   starSliderImage: {fileID: 738732085}
   countdownText: {fileID: 1743738600}
-  countdownTime: 0
+  countdownTime: 60
   gameOverMenuUI: {fileID: 1460514919}
   endOfLevelMenuUI: {fileID: 1460514918}
   gameOverAudioClip: {fileID: 8300000, guid: 3e3e8dbad8f4aa048ba84ef1405af255, type: 3}
@@ -1883,7 +1883,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

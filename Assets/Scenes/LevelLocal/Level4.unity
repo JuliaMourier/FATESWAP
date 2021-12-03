@@ -1913,15 +1913,14 @@ MonoBehaviour:
   noteNumber: 4
   starSliderImage: {fileID: 211449909}
   countdownText: {fileID: 211449908}
-  countdownTime: 0
+  countdownTime: 90
   gameOverMenuUI: {fileID: 1460514919}
   endOfLevelMenuUI: {fileID: 1460514918}
-  swapSourceSound: {fileID: 2070768636}
-  mainMenu: {fileID: 0}
   gameOverAudioClip: {fileID: 8300000, guid: 3e3e8dbad8f4aa048ba84ef1405af255, type: 3}
   endOfLevelAudioClip: {fileID: 8300000, guid: 5ec400b27afd110409def87e6b1b2ead, type: 3}
   noteSound: {fileID: 1945247228}
   keySound: {fileID: 428378765}
+  swapSourceSound: {fileID: 2070768636}
   exit: {fileID: 82448853}
   sliderSwap: {fileID: 211449907}
   swapDelay: 15
@@ -1956,7 +1955,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
