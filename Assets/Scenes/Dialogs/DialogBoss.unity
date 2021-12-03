@@ -784,7 +784,7 @@ MonoBehaviour:
   - {fileID: 1357801896}
   - {fileID: 1610136053}
   - {fileID: 1237415887}
-  - {fileID: 1759376913}
+  - {fileID: 0}
 --- !u!61 &507250245
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5739,17 +5739,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
---- !u!114 &1759376913 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1813225988275286185, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
-  m_PrefabInstance: {fileID: 1759376912}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759376914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52dadff74720e6444a82a81cfb7a75f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1759376914 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1813225988275286189, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
@@ -6013,7 +6002,7 @@ AudioSource:
   m_GameObject: {fileID: 2050340887}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: dafd78fa39d8a5d40b23186acc01463f, type: 2}
   m_audioClip: {fileID: 8300000, guid: c4a3bb04479934244b8c485d5e963d25, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.752
