@@ -2742,7 +2742,7 @@ PrefabInstance:
     - target: {fileID: 6768015982698997867, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
       propertyPath: characters.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 507501171}
     - target: {fileID: 6768015982698997867, guid: f5b610cfcbb158a47bc9b849dcbf2579, type: 3}
       propertyPath: characters.Array.data[1]
       value: 
@@ -7698,6 +7698,14 @@ PrefabInstance:
       propertyPath: GameManager
       value: 
       objectReference: {fileID: 1558632569}
+    - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: switchSound
+      value: 
+      objectReference: {fileID: 1361675710}
+    - target: {fileID: 3056977934308329336, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+      propertyPath: theOneWhoCanSwitch
+      value: 
+      objectReference: {fileID: 270395768}
     - target: {fileID: 3056977934308329338, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
       propertyPath: m_Name
       value: HiddenSwitch
@@ -7763,6 +7771,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9df1736271f7d84fba5cb2d0730bd4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1361675710 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4689455018735236424, guid: 5a8ab2c2c70054347ac84ef716cda3df, type: 3}
+  m_PrefabInstance: {fileID: 1361675708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1371905945
 GameObject:
   m_ObjectHideFlags: 0
@@ -7966,7 +7979,7 @@ Transform:
   - {fileID: 780853697}
   - {fileID: 1630220342}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1420221078
 GameObject:
