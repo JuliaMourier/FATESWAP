@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -295,6 +299,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -365,6 +373,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -518,6 +530,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -588,6 +604,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -749,6 +769,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -888,6 +912,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -958,6 +986,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1032,6 +1064,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1106,6 +1142,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1335,6 +1375,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1420,6 +1464,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1595,6 +1643,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1666,6 +1718,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1748,6 +1804,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1838,6 +1898,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1944,8 +2008,8 @@ RectTransform:
   m_Children:
   - {fileID: 511531383}
   - {fileID: 240384993}
-  - {fileID: 1330661600}
   - {fileID: 1861335227}
+  - {fileID: 1330661600}
   - {fileID: 1143752352}
   - {fileID: 1349282913}
   - {fileID: 1890942416}
@@ -2229,7 +2293,7 @@ Transform:
   - {fileID: 887104057}
   - {fileID: 1128836360}
   m_Father: {fileID: 1265739057}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1330661601
 MonoBehaviour:
@@ -2245,6 +2309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 887104058}
   story: {fileID: 1128836361}
+  nextSlide: {fileID: 1289052104}
 --- !u!4 &1349282913 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 951611150527845778, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
@@ -2414,6 +2479,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2519,6 +2588,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2609,6 +2682,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2721,6 +2798,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151256230182, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2740,7 +2821,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 951611150527845778, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 951611150527845778, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2790,6 +2871,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 951611150527845781, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
+      propertyPath: nextSlide
+      value: 
+      objectReference: {fileID: 1289052104}
     - target: {fileID: 951611151500916636, guid: e1c6019197ae2514fb3468d4c2f91954, type: 3}
       propertyPath: m_Text
       value: Ce jeune enfant insouciant se nomme Javier.

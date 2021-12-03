@@ -530,6 +530,7 @@ MonoBehaviour:
   sliderSwap: {fileID: 1495309372}
   swapDelay: 15
   boss: {fileID: 0}
+  solo: 0
   multi: 0
 --- !u!4 &393321800
 Transform:

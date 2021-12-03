@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4345353183431298746}
   - component: {fileID: 7781649994250978993}
   - component: {fileID: 4316849464775961646}
-  - component: {fileID: 4942415720961200580}
   - component: {fileID: 3222625736439803796}
+  - component: {fileID: 3925397418539725918}
   m_Layer: 10
   m_Name: Pr Javier
   m_TagString: Untagged
@@ -108,22 +108,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4942415720961200580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4003377048495772300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6d84592ef1d7f54daebebf384fa2b84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 3222625736439803796}
-  initialDirection: {x: -1, y: 0}
-  speed: 0.7
-  isAlive: 1
 --- !u!95 &3222625736439803796
 Animator:
   serializedVersion: 3
@@ -143,6 +127,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3925397418539725918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4003377048495772300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e0b3b948a3fa8489c480dabcc604ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ennemi: {fileID: 0}
+  animator: {fileID: 3222625736439803796}
+  initialDirection: {x: -1, y: 0}
+  speed: 0.7
+  isAlive: 1
+  explosionSound: {fileID: 0}
 --- !u!1 &5472711503190036177
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +190,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d5f34e2dc93244d87af0b7d6b8849a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  robot: {fileID: 4942415720961200580}
+  robot: {fileID: 0}
+  forPunchSound2: {fileID: 0}
 --- !u!61 &6877242958630168828
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -336,4 +339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a653e3a89bc0ad142bfe5f67363f7307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  robot: {fileID: 4942415720961200580}
+  robot: {fileID: 0}
+  forPunch: {fileID: 0}
+  againstPunch: {fileID: 0}
