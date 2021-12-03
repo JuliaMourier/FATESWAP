@@ -15,12 +15,7 @@ public class Door : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         solo = FindObjectOfType<GameManager>().solo;
         multi = FindObjectOfType<GameManager>().multi;
-        if(multi){
-            characters.Add(GameObject.Find("Feim(Clone)").GetComponent<Fei>());
-            characters.Add(GameObject.Find("Victoriam(Clone)").GetComponent<Victoria>());
-            characters.Add(GameObject.Find("Luciem(Clone)").GetComponent<Character>());
-            characters.Add(GameObject.Find("Henrikm(Clone)").GetComponent<Character>());
-        }
+        
     }
 
     private void OnTriggerStay2D(Collider2D other) {
