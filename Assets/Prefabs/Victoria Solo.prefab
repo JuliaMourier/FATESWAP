@@ -64,7 +64,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1064990881085756130, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
       propertyPath: m_Name
-      value: Victoria
+      value: Victoria Solo
       objectReference: {fileID: 0}
     - target: {fileID: 1064990881085756130, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
       propertyPath: m_IsActive
@@ -118,6 +118,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1407674573082932301, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: dafd78fa39d8a5d40b23186acc01463f, type: 2}
+    - target: {fileID: 2252917944738379157, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: dafd78fa39d8a5d40b23186acc01463f, type: 2}
+    - target: {fileID: 3808855947819860607, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: dafd78fa39d8a5d40b23186acc01463f, type: 2}
+    - target: {fileID: 6828577519719348327, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: dafd78fa39d8a5d40b23186acc01463f, type: 2}
     m_RemovedComponents:
     - {fileID: 1064990881085756141, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}

@@ -1947,6 +1947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   robot: {fileID: 175791202}
+  forPunchSound2: {fileID: 0}
 --- !u!1 &189295913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2084,7 +2085,7 @@ AudioSource:
   m_GameObject: {fileID: 290691712}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: dafd78fa39d8a5d40b23186acc01463f, type: 2}
   m_audioClip: {fileID: 8300000, guid: c4a3bb04479934244b8c485d5e963d25, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.752

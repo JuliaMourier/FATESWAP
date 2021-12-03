@@ -52,7 +52,7 @@ public class Switch : MonoBehaviour
             else if(GameManager.multi){
                 if (other.gameObject.Equals(theOneWhoCanSwitch.gameObject))
                 { //if only one character can switch the switch, check if the collision is dur to this character
-                    if (available && theOneWhoCanSwitch.isPowerActivate && (Input.GetKey(theOneWhoCanSwitch.GetComponent<MovementMultiplayerMode>().switchPressKey) || Input.GetKey(theOneWhoCanSwitch.GetComponent<TempMovementSolo>().switchPressKey2)))
+                    if (available && theOneWhoCanSwitch.isPowerActivate && (Input.GetKey(theOneWhoCanSwitch.GetComponent<MovementMultiplayerMode>().switchPressKey)))
                     { //if Henrik is capable of switch the switch
                         available = false; //Disable the switch
                         SwitchOn(); //Launch the change of state

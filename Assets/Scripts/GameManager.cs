@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Photon.Pun;
 
 public class GameManager : MonoBehaviour
 {
@@ -78,12 +79,7 @@ public class GameManager : MonoBehaviour
     }
 
     void Start() {
-        if(multi) {
-            Lucie = GameObject.Find("Luciem(Clone)").GetComponent<Character>();
-            Fei = GameObject.Find("Feim(Clone)").GetComponent<Fei>();
-            Henrik = GameObject.Find("Henrikm(Clone)").GetComponent<Character>();
-            Victoria = GameObject.Find("Victoriam(Clone)").GetComponent<Victoria>();
-        }
+
         
         solo = !Lucie.gameObject.activeInHierarchy;
         

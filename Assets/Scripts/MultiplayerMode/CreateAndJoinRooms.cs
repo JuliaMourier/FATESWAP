@@ -120,7 +120,6 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
             Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(p); //Display the list of the player currently in the room
         }
 
-        PhotonNetwork.LocalPlayer.CustomProperties["number"] = (int)PhotonNetwork.CurrentRoom.PlayerCount;
     }
 
     //Leave the room when click on back button
@@ -162,13 +161,13 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         }
 
     }
-
     
     //When a player enter the room display the new player name in the list and update the number of players currently in the room
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         
         base.OnPlayerEnteredRoom(newPlayer);
+        newPlayer.CustomProperties["number"] = PhotonNetwork.CurrentRoom.PlayerCount;
         Debug.Log("player list updated " + PhotonNetwork.CountOfPlayers + "player " + newPlayer.CustomProperties["number"]);
         UpdateNumberOfPlayer();
         Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
@@ -199,6 +198,9 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     }
 
     public void StartGame(){
+        foreach(KeyValuePair<int, Player> players in PhotonNetwork.CurrentRoom.Players){
+            players.Value.CustomProperties["number"] = players.Key;
+        }
         SceneManager.LoadScene("TestMultiplayer");
     }
 }
