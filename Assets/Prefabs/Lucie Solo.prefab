@@ -36,10 +36,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1147700084802834746, guid: 056add8ea6282d1458ea5a91d8c40a79, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300002, guid: dafd78fa39d8a5d40b23186acc01463f, type: 2}
     - target: {fileID: 1747054415868408136, guid: 056add8ea6282d1458ea5a91d8c40a79, type: 3}
       propertyPath: m_Name
       value: Lucie
@@ -111,18 +107,6 @@ PrefabInstance:
     - target: {fileID: 1747054415868408143, guid: 056add8ea6282d1458ea5a91d8c40a79, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4480310005157137390, guid: 056add8ea6282d1458ea5a91d8c40a79, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300002, guid: dafd78fa39d8a5d40b23186acc01463f, type: 2}
-    - target: {fileID: 6781950445471304103, guid: 056add8ea6282d1458ea5a91d8c40a79, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300002, guid: dafd78fa39d8a5d40b23186acc01463f, type: 2}
-    - target: {fileID: 7696761662435633121, guid: 056add8ea6282d1458ea5a91d8c40a79, type: 3}
-      propertyPath: m_Name
-      value: Lucie Solo
       objectReference: {fileID: 0}
     - target: {fileID: 7696761662435633121, guid: 056add8ea6282d1458ea5a91d8c40a79, type: 3}
       propertyPath: m_IsActive
