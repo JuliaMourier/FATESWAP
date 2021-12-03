@@ -35,7 +35,10 @@ public class LevelSelectionMenu : MonoBehaviour {
     // When the new game button is pressed, we reset all the stars
     // Only the level 1 will be unlocked after this button is pressed
     public void NewGame() {
-        PlayerPrefs.DeleteAll();
+        // Reset all the stars for the selected mode (coop or solo)
+        for (int i = 0; i < 5; i++) {
+            PlayerPrefs.DeleteKey(STARS_LEVEL + i);
+        }
         if (isSoloMode) {
             SceneManager.LoadScene("IntroCinematic_Solo");
             PlayerPrefs.SetInt("StarsLevelSolo0", 3);
