@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Robot : MonoBehaviour
+public class Boss : MonoBehaviour
 {
     public GameObject ennemi ; //Ennemi of the robot => Null if all characters can kill him
     public Animator animator; //Animator
@@ -53,11 +53,6 @@ public class Robot : MonoBehaviour
         }
     }
 
-    //deactivate the robot
-    public void Disable(){
-        this.gameObject.SetActive(false);
-    }
-
     // If we want to put less than 1s for the deactivation
     protected IEnumerator DeactivateRobot(){
         isAlive = false;
@@ -71,9 +66,6 @@ public class Robot : MonoBehaviour
         {
             elapsed += Time.deltaTime;
             yield return null;
-        }
-        if(this.name != "PrJavier"){
-            this.Disable();
         }
     }
 

@@ -121,7 +121,6 @@ public class TempMovementSolo : MonoBehaviour
             IsGrounded = true;
             if (character.name == "Lucie")
             {
-                Debug.Log("Lucie");
                 jumpCount = 1;
             }
         }
