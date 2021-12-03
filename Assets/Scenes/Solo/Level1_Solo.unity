@@ -368,6 +368,7 @@ MonoBehaviour:
   sliderSwap: {fileID: 1069164676}
   swapDelay: 15
   boss: {fileID: 0}
+  solo: 1
   multi: 0
 --- !u!4 &393321800
 Transform:
@@ -518,6 +519,7 @@ MonoBehaviour:
   sliderSwap: {fileID: 0}
   swapDelay: 15
   boss: {fileID: 0}
+  solo: 0
   multi: 0
 --- !u!1 &394062886
 GameObject:

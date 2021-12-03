@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
 
     public Robot boss = null;
 
-    public bool solo { get; private set; } = false;
+    public bool solo = false;
     public bool multi = false;
 
     void Awake() {
@@ -103,9 +103,11 @@ public class GameManager : MonoBehaviour
             indexByCharacter.Add(Victoria, 2);
             indexByCharacter.Add(Lucie, 3);
             InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay); 
-        // Coroutine that handles the timer 
-       
-            //InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);
+        
+        }
+
+        if(solo){
+            sliderSwap.gameObject.SetActive(false);
         }
     }
 
@@ -238,7 +240,6 @@ public class GameManager : MonoBehaviour
     public void LoadNextScene() {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        Debug.Log(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     // Restart the current level

@@ -1854,6 +1854,7 @@ MonoBehaviour:
   sliderSwap: {fileID: 211449907}
   swapDelay: 15
   boss: {fileID: 0}
+  solo: 1
   multi: 0
 --- !u!4 &167430763
 Transform:
@@ -1972,9 +1973,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1171813971742821920, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 194
+      objectReference: {fileID: 0}
     - target: {fileID: 1882918447463716296, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578120832607824299, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 158.39996
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725261184450704794, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 194
       objectReference: {fileID: 0}
     - target: {fileID: 3328528663981646896, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
       propertyPath: m_LocalPosition.x
