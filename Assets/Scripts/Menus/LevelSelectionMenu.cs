@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class LevelSelectionMenu : MonoBehaviour {
 
+    public bool isSoloMode;
+    private string STARS_LEVEL = "StarsLevel";
+
     [SerializeField]
     private bool unlocked;
 
@@ -16,6 +19,9 @@ public class LevelSelectionMenu : MonoBehaviour {
     private void Awake() {
         this.currentLevelIndex = int.Parse(gameObject.name);
         this.button = GetComponent<Button>();
+        if (isSoloMode) {
+            STARS_LEVEL = "StarsLevelSolo";
+        }
     }
 
     private void Update() {
@@ -29,23 +35,21 @@ public class LevelSelectionMenu : MonoBehaviour {
     // When the new game button is pressed, we reset all the stars
     // Only the level 1 will be unlocked after this button is pressed
     public void NewGame() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         PlayerPrefs.DeleteAll();
-        PlayerPrefs.SetInt("StarsLevel0", 3);
-    }
-
-    public void NewGameSolo()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 14);
-        PlayerPrefs.DeleteAll();
-        PlayerPrefs.SetInt("StarsLevel0", 3);
+        if (isSoloMode) {
+            SceneManager.LoadScene("IntroCinematic_Solo");
+            PlayerPrefs.SetInt("StarsLevelSolo0", 3);
+        } else {
+            SceneManager.LoadScene("IntroCinematic");
+            PlayerPrefs.SetInt("StarsLevel0", 3);
+        }
     }
 
     // Update the level unlocked status
     // If the previous level has a stars number greater than 0, the current level is unlocked
     private void UpdateLevelStatus() {
         int previousLevelIndex = currentLevelIndex - 1;
-        if (PlayerPrefs.GetInt("StarsLevel" + previousLevelIndex) > 0) {
+        if (PlayerPrefs.GetInt(STARS_LEVEL + previousLevelIndex) > 0) {
             unlocked = true;
         }
     }
@@ -64,7 +68,7 @@ public class LevelSelectionMenu : MonoBehaviour {
             foreach (var star in stars) {
                 star.SetActive(true);                
             }
-            for (int i = 0; i < PlayerPrefs.GetInt("StarsLevel" + currentLevelIndex); i++) {
+            for (int i = 0; i < PlayerPrefs.GetInt(STARS_LEVEL + currentLevelIndex); i++) {
                 stars[i].gameObject.GetComponent<Image>().sprite = starSprite;
             }
         }
@@ -72,7 +76,6 @@ public class LevelSelectionMenu : MonoBehaviour {
 
     // Load the scene corresponding to the associated level
     public void PlayLevel(string levelName) {
-        // PlayerPrefs.SetInt("StarsLevel" + currentLevelIndex, 2);
         SceneManager.LoadScene(levelName);
     }
 
