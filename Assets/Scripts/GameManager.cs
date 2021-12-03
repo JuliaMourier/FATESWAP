@@ -39,19 +39,18 @@ public class GameManager : MonoBehaviour
     public Image starSliderImage;
     public TextMeshProUGUI countdownText;
     public int countdownTime;
+    private string STARS_LEVEL;
 
     // MENUS
     public GameObject gameOverMenuUI;
     public GameObject endOfLevelMenuUI;
-
-    public AudioSource swapSourceSound;
-    public MainMenu mainMenu;
     // AUDIO
     public AudioClip gameOverAudioClip;
     public AudioClip endOfLevelAudioClip;
     private AudioSource audioSource;
     public AudioSource noteSound;
     public AudioSource keySound;
+    public AudioSource swapSourceSound;
 
     // EXIT
     public SpriteRenderer exit;
@@ -75,33 +74,28 @@ public class GameManager : MonoBehaviour
         // Get and pass the AudioSource component to the audioSource attribute
         audioSource = GetComponent<AudioSource>();
         levelName = SceneManager.GetActiveScene().name;
-        
+        if (solo) {
+            STARS_LEVEL = "StarsLevelSolo" + noteNumber;
+        } else {
+            STARS_LEVEL = "Stars" + levelName;
+        }
     }
 
     void Start() {
-
-        
         solo = !Lucie.gameObject.activeInHierarchy;
-        
-        if (!solo)
-        {
-            sliderSwap.maxValue = swapDelay;
-            // We invoke the swapCharacters() method repeatedly according to the swapDelay value
-            StartCoroutine(CountdownTimerToNull());
-        }
-       
-        
+        StartCoroutine(CountdownTimerToNull());
 
-        if (!solo && !multi)
-        {   
+        if (!solo) {
+            sliderSwap.maxValue = swapDelay;
+        }
+
+        if (!solo && !multi) {   
             indexByCharacter.Add(Henrik, 0);
             indexByCharacter.Add(Fei, 1);
             indexByCharacter.Add(Victoria, 2);
             indexByCharacter.Add(Lucie, 3);
+            // We invoke the swapCharacters() method repeatedly according to the swapDelay value
             InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay); 
-        // Coroutine that handles the timer 
-       
-            //InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay);
         }
     }
 
@@ -186,10 +180,10 @@ public class GameManager : MonoBehaviour
                 currentStarsNumber++;
             }
             // If the current stars number for level is greater than the saved record (for this level), we update it
-            if (currentStarsNumber > PlayerPrefs.GetInt("Stars" + levelName)) {
-                PlayerPrefs.SetInt("Stars" + levelName, currentStarsNumber);
+            if (currentStarsNumber > PlayerPrefs.GetInt(STARS_LEVEL)) {
+                PlayerPrefs.SetInt(STARS_LEVEL, currentStarsNumber);
             }
-            // TODO
+            // If the note has been found, we add it in the player prefs
             if (isNoteFound) {
                 PlayerPrefs.SetString("Note" + noteNumber.ToString(), "true");
             }
