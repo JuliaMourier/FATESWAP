@@ -24,7 +24,7 @@ MonoBehaviour:
   Player3: {fileID: 0}
   Player4: {fileID: 0}
   animator: {fileID: 7925931451313900642}
-  character: {fileID: 7925931450434887114}
+  character: {fileID: 0}
 --- !u!1001 &8419285735280160099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36,6 +36,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 671758461167798222, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: dafd78fa39d8a5d40b23186acc01463f, type: 2}
     - target: {fileID: 1813225986487402544, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.071
@@ -84,6 +88,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5629171333618434497, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: dafd78fa39d8a5d40b23186acc01463f, type: 2}
     - target: {fileID: 6086900890380414496, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
       propertyPath: m_Name
       value: Fei
@@ -156,6 +164,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7632645612637532403, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: dafd78fa39d8a5d40b23186acc01463f, type: 2}
     m_RemovedComponents:
     - {fileID: 4236927051998501083, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
     - {fileID: 1813225988275286186, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
@@ -170,17 +182,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 1813225986457231617, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
   m_PrefabInstance: {fileID: 8419285735280160099}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7925931450434887114 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1813225988275286185, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
-  m_PrefabInstance: {fileID: 8419285735280160099}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7925931450434887118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52dadff74720e6444a82a81cfb7a75f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &7925931451352477011 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1813225986487402544, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
