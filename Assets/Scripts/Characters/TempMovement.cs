@@ -64,19 +64,19 @@ public class TempMovement : MonoBehaviour
         if (character != null) {
             // We set different controllers according to the character name
             switch(character.name) {
-                // Fei is controlled by default with the arrow keys
+                // By default, Fei is controlled by J3
                 case "Fei":
                     setControlsToJ3();
                     break;
-                // Henrik is controlled by defautl with the ZQSD scheme
+                // By default, Henrik is controlled by J1
                 case "Henrik":
                     setControlsToJ1();
                     break;
-                // Victoria is controlled by default with IJLO scheme
+                // By default, Victoria is controlled by J2
                 case "Victoria":
                     setControlsToJ2();
                     break;
-                // Lucie is controlled by default with CVBSpace scheme
+                // By default, Lucie is controlled by J4
                 case "Lucie":
                     setControlsToJ4();
                     break;

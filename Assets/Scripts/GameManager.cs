@@ -91,8 +91,8 @@ public class GameManager : MonoBehaviour
 
         if (!solo && !multi) {   
             indexByCharacter.Add(Henrik, 0);
-            indexByCharacter.Add(Fei, 1);
-            indexByCharacter.Add(Victoria, 2);
+            indexByCharacter.Add(Victoria, 1);
+            indexByCharacter.Add(Fei, 2);
             indexByCharacter.Add(Lucie, 3);
             // We invoke the swapCharacters() method repeatedly according to the swapDelay value
             InvokeRepeating(nameof(swapCharacters), swapDelay, swapDelay); 
@@ -263,7 +263,6 @@ public class GameManager : MonoBehaviour
     // The new index has to be different of the current one
 
     private void swapCharacters() {
-        
         //Reset the HUD slider for swap
         elapsedTime = 0.0f;
         if(!isGameOver){
@@ -275,40 +274,35 @@ public class GameManager : MonoBehaviour
             List<int> indexList;
             var allCharactersHaveANewIndex = false;
             int rndIndex;
-            int previousFeiIndex = indexByCharacter[Fei]; // We need this variable in case the second character process fails
+            int previousHenrikIndex = indexByCharacter[Henrik]; // We need this variable in case the second character process fails
             // As long as each character doesn't have a new index, we start the process again
             while(!allCharactersHaveANewIndex) {
                 indexList = new List<int>(){0, 1, 2, 3};
-                // Process for the first character (Fei)
+                // Process for the first character (Henrik)
                 rndIndex = Random.Range(0, 4); // 0 included, 4 excluded
-                if (previousFeiIndex != rndIndex) {
-                    indexByCharacter[Fei] = rndIndex;
+                if (previousHenrikIndex != rndIndex) {
+                    indexByCharacter[Henrik] = rndIndex;
                     indexList.Remove(rndIndex);
-                    // Process for the second character (Henrik)
+                    // Process for the second character (Victoria)
                     rndIndex = Random.Range(0, 3); // 0 included, 3 excluded
-                    if (indexByCharacter[Henrik] != indexList[rndIndex]) {
-                        indexByCharacter[Henrik] = indexList[rndIndex];
+                    if (indexByCharacter[Victoria] != indexList[rndIndex]) {
+                        indexByCharacter[Victoria] = indexList[rndIndex];
                         indexList.RemoveAt(rndIndex);
                         // Process for the last two characters (Victoria and Lucie)
-                        if ((indexByCharacter[Victoria] != indexList[0]) && (indexByCharacter[Lucie] != indexList[1])) {
-                            indexByCharacter[Victoria] = indexList[0];
+                        if ((indexByCharacter[Fei] != indexList[0]) && (indexByCharacter[Lucie] != indexList[1])) {
+                            indexByCharacter[Fei] = indexList[0];
                             indexByCharacter[Lucie] = indexList[1];
                         } else {
-                            indexByCharacter[Victoria] = indexList[1];
+                            indexByCharacter[Fei] = indexList[1];
                             indexByCharacter[Lucie] = indexList[0];
                         }
                         allCharactersHaveANewIndex = true;
                     }
                 }
             }
-
             // We update the controls of each character according to its new assigned index
-            if (!solo && !multi)
-            {
-                foreach (KeyValuePair<Character, int> entry in indexByCharacter)
-                {
-                    entry.Key.GetComponentInChildren<TempMovement>().swapControls(entry.Value);
-                }
+            foreach (KeyValuePair<Character, int> entry in indexByCharacter) {
+                entry.Key.GetComponentInChildren<TempMovement>().swapControls(entry.Value);
             }
         }
 
