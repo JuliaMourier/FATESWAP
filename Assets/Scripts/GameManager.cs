@@ -273,7 +273,7 @@ public class GameManager : MonoBehaviour
         //Reset the HUD slider for swap
         elapsedTime = 0.0f;
         if(!isGameOver){
-            if(boss != null){
+            if(boss != null && boss.isAlive){
                 boss.animator.SetTrigger("swap");
             }
             swapSourceSound.Play(); // Play the sound of swap

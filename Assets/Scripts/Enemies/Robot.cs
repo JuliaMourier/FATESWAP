@@ -13,11 +13,15 @@ public class Robot : MonoBehaviour
     public bool isAlive = true; //is robot alive, set to false when dies
     public AudioSource explosionSound;//Explosion sound
 
+    public bool isKillable = true;
+
     // initialisation of the direction of the robot
     private void Awake(){
         direction = initialDirection;
         robotMove = true;
-        animator.SetBool("robotMove", robotMove);
+        if(isAlive){
+            animator.SetBool("robotMove", robotMove);
+        }
     }
     
     //If the robot find a node
@@ -34,15 +38,21 @@ public class Robot : MonoBehaviour
 
     //update the position of the robot
     private void Update(){
-        Vector3 direction3D = new Vector3(direction.x, direction.y, this.transform.position.z);
-        this.transform.position = this.transform.position + direction3D * Time.deltaTime * speed;
-        // Set the sprite direction of the robot
-        if(direction.x > 0.5){ // if the character goes right the sprite need to stay at 0 rotation
-            this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 0, this.transform.rotation.z));
+        if(isAlive){
+            Vector3 direction3D = new Vector3(direction.x, direction.y, this.transform.position.z);
+            this.transform.position = this.transform.position + direction3D * Time.deltaTime * speed;
+            // Set the sprite direction of the robot
+            if(direction.x > 0.5){ // if the character goes right the sprite need to stay at 0 rotation
+                this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 0, this.transform.rotation.z));
+            }
+            else if(direction.x < -0.5){ // if the character goes left we have to rotate its sprite of 180°
+                this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 180, this.transform.rotation.z));
+            } 
         }
-        else if(direction.x < -0.5){ // if the character goes left we have to rotate its sprite of 180°
-            this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 180, this.transform.rotation.z));
+        else {
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);//new Vector3(4.57f, -0.75f, this.transform.position.z);
         }
+        
     }
 
     //when robot dies launch the animation of explosion and deactivate the robot after 1s
@@ -72,7 +82,12 @@ public class Robot : MonoBehaviour
             elapsed += Time.deltaTime;
             yield return null;
         }
-        if(this.name != "PrJavier"){
+        if(this.name == "PrJavier"){
+            this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+            this.transform.rotation = Quaternion.Euler(new  Vector3(this.transform.rotation.x, this.transform.rotation.y, 70));
+            this.transform.position =  new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+        }
+        else {
             this.Disable();
         }
     }
