@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour
     // it calls either the Resume() method or the Pause() method
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)) {
+        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Joystick1Button9) || Input.GetKeyDown(KeyCode.Joystick2Button9)|| Input.GetKeyDown(KeyCode.Joystick3Button9)) {
             if (GameIsPaused) {
                 unpauseSound.Play();
                 Resume();

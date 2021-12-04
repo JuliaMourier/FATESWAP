@@ -9,6 +9,7 @@ public class ToolManager : MonoBehaviour
 
     public Collectables key;
 
+
     public List<SpriteRenderer> toolsHUD;
 
     public void AddTool(int number){
