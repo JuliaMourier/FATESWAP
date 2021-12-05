@@ -3813,7 +3813,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1882918447463716296, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3328528663981646896, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3930,6 +3930,10 @@ PrefabInstance:
     - target: {fileID: 8634869518198550069, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
       propertyPath: m_SortingOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8703863877635005571, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b3f21365bd86664aaf6d5f3e7907c50, type: 3}

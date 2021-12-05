@@ -2157,11 +2157,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 298896289715626258, guid: c5a04c2e310b66c4e886fa0ef6b347bd, type: 3}
   m_PrefabInstance: {fileID: 690239579}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &691170317 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7759013740930466444, guid: f4fb5d58d4e83b74d879738f00e89a4d, type: 3}
-  m_PrefabInstance: {fileID: 5898572478214805466}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &790231355 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6644316412033157495, guid: 241923c1681cc7d4a85782689c2165a5, type: 3}
@@ -6546,7 +6541,7 @@ MonoBehaviour:
   initialDirection: {x: -1, y: 0}
   speed: 0.7
   isAlive: 1
-  explosionSound: {fileID: 691170317}
+  explosionSound: {fileID: 497598114}
   isKillable: 0
 --- !u!4 &3222625736509859504 stripped
 Transform:
@@ -6560,6 +6555,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3440338122828600056, guid: 164a33f92f0dd7246adf1de1240d842a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3440338122828600058, guid: 164a33f92f0dd7246adf1de1240d842a, type: 3}
       propertyPath: m_RootOrder
       value: 14
