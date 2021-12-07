@@ -43,11 +43,6 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     public GameObject playerListItemPrefab;
 
     public GameObject findRoomMenu;
-
-    
-
-    private int countPlayers = 0;
-
     
     private void Start(){ 
         if (!PhotonNetwork.IsConnected)
@@ -201,7 +196,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         foreach(KeyValuePair<int, Player> players in PhotonNetwork.CurrentRoom.Players){
             players.Value.CustomProperties["number"] = players.Key;
         }
-        SceneManager.LoadScene("TestMultiplayer");
+        SceneManager.LoadScene("LevelMultiplayer");
     }
 }
 

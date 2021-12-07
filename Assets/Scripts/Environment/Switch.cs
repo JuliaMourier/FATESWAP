@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Switch : MonoBehaviour
 {
@@ -26,8 +27,14 @@ public class Switch : MonoBehaviour
             if(other.gameObject.layer == LayerMask.NameToLayer("Characters")){ //if anyone can switch the switch no parameter theOneWhoCanSwitch is specified
                 foreach(Character character in characters){ //Test for each character
                     if(other.gameObject.Equals(character.gameObject)){ //If its the character 
-                        if(Input.GetKey(character.GetComponent<TempMovement>().shootKey)){ //and he wants to go through the door
-                            if(available){
+                        if(GameManager.multi){
+                            if(Input.GetKey(character.GetComponent<MovementMultiplayerMode>().shootKey) && available){ //and he wants to go through the door   
+                                PhotonView photonView = PhotonView.Get(this);
+                                photonView.RPC("MSwitchOn", RpcTarget.All);
+                            }
+                        }
+                        else {
+                            if(Input.GetKey(character.GetComponent<TempMovement>().shootKey) && available){ //and he wants to go through the door   
                                 available = false; //Disable the switch
                                 SwitchOn(); //Launch the change of state
                             }
@@ -54,8 +61,8 @@ public class Switch : MonoBehaviour
                 { //if only one character can switch the switch, check if the collision is dur to this character
                     if (available && theOneWhoCanSwitch.isPowerActivate && (Input.GetKey(theOneWhoCanSwitch.GetComponent<MovementMultiplayerMode>().switchPressKey)))
                     { //if Henrik is capable of switch the switch
-                        available = false; //Disable the switch
-                        SwitchOn(); //Launch the change of state
+                        PhotonView photonView = PhotonView.Get(this);
+                        photonView.RPC("MSwitchOn", RpcTarget.All);
                     }
                 }
             }
@@ -77,6 +84,7 @@ public class Switch : MonoBehaviour
 
     //Switch the sprite of the switch and its state attribute
     private void SwitchOn(){
+        
         switchSound.Play();
         if (isSwitchedOn){
             GetComponent<SpriteRenderer>().sprite = switchOff;
@@ -109,4 +117,21 @@ public class Switch : MonoBehaviour
         available = true; //The switch is back to available
 
     }
+
+    //Switch the sprite of the switch and its state attribute
+    [PunRPC]
+    private void MSwitchOn(){
+        available = false;
+        switchSound.Play();
+        if (isSwitchedOn){
+            GetComponent<SpriteRenderer>().sprite = switchOff;
+        }
+        else {
+            GetComponent<SpriteRenderer>().sprite = switchOn;
+        }
+        isSwitchedOn = !isSwitchedOn;
+        StartCoroutine(WaitUntilAvailable());
+    }
+
+   
 }

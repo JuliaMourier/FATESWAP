@@ -12,40 +12,40 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/MainMenu.unity
     guid: c9b37a971c5870046b3b730d3999a35e
   - enabled: 1
-    path: Assets/Scenes/Cinematics/IntroCinematic.unity
+    path: Assets/Scenes/LevelLocal/Cinematics/IntroCinematic.unity
     guid: b891f25066285f3419ae799af670c102
   - enabled: 1
-    path: Assets/Scenes/Dialogs/Dialog1.unity
+    path: Assets/Scenes/LevelLocal/Dialogs/Dialog1.unity
     guid: 8f8ccee815532864b91a46c8b64d5beb
   - enabled: 1
     path: Assets/Scenes/LevelLocal/Level1.unity
     guid: efae820e653b37d4094192bcf1a0e374
   - enabled: 1
-    path: Assets/Scenes/Dialogs/Dialog2.unity
+    path: Assets/Scenes/LevelLocal/Dialogs/Dialog2.unity
     guid: c4f3985a5a93a7d4cb5c1b3263f59524
   - enabled: 1
     path: Assets/Scenes/LevelLocal/Level2.unity
     guid: d6efb0c0ebdb70a41b7db8aca5074abc
   - enabled: 1
-    path: Assets/Scenes/Dialogs/Dialog3.unity
+    path: Assets/Scenes/LevelLocal/Dialogs/Dialog3.unity
     guid: 1a51a24182742dd4384880dee5f8f3ce
   - enabled: 1
     path: Assets/Scenes/LevelLocal/Level3.unity
     guid: 10f40d2148a1a554f90abbe4829af96b
   - enabled: 1
-    path: Assets/Scenes/Dialogs/Dialog4.unity
+    path: Assets/Scenes/LevelLocal/Dialogs/Dialog4.unity
     guid: 743f9470332922b4989689035c4f8817
   - enabled: 1
     path: Assets/Scenes/LevelLocal/Level4.unity
     guid: 3b4cda656232524408021c8daa63ff7a
   - enabled: 1
-    path: Assets/Scenes/Dialogs/DialogBoss.unity
+    path: Assets/Scenes/LevelLocal/Dialogs/DialogBoss.unity
     guid: d1f8ae4cf5bdbbd4394825eea00bd565
   - enabled: 1
     path: Assets/Scenes/LevelLocal/BossScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Cinematics/FinalCinematic.unity
+    path: Assets/Scenes/LevelLocal/Cinematics/FinalCinematic.unity
     guid: 97ecdff836bfb304eb5cd131798ffc9b
   - enabled: 1
     path: Assets/Scenes/Menus/Credits.unity
@@ -90,6 +90,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Solo/Credits_Solo.unity
     guid: 152d086d85d54ed4486f411751af441c
   - enabled: 1
-    path: Assets/Scenes/TestMultiplayer.unity
+    path: Assets/Scenes/MultiplayerOnline/LevelMultiplayer.unity
     guid: 1f6206b601f60d44d8d7a5980b1ce366
   m_configObjects: {}

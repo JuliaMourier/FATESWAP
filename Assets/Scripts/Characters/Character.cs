@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 
 public class Character : MonoBehaviour
@@ -25,6 +26,11 @@ public class Character : MonoBehaviour
 
    //Set the diretcion of the character with the Vector3 given
    public void SetDirection(Vector3 newDirection){
+      direction = newDirection;
+   }
+
+   [PunRPC]
+   public void SetDirectionForAll(Vector3 newDirection){
       direction = newDirection;
    }
 }

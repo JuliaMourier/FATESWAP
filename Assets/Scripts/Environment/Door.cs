@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Door : MonoBehaviour
 {
@@ -34,8 +35,8 @@ public class Door : MonoBehaviour
                     if(other.gameObject.Equals(character.gameObject)){ //If its the character 
                         if(Input.GetKey(character.GetComponent<MovementMultiplayerMode>().shootKey))
                             {//and he wants to go through the door
-                            character.gameObject.SetActive(false); //character enter
-                            numberCharacterWhoEnteredTheDoor++; //One character more is entered
+                            PhotonView photonView = PhotonView.Get(this);
+                            photonView.RPC("CharacterEntered", RpcTarget.All, characters.IndexOf(character));
                         }
                     }
                 }
@@ -63,4 +64,12 @@ public class Door : MonoBehaviour
     protected virtual void OnDoorEntered(){ //When the door is entered by all the characters
         FindObjectOfType<GameManager>().WinTheGame(this);
     }
+
+    [PunRPC]
+    private void DisableTargetForAll(int index){
+        characters[index].gameObject.SetActive(false); //character enter
+        numberCharacterWhoEnteredTheDoor++; //One character more is entered
+    }
+
+    
 }
