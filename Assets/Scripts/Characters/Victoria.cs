@@ -19,12 +19,23 @@ public class Victoria : Character
     public bool solo = false;
     private bool multi = false;
 
+    private KeyCode shootKey;
+
     public AudioSource fireballSound;
 
     void Start()
     {
         solo = FindObjectOfType<GameManager>().solo;
         multi = FindObjectOfType<GameManager>().multi;
+        if(solo){
+            shootKey = GetComponent<TempMovementSolo>().shootKey;
+        }
+        else if (multi){
+            shootKey = GetComponent<MovementMultiplayerMode>().shootKey;
+        }
+        else {
+            shootKey = GetComponent<TempMovement>().shootKey;
+        }
 
     }
     //When power is activated allow Victoria to throw fire balls
@@ -45,13 +56,13 @@ public class Victoria : Character
     private void Update() {
         if (solo)
         {
-            if(((Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey)) ||(Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey2))) && isCapableOfThrowingFireBalls){ //if her power are activates and she press X 
+            if(((Input.GetKeyUp(shootKey)) ||(Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey2))) && isCapableOfThrowingFireBalls){ //if her power are activates and she press X 
                 ThrowFireBall(); //throw
                 fireballSound.Play();
             }
         }
         else if(multi){
-            if (Input.GetKeyUp(GetComponent<MovementMultiplayerMode>().shootKey) && isCapableOfThrowingFireBalls)
+            if ((Input.GetKeyUp(shootKey) || Input.GetKeyUp(KeyCode.Joystick1Button2)) && isCapableOfThrowingFireBalls)
             { //if her power are activates and she press X 
                 PhotonView photonView = PhotonView.Get(this);
                 if(photonView.IsMine){
@@ -60,7 +71,7 @@ public class Victoria : Character
             }
         }    
         else {
-            if (Input.GetKeyUp(GetComponent<TempMovement>().shootKey) && isCapableOfThrowingFireBalls)
+            if (Input.GetKeyUp(shootKey) && isCapableOfThrowingFireBalls)
             { //if her power are activates and she press X 
                 ThrowFireBall(); //throw
                 fireballSound.Play();

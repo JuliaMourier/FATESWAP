@@ -28,9 +28,11 @@ public class Switch : MonoBehaviour
                 foreach(Character character in characters){ //Test for each character
                     if(other.gameObject.Equals(character.gameObject)){ //If its the character 
                         if(GameManager.multi){
-                            if(Input.GetKey(character.GetComponent<MovementMultiplayerMode>().shootKey) && available){ //and he wants to go through the door   
+                            if((Input.GetKey(character.GetComponent<MovementMultiplayerMode>().shootKey) || Input.GetKey(KeyCode.Joystick1Button2)) && available){ //and he wants to go through the door   
                                 PhotonView photonView = PhotonView.Get(this);
-                                photonView.RPC("MSwitchOn", RpcTarget.All);
+                                if(photonView.IsMine){
+                                    photonView.RPC("MSwitchOn", RpcTarget.All);
+                                }
                             }
                         }
                         else {
@@ -59,10 +61,12 @@ public class Switch : MonoBehaviour
             else if(GameManager.multi){
                 if (other.gameObject.Equals(theOneWhoCanSwitch.gameObject))
                 { //if only one character can switch the switch, check if the collision is dur to this character
-                    if (available && theOneWhoCanSwitch.isPowerActivate && (Input.GetKey(theOneWhoCanSwitch.GetComponent<MovementMultiplayerMode>().switchPressKey)))
+                    if (available && theOneWhoCanSwitch.isPowerActivate && (Input.GetKey(theOneWhoCanSwitch.GetComponent<MovementMultiplayerMode>().switchPressKey) || Input.GetKey(KeyCode.Joystick1Button2)))
                     { //if Henrik is capable of switch the switch
                         PhotonView photonView = PhotonView.Get(this);
-                        photonView.RPC("MSwitchOn", RpcTarget.All);
+                        if(photonView.IsMine){
+                            photonView.RPC("MSwitchOn", RpcTarget.All);
+                        }
                     }
                 }
             }

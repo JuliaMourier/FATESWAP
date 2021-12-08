@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 public class InGameMenus : MonoBehaviour {
 
@@ -19,6 +20,10 @@ public class InGameMenus : MonoBehaviour {
     public void LoadNextScene() {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void LeaveLobby(){
+        PhotonNetwork.LeaveLobby();
     }
 
 }

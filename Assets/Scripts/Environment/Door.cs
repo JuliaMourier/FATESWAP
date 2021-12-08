@@ -36,7 +36,9 @@ public class Door : MonoBehaviour
                         if(Input.GetKey(character.GetComponent<MovementMultiplayerMode>().shootKey))
                             {//and he wants to go through the door
                             PhotonView photonView = PhotonView.Get(this);
-                            photonView.RPC("CharacterEntered", RpcTarget.All, characters.IndexOf(character));
+                            if(character.GetComponent<PhotonView>().IsMine){
+                                photonView.RPC("CharacterEntered", RpcTarget.All, characters.IndexOf(character));
+                            }
                         }
                     }
                 }
@@ -66,7 +68,7 @@ public class Door : MonoBehaviour
     }
 
     [PunRPC]
-    private void DisableTargetForAll(int index){
+    private void CharacterEntered(int index){
         characters[index].gameObject.SetActive(false); //character enter
         numberCharacterWhoEnteredTheDoor++; //One character more is entered
     }
