@@ -527,7 +527,7 @@ MonoBehaviour:
   swapSourceSound: {fileID: 1911661033}
   exit: {fileID: 823872368}
   sliderSwap: {fileID: 1495309372}
-  swapDelay: 5
+  swapDelay: 15
   boss: {fileID: 0}
   solo: 0
   multi: 0
