@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Photon.Pun;
+using Photon.Realtime;
+using System.Collections.Generic;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -38,21 +40,23 @@ public class MovementMultiplayerMode : MonoBehaviour
 
     private PhotonView view;
 
+    private string nickname = "";
 
     // Configure the controls for the beginning
     void Awake() {
         view = GetComponent<PhotonView>();
         // Init the label sign/text above the character
-        // sign = new GameObject(character.name);
-        // sign.transform.rotation = Camera.main.transform.rotation;
-        // sign.layer = LayerMask.NameToLayer("UI");
-        // tm = sign.AddComponent<TextMesh>();
-        // tm.color = new Color(1f, 0f, 0f);
-        // tm.fontStyle = FontStyle.Bold;
-        // tm.alignment = TextAlignment.Center;
-        // tm.anchor = TextAnchor.MiddleCenter;
-        // tm.characterSize = 0.065f;
-        // tm.fontSize = 30;
+        sign = new GameObject(character.name);
+        sign.transform.rotation = Camera.main.transform.rotation;
+        sign.layer = LayerMask.NameToLayer("UI");
+        tm = sign.AddComponent<TextMesh>();
+        tm.color = new Color(1f, 0f, 0f);
+        tm.fontStyle = FontStyle.Bold;
+        tm.alignment = TextAlignment.Center;
+        tm.anchor = TextAnchor.MiddleCenter;
+        tm.characterSize = 0.065f;
+        tm.fontSize = 30;
+        
 
         switchPressKey = KeyCode.W;
         shootKey = KeyCode.W;
@@ -135,4 +139,9 @@ public class MovementMultiplayerMode : MonoBehaviour
         sign.SetActive(false);
     }
 
+
+    public void SetCorrectNickName(string playerName){
+        nickname = playerName;
+        tm.text = nickname;
+    }
 }

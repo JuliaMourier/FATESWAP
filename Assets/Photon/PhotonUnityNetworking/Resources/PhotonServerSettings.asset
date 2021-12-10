@@ -45,6 +45,8 @@ MonoBehaviour:
   - SetDirectionForAll
   - UpdateForAll
   - CharacterEntered
+  - DecreaseRigidBodyForAll
+  - IncreaseRigidBodyForAll
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

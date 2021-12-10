@@ -30,9 +30,7 @@ public class Switch : MonoBehaviour
                         if(GameManager.multi){
                             if((Input.GetKey(character.GetComponent<MovementMultiplayerMode>().shootKey) || Input.GetKey(KeyCode.Joystick1Button2)) && available){ //and he wants to go through the door   
                                 PhotonView photonView = PhotonView.Get(this);
-                                if(photonView.IsMine){
-                                    photonView.RPC("MSwitchOn", RpcTarget.All);
-                                }
+                                photonView.RPC("MSwitchOn", RpcTarget.All);
                             }
                         }
                         else {
@@ -61,12 +59,10 @@ public class Switch : MonoBehaviour
             else if(GameManager.multi){
                 if (other.gameObject.Equals(theOneWhoCanSwitch.gameObject))
                 { //if only one character can switch the switch, check if the collision is dur to this character
-                    if (available && theOneWhoCanSwitch.isPowerActivate && (Input.GetKey(theOneWhoCanSwitch.GetComponent<MovementMultiplayerMode>().switchPressKey) || Input.GetKey(KeyCode.Joystick1Button2)))
+                    if (theOneWhoCanSwitch.GetComponent<PhotonView>().IsMine && available && theOneWhoCanSwitch.isPowerActivate && (Input.GetKey(theOneWhoCanSwitch.GetComponent<MovementMultiplayerMode>().switchPressKey) || Input.GetKey(KeyCode.Joystick1Button2)))
                     { //if Henrik is capable of switch the switch
                         PhotonView photonView = PhotonView.Get(this);
-                        if(photonView.IsMine){
-                            photonView.RPC("MSwitchOn", RpcTarget.All);
-                        }
+                        photonView.RPC("MSwitchOn", RpcTarget.All);
                     }
                 }
             }

@@ -33,19 +33,17 @@ public class Door : MonoBehaviour
             else if(multi){
                 foreach(Character character in characters){
                     if(other.gameObject.Equals(character.gameObject)){ //If its the character 
-                        if(Input.GetKey(character.GetComponent<MovementMultiplayerMode>().shootKey))
+                        if(character.GetComponent<PhotonView>().IsMine && (Input.GetKey(character.GetComponent<MovementMultiplayerMode>().shootKey) ||Input.GetKey(KeyCode.Joystick1Button2)))
                             {//and he wants to go through the door
                             PhotonView photonView = PhotonView.Get(this);
-                            if(character.GetComponent<PhotonView>().IsMine){
-                                photonView.RPC("CharacterEntered", RpcTarget.All, characters.IndexOf(character));
-                            }
+                            photonView.RPC("CharacterEntered", RpcTarget.All, characters.IndexOf(character));
+                            
                         }
                     }
                 }
             }
             else
             {
-
                 foreach(Character character in characters){
                     if(other.gameObject.Equals(character.gameObject)){ //If its the character 
                         if(Input.GetKey(character.GetComponent<TempMovement>().shootKey))
