@@ -180,7 +180,7 @@ public class TempMovement : MonoBehaviour
     // Method to set controls to the KeyBoard
     private void setControlsToJ4() {
         jumpKey = KeyCode.UpArrow;
-        axis = "Horizontal";
+        axis = "HorizontalJ4";
         powerKey = KeyCode.X;
         tm.text = "J4";
         shootKey = KeyCode.W;
