@@ -31,8 +31,6 @@ public class TempMovementSolo : MonoBehaviour
     private KeyCode powerKey;
     private KeyCode swap;
 
-    private string axis;
-
     public KeyCode shootKey { get; private set; }
     public KeyCode shootKey2 { get; private set; }
     public KeyCode switchPressKey { get; private set; }
@@ -137,7 +135,6 @@ public class TempMovementSolo : MonoBehaviour
     private void setControlsToArrowKeys() {
         swap = KeyCode.RightControl;
         jumpKey = KeyCode.UpArrow;
-        axis = "Horizontal";
         powerKey = KeyCode.X;
         shootKey2 = KeyCode.Joystick1Button2;
         shootKey = KeyCode.W;

@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Photon.Pun;
+using Photon.Realtime;
+using System.Collections.Generic;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -38,21 +40,23 @@ public class MovementMultiplayerMode : MonoBehaviour
 
     private PhotonView view;
 
+    private string nickname = "";
 
     // Configure the controls for the beginning
     void Awake() {
         view = GetComponent<PhotonView>();
         // Init the label sign/text above the character
-        // sign = new GameObject(character.name);
-        // sign.transform.rotation = Camera.main.transform.rotation;
-        // sign.layer = LayerMask.NameToLayer("UI");
-        // tm = sign.AddComponent<TextMesh>();
-        // tm.color = new Color(1f, 0f, 0f);
-        // tm.fontStyle = FontStyle.Bold;
-        // tm.alignment = TextAlignment.Center;
-        // tm.anchor = TextAnchor.MiddleCenter;
-        // tm.characterSize = 0.065f;
-        // tm.fontSize = 30;
+        sign = new GameObject(character.name);
+        sign.transform.rotation = Camera.main.transform.rotation;
+        sign.layer = LayerMask.NameToLayer("UI");
+        tm = sign.AddComponent<TextMesh>();
+        tm.color = new Color(1f, 0f, 0f);
+        tm.fontStyle = FontStyle.Bold;
+        tm.alignment = TextAlignment.Center;
+        tm.anchor = TextAnchor.MiddleCenter;
+        tm.characterSize = 0.065f;
+        tm.fontSize = 30;
+        
 
         switchPressKey = KeyCode.W;
         shootKey = KeyCode.W;
@@ -61,26 +65,28 @@ public class MovementMultiplayerMode : MonoBehaviour
         //this.Invoke(nameof(hidePlayerLabel), 3f);
     }
 
-    void Update(){ 
-        if(view.IsMine){
+    void Update(){ //Update
+           if(view.IsMine){
             if(Input.GetAxis("Horizontal") > 0.9){ // if the character goes right
             move = true;
             this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 0, this.transform.rotation.z));
             this.transform.Translate(Vector2.right * Time.deltaTime * speed);
-            character.SetDirection(new Vector3(1, 0, 0)); //Direction to the right
+            PhotonView photonView = PhotonView.Get(this);
+            photonView.RPC("SetDirectionForAll", RpcTarget.All,new Vector3(1, 0, 0));
 
         } else if (Input.GetAxis("Horizontal") < -0.9){ // if the character goes left
             move = true;
             this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 180, this.transform.rotation.z));
             this.transform.Translate(Vector2.right * Time.deltaTime * speed);
-            character.SetDirection(new Vector3(-1, 0, 0)); //Direction to the right
+            PhotonView photonView = PhotonView.Get(this);
+            photonView.RPC("SetDirectionForAll", RpcTarget.All,new Vector3(-1, 0, 0));
         } else {
             // the character is not going left or right => no movement 
             move = false;
         }
 
         // if the jumpKey is pressed : jump
-        if (character.name == "Luciem(Clone)"){
+        if (character.name == "Luciem"){
             if (power){
                 if ((Input.GetKeyDown(KeyCode.Joystick1Button1) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))&& (jumpCount != 0))
                 {
@@ -111,7 +117,7 @@ public class MovementMultiplayerMode : MonoBehaviour
         if (Physics2D.OverlapArea(top_left.position, bottom_right.position, Obstacles))
         {
             IsGrounded = true;
-            if (character.name == "Luciem(Clone)")
+            if (character.name == "Luciem")
             {
                 jumpCount = 1;
             }
@@ -124,10 +130,8 @@ public class MovementMultiplayerMode : MonoBehaviour
 
         // Update the label position above the character head
         //sign.transform.position = this.transform.position + Vector3.up * 0.4f;
-    }             
-}
-
-   
+        }   
+    }
 
 
     // Method to hide the player label
@@ -135,4 +139,9 @@ public class MovementMultiplayerMode : MonoBehaviour
         sign.SetActive(false);
     }
 
+
+    public void SetCorrectNickName(string playerName){
+        nickname = playerName;
+        tm.text = nickname;
+    }
 }

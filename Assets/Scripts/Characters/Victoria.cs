@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Victoria : Character
 {
@@ -18,12 +19,23 @@ public class Victoria : Character
     public bool solo = false;
     private bool multi = false;
 
+    private KeyCode shootKey;
+
     public AudioSource fireballSound;
 
     void Start()
     {
         solo = FindObjectOfType<GameManager>().solo;
         multi = FindObjectOfType<GameManager>().multi;
+        if(solo){
+            shootKey = GetComponent<TempMovementSolo>().shootKey;
+        }
+        else if (multi){
+            shootKey = GetComponent<MovementMultiplayerMode>().shootKey;
+        }
+        else {
+            shootKey = GetComponent<TempMovement>().shootKey;
+        }
 
     }
     //When power is activated allow Victoria to throw fire balls
@@ -44,19 +56,22 @@ public class Victoria : Character
     private void Update() {
         if (solo)
         {
-            if(((Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey)) ||(Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey2))) && isCapableOfThrowingFireBalls){ //if her power are activates and she press X 
+            if(((Input.GetKeyUp(shootKey)) ||(Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey2))) && isCapableOfThrowingFireBalls){ //if her power are activates and she press X 
                 ThrowFireBall(); //throw
-                    fireballSound.Play();
+                fireballSound.Play();
             }
         }
         else if(multi){
-            if (Input.GetKeyUp(GetComponent<MovementMultiplayerMode>().shootKey) && isCapableOfThrowingFireBalls)
+            if ((Input.GetKeyUp(shootKey) || Input.GetKeyUp(KeyCode.Joystick1Button2)) && isCapableOfThrowingFireBalls)
             { //if her power are activates and she press X 
-                ThrowFireBall(); //throw
+                PhotonView photonView = PhotonView.Get(this);
+                if(photonView.IsMine){
+                    photonView.RPC("ThrowFireBallVisibleForAll", RpcTarget.All);
+                }   
             }
         }    
         else {
-            if (Input.GetKeyUp(GetComponent<TempMovement>().shootKey) && isCapableOfThrowingFireBalls)
+            if (Input.GetKeyUp(shootKey) && isCapableOfThrowingFireBalls)
             { //if her power are activates and she press X 
                 ThrowFireBall(); //throw
                 fireballSound.Play();
@@ -94,6 +109,21 @@ public class Victoria : Character
 
         isCapableOfThrowingFireBalls = true; //The fireball can be thrown again
 
+    }
+
+    [PunRPC]
+    public void ThrowFireBallVisibleForAll(){ 
+        isCapableOfThrowingFireBalls = false; //Prevent throwing fireball again 
+        animator.SetTrigger("throw"); //animate Victoria
+        GameObject fireBall = Instantiate(fireBallPrefab); //instantiate the fireball
+        fireBall.transform.position = hand.position; //set its position to the Victoria's hand
+        fireBall.GetComponent<FireBall>().SetDirection(this.direction); //Set the direction to Victoria's direction        
+        if(direction.x < -0.5){ //if the character goes left
+        //swap the direction of the sprite
+            fireBall.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x, 180, this.transform.rotation.z));
+        }
+        StopAllCoroutines();//Stop other running routines
+        StartCoroutine(WaitUntilAvailable()); //Will allow the throw in 0.5s
     }
 
 }
