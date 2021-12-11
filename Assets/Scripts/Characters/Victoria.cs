@@ -35,6 +35,7 @@ public class Victoria : Character
         }
         else {
             shootKey = GetComponent<TempMovement>().shootKey;
+            isCapableOfThrowingFireBalls = true;
         }
 
     }
@@ -71,8 +72,9 @@ public class Victoria : Character
             }
         }    
         else {
-            if (Input.GetKeyUp(shootKey) && isCapableOfThrowingFireBalls)
-            { //if her power are activates and she press X 
+            
+            if (Input.GetKeyUp(GetComponent<TempMovement>().shootKey) && isCapableOfThrowingFireBalls)
+            { //if her power are activates and she press W
                 ThrowFireBall(); //throw
                 fireballSound.Play();
             }
