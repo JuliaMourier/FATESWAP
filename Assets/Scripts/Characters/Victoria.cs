@@ -56,13 +56,13 @@ public class Victoria : Character
     private void Update() {
         if (solo)
         {
-            if(((Input.GetKeyUp(shootKey)) ||(Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey2))) && isCapableOfThrowingFireBalls){ //if her power are activates and she press X 
+            if(((Input.GetKeyUp(shootKey)) ||(Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey2))) && isCapableOfThrowingFireBalls && isPowerActivate){ //if her power are activates and she press X 
                 ThrowFireBall(); //throw
                 fireballSound.Play();
             }
         }
         else if(multi){
-            if ((Input.GetKeyUp(shootKey) || Input.GetKeyUp(KeyCode.Joystick1Button2)) && isCapableOfThrowingFireBalls)
+            if ((Input.GetKeyUp(shootKey) || Input.GetKeyUp(KeyCode.Joystick1Button2)) && isCapableOfThrowingFireBalls && isPowerActivate)
             { //if her power are activates and she press X 
                 PhotonView photonView = PhotonView.Get(this);
                 if(photonView.IsMine){
@@ -72,7 +72,7 @@ public class Victoria : Character
         }    
         else {
             
-            if (Input.GetKeyUp(GetComponent<TempMovement>().shootKey) && isCapableOfThrowingFireBalls)
+            if (Input.GetKeyUp(GetComponent<TempMovement>().shootKey) && isCapableOfThrowingFireBalls && isPowerActivate)
             { //if her power are activates and she press W
                 ThrowFireBall(); //throw
                 fireballSound.Play();
