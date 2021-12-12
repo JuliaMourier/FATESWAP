@@ -234,21 +234,4 @@ public class TempMovement : MonoBehaviour
         sign.SetActive(false);
     }
 
-    /*
-    public void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 6 ^collision.gameObject.layer == 8)
-        {
-            IsGrounded = false;
-            // animator.SetBool("isJumping", true);
-        }
-    }
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 6 ^ collision.gameObject.layer == 8)
-        {
-            IsGrounded = true;
-            // animator.SetBool("isJumping", false);
-        }
-    }*/
 }

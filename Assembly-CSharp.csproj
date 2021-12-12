@@ -104,7 +104,7 @@
      <Compile Include="Assets\Scripts\Environment\Tool.cs" />
      <Compile Include="Assets\Scripts\Menus\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Environment\Target.cs" />
-     <Compile Include="Assets\Scripts\Enemies\ToolManager.cs" />
+     <Compile Include="Assets\Scripts\Environment\ToolManager.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Environment\DoorToBoss.cs" />

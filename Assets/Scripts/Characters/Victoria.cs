@@ -35,7 +35,6 @@ public class Victoria : Character
         }
         else {
             shootKey = GetComponent<TempMovement>().shootKey;
-            isCapableOfThrowingFireBalls = true;
         }
 
     }

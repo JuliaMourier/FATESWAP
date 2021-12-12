@@ -30,7 +30,7 @@ public class RobotBody : MonoBehaviour
         }
         else {
             if(collision.gameObject.layer == LayerMask.NameToLayer("Fireball")){
-                if(robot.isAlive){
+                if(robot.isAlive && robot.isKillable){
                     robot.RobotDie();
                     forPunch.Play();
                 }
