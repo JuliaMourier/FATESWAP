@@ -4183,6 +4183,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.36
       objectReference: {fileID: 0}
+    - target: {fileID: 2668633390440631752, guid: 5d6df33bba57e644c8e4d508e67eb785, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2668633390440631753, guid: 5d6df33bba57e644c8e4d508e67eb785, type: 3}
       propertyPath: switchOpener
       value: 
@@ -5584,6 +5588,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 944846935}
     m_Modifications:
+    - target: {fileID: 540184219671830174, guid: 678430501f2d76740bfd3f443d28f754, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 540184219671830175, guid: 678430501f2d76740bfd3f443d28f754, type: 3}
       propertyPath: switchOpener
       value: 
