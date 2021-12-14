@@ -264,7 +264,7 @@ public class GameManager : MonoBehaviour
 
     private void swapCharacters() {
         //Reset the HUD slider for swap
-        elapsedTime = 0.0f;
+        ResetSwapSlider();
         if(!isGameOver){
             if(boss != null && boss.isAlive){
                 boss.animator.SetTrigger("swap");
@@ -306,6 +306,10 @@ public class GameManager : MonoBehaviour
             }
         }
 
+    }
+
+    public void ResetSwapSlider(){
+        elapsedTime = 0f;
     }
     
         

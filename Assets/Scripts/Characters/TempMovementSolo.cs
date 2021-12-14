@@ -133,7 +133,7 @@ public class TempMovementSolo : MonoBehaviour
 
     // Method to set controls to the arrow keys
     private void setControlsToArrowKeys() {
-        swap = KeyCode.RightControl;
+        swap = KeyCode.C;
         jumpKey = KeyCode.UpArrow;
         powerKey = KeyCode.X;
         shootKey2 = KeyCode.Joystick1Button2;

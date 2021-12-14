@@ -64,9 +64,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     //When the lobby is joined, the loading is complete so we load the next scene in the stack
     public override void OnJoinedLobby()
     {
-        Debug.Log("Lobby Joined");
         PhotonNetwork.AutomaticallySyncScene = true;
-
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -80,23 +78,12 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
             options.IsVisible = true;
             PhotonNetwork.CreateRoom(createLobby.text.ToUpper(), options); //Create room (upper case to avoid players errors))
         }
-        Debug.Log("Create : " + PhotonNetwork.CountOfRooms); 
     }
 
     //Allow the player to Join the room thanks to photon
     public void JoinRoom(){
         GetUserName();
-        
         PhotonNetwork.JoinRoom(joinLobby.text.ToUpper()); //Join the room (upper case to avoid players errors)
-        Debug.Log("Join : " + PhotonNetwork.CountOfRooms); 
-
-    }
-
-    public void JoinRandomRoom(){
-        GetUserName();
-
-        PhotonNetwork.JoinRandomRoom();
-        Debug.Log("Random Join : " + PhotonNetwork.CountOfRooms); 
     }
 
     //When a room is joined, redirect the player to the player list menu (TODO wait until 4 players) and name the room
@@ -164,7 +151,6 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         base.OnPlayerEnteredRoom(newPlayer);
         newPlayer.CustomProperties["number"] = PhotonNetwork.CurrentRoom.PlayerCount;
         Debug.Log("player list updated " + PhotonNetwork.CountOfPlayers + "player " + newPlayer.CustomProperties["number"]);
-        UpdateNumberOfPlayer();
         Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
     }
 
@@ -186,11 +172,6 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         }
     }
 
-    
-
-    public void UpdateNumberOfPlayer(){
-        roomName.text = PhotonNetwork.CurrentRoom.Name + " " + PhotonNetwork.CurrentRoom.PlayerCount  + "/4"; //Name the room + number of players
-    }
 
     public void StartGame(){
         foreach(KeyValuePair<int, Player> players in PhotonNetwork.CurrentRoom.Players){

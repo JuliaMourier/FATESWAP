@@ -10,6 +10,8 @@ public class GiveOwnership : MonoBehaviour
     public List<PhotonView> charactersView;
     private List<Player> playersInRoom = new List<Player>();
 
+    private int swapIndex = 1;
+
     // Start is called before the first frame update
     void Awake()
     {       
@@ -24,6 +26,18 @@ public class GiveOwnership : MonoBehaviour
                 i++;
             }
         }
-        //charactersView[players.Key - 1].TransferOwnership(players.Value);
+        InvokeRepeating("SwapOwnership", 15f, 15f);
+    }
+
+    public void SwapOwnership(){
+        FindObjectOfType<GameManager>().ResetSwapSlider();
+        int i = 0;
+        foreach(Player player in playersInRoom){
+            if(charactersView[(i + swapIndex) % 4] != null){
+                charactersView[(i + swapIndex) % 4].TransferOwnership(player);
+                i++;
+            }
+        }
+        swapIndex = (swapIndex + 1) % 4;
     }
 }
