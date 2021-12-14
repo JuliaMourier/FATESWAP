@@ -25,7 +25,7 @@ public class LevelSelectionMenu : MonoBehaviour {
     }
 
     private void Update() {
-        // The state of the button 0 will never change, that's why we call the update methods only for higher indexes
+        // The state of the button (or level) 0 will never change, that's why we call the update methods only for higher indexes
         if (currentLevelIndex > 0) {
             UpdateLevelStatus();
             UpdateLevelImage();
