@@ -18,5 +18,7 @@ public class MainMenu : MonoBehaviour
         soundsMixer.SetFloat("soundsVolume", soundsVolume);
     }
 
-    
+    public void ExitGame(){ //Quit the game
+        Application.Quit();
+    }
 }

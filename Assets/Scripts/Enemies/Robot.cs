@@ -12,7 +12,6 @@ public class Robot : MonoBehaviour
     private bool robotMove = false; //is robot moving
     public bool isAlive = true; //is robot alive, set to false when dies
     public AudioSource explosionSound;//Explosion sound
-
     public bool isKillable = true;
 
     // initialisation of the direction of the robot
