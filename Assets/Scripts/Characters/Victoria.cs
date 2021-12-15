@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
@@ -28,13 +27,13 @@ public class Victoria : Character
         solo = FindObjectOfType<GameManager>().solo;
         multi = FindObjectOfType<GameManager>().multi;
         if(solo){
-            shootKey = GetComponent<TempMovementSolo>().shootKey;
+            shootKey = GetComponent<MovementSolo>().shootKey;
         }
         else if (multi){
             shootKey = GetComponent<MovementMultiplayerMode>().shootKey;
         }
         else {
-            shootKey = GetComponent<TempMovement>().shootKey;
+            shootKey = GetComponent<Movement>().shootKey;
         }
 
     }
@@ -56,7 +55,7 @@ public class Victoria : Character
     private void Update() {
         if (solo)
         {
-            if(((Input.GetKeyUp(shootKey)) ||(Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey2))) && isCapableOfThrowingFireBalls && isPowerActivate){ //if her power are activates and she press X 
+            if(((Input.GetKeyUp(shootKey)) ||(Input.GetKeyUp(GetComponent<MovementSolo>().shootKey2))) && isCapableOfThrowingFireBalls && isPowerActivate){ //if her power are activates and she press X 
                 ThrowFireBall(); //throw
                 fireballSound.Play();
             }
@@ -72,7 +71,7 @@ public class Victoria : Character
         }    
         else {
             
-            if (Input.GetKeyUp(GetComponent<TempMovement>().shootKey) && isCapableOfThrowingFireBalls && isPowerActivate)
+            if (Input.GetKeyUp(GetComponent<Movement>().shootKey) && isCapableOfThrowingFireBalls && isPowerActivate)
             { //if her power are activates and she press W
                 ThrowFireBall(); //throw
                 fireballSound.Play();

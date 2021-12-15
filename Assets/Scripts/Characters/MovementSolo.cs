@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class TempMovementSolo : MonoBehaviour
+public class MovementSolo : MonoBehaviour
 {
     // --- Attributes ---
 

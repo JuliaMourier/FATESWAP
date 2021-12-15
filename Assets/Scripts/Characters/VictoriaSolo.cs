@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -37,7 +36,7 @@ public class VictoriaSolo : Character
     //Check if Victoria wants to throw a fireball
     private void Update()
     {
-        if (Input.GetKeyUp(GetComponent<TempMovementSolo>().shootKey) && isCapableOfThrowingFireBalls)
+        if (Input.GetKeyUp(GetComponent<MovementSolo>().shootKey) && isCapableOfThrowingFireBalls)
         { //if her power are activates and she press X 
 
             ThrowFireBall(); //throw

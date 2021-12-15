@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Photon.Pun;
 
 public class GameManager : MonoBehaviour
 {
@@ -302,7 +301,7 @@ public class GameManager : MonoBehaviour
             }
             // We update the controls of each character according to its new assigned index
             foreach (KeyValuePair<Character, int> entry in indexByCharacter) {
-                entry.Key.GetComponentInChildren<TempMovement>().swapControls(entry.Value);
+                entry.Key.GetComponentInChildren<Movement>().swapControls(entry.Value);
             }
         }
 

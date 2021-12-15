@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -46,7 +45,7 @@ public class Door : MonoBehaviour
             {
                 foreach(Character character in characters){
                     if(other.gameObject.Equals(character.gameObject)){ //If its the character 
-                        if(Input.GetKey(character.GetComponent<TempMovement>().shootKey))
+                        if(Input.GetKey(character.GetComponent<Movement>().shootKey))
                             {//and he wants to go through the door
                             character.gameObject.SetActive(false); //character enter
                             numberCharacterWhoEnteredTheDoor++; //One character more is entered

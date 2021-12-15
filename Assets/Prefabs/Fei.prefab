@@ -200,8 +200,8 @@ GameObject:
   - component: {fileID: 1813225988275286180}
   - component: {fileID: 1813225988275286183}
   - component: {fileID: 1813225986457231617}
-  - component: {fileID: 1813225988275286186}
   - component: {fileID: 1813225988275286178}
+  - component: {fileID: 348148050266831505}
   m_Layer: 8
   m_Name: Fei
   m_TagString: Untagged
@@ -345,7 +345,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1813225988275286186
+--- !u!114 &1813225988275286178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813225988275286189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e0263eeed5d6040b0aff290232776b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPowerActivate: 0
+--- !u!114 &348148050266831505
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,21 +380,8 @@ MonoBehaviour:
   animator: {fileID: 1813225986457231617}
   character: {fileID: 1813225988275286178}
   jumpSound: {fileID: 7632645612637532403}
-  powerupSound: {fileID: 671758461167798222}
-  powerdownSound: {fileID: 5629171333618434497}
---- !u!114 &1813225988275286178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1813225988275286189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e0263eeed5d6040b0aff290232776b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPowerActivate: 0
+  powerupSound: {fileID: 5629171333618434497}
+  powerdownSound: {fileID: 671758461167798222}
 --- !u!1 &7977555305906613338
 GameObject:
   m_ObjectHideFlags: 0

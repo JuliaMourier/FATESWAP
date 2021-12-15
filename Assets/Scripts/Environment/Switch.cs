@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
@@ -34,7 +33,7 @@ public class Switch : MonoBehaviour
                             }
                         }
                         else {
-                            if(Input.GetKey(character.GetComponent<TempMovement>().shootKey) && available){ //and he wants to go through the door   
+                            if(Input.GetKey(character.GetComponent<Movement>().shootKey) && available){ //and he wants to go through the door   
                                 available = false; //Disable the switch
                                 SwitchOn(); //Launch the change of state
                             }
@@ -49,7 +48,7 @@ public class Switch : MonoBehaviour
 
                 if (other.gameObject.Equals(theOneWhoCanSwitch.gameObject))
                 { //if only one character can switch the switch, check if the collision is dur to this character
-                    if (available && theOneWhoCanSwitch.isPowerActivate && (Input.GetKey(theOneWhoCanSwitch.GetComponent<TempMovementSolo>().switchPressKey) || Input.GetKey(theOneWhoCanSwitch.GetComponent<TempMovementSolo>().switchPressKey2)))
+                    if (available && theOneWhoCanSwitch.isPowerActivate && (Input.GetKey(theOneWhoCanSwitch.GetComponent<MovementSolo>().switchPressKey) || Input.GetKey(theOneWhoCanSwitch.GetComponent<MovementSolo>().switchPressKey2)))
                     { //if Henrik is capable of switch the switch
                         available = false; //Disable the switch
                         SwitchOn(); //Launch the change of state
@@ -71,7 +70,7 @@ public class Switch : MonoBehaviour
 
                 if (other.gameObject.Equals(theOneWhoCanSwitch.gameObject))
                 { //if only one character can switch the switch, check if the collision is dur to this character
-                    if (available && theOneWhoCanSwitch.isPowerActivate && Input.GetKey(theOneWhoCanSwitch.GetComponent<TempMovement>().switchPressKey))
+                    if (available && theOneWhoCanSwitch.isPowerActivate && Input.GetKey(theOneWhoCanSwitch.GetComponent<Movement>().switchPressKey))
                     { //if Henrik is capable of switch the switch
                         available = false; //Disable the switch
                         SwitchOn(); //Launch the change of state
