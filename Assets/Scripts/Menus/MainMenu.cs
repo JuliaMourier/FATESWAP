@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Audio;
-
 public class MainMenu : MonoBehaviour
 {
     public AudioMixer musicMixer;

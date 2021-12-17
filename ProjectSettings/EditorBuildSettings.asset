@@ -101,4 +101,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MultiplayerOnline/Level4m.unity
     guid: 0344a3bfe666ad14c919d5b99321cad1
+  - enabled: 1
+    path: Assets/Scenes/MultiplayerOnline/BossLevelm.unity
+    guid: 65614d1aa6ab5e8418218e3253726ba5
   m_configObjects: {}
