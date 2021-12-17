@@ -6913,6 +6913,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6270911354528397858, guid: d068a8d5d095ddb47a9358bee48388a2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6270911354528397859, guid: d068a8d5d095ddb47a9358bee48388a2, type: 3}
       propertyPath: ennemi
       value: 

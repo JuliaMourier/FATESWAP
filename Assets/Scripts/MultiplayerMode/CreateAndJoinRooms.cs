@@ -177,7 +177,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
         foreach(KeyValuePair<int, Player> players in PhotonNetwork.CurrentRoom.Players){
             players.Value.CustomProperties["number"] = players.Key;
         }
-        SceneManager.LoadScene("LevelMultiplayer");
+        SceneManager.LoadScene("Level1m");
     }
 }
 

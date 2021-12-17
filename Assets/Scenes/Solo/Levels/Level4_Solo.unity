@@ -3346,6 +3346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1813225988275286186, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
+    - {fileID: 8341721815236578756, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f2b71ac583ad10c47a986d4ccf32f123, type: 3}
 --- !u!1 &668857693 stripped
 GameObject:
@@ -4238,7 +4239,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lucie
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 143075817357786823, guid: c96fe75ac1ec77b4e82c26d67c750b5b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c96fe75ac1ec77b4e82c26d67c750b5b, type: 3}
 --- !u!1 &1032464424 stripped
 GameObject:
@@ -5852,6 +5854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1064990881085756141, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
+    - {fileID: 7193739934671886730, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e1001216ff3caa04b8c6f5b0b7a6d706, type: 3}
 --- !u!1 &1355635853 stripped
 GameObject:
@@ -6381,6 +6384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7043650443082357156, guid: 2c6d46df08977374282a812c4ebdcf8e, type: 3}
+    - {fileID: 2575206742621433661, guid: 2c6d46df08977374282a812c4ebdcf8e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2c6d46df08977374282a812c4ebdcf8e, type: 3}
 --- !u!1 &1893977169 stripped
 GameObject:

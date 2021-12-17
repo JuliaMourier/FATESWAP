@@ -90,6 +90,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Solo/Cinematics/Credits_Solo.unity
     guid: 152d086d85d54ed4486f411751af441c
   - enabled: 1
-    path: Assets/Scenes/MultiplayerOnline/LevelMultiplayer.unity
+    path: Assets/Scenes/MultiplayerOnline/Level1m.unity
     guid: 1f6206b601f60d44d8d7a5980b1ce366
+  - enabled: 1
+    path: Assets/Scenes/MultiplayerOnline/Level2m.unity
+    guid: 6dc83164375f27743aee4b522bf940dc
+  - enabled: 1
+    path: Assets/Scenes/MultiplayerOnline/Level3m.unity
+    guid: ae1b0a0a7f31dea4ab2fcb9a289c3c7c
+  - enabled: 1
+    path: Assets/Scenes/MultiplayerOnline/Level4m.unity
+    guid: 0344a3bfe666ad14c919d5b99321cad1
   m_configObjects: {}

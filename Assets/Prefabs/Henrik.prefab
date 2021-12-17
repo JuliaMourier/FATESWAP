@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 7051517751146259242}
   - component: {fileID: 7051517751146259240}
   - component: {fileID: 7051517750694878019}
-  - component: {fileID: 7051517751146259238}
+  - component: {fileID: 2567311450665735615}
   m_Layer: 8
   m_Name: Henrik
   m_TagString: Untagged
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPowerActivate: 0
---- !u!114 &7051517751146259238
+--- !u!114 &2567311450665735615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -591,10 +591,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7051517751146259247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f2ef96ec9bd21349bc34e27df23fdf0, type: 3}
+  m_Script: {fileID: 11500000, guid: a8e8d01fcb3bf484588dbd0365fa1776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.4
+  speed: 1
   impulsionForce: 3.2
   top_left: {fileID: 7051517750133859439}
   bottom_right: {fileID: 7051517751611188020}

@@ -27,10 +27,4 @@ public class PlayerListItem : MonoBehaviourPunCallbacks
             Destroy(gameObject);
         }
     }
-
-    // When the room is left, destroy this item
-    public override void OnLeftRoom()
-    {
-        Destroy(gameObject);
-    }
 }
