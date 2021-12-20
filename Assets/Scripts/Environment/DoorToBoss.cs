@@ -10,6 +10,9 @@ public class DoorToBoss : Door
         if(FindObjectOfType<GameManager>().solo){
             SceneManager.LoadScene("DialogBoss_Solo"); //Load the scene of dialog of the boss scene for solo mode
         }
+        else if (FindObjectOfType<GameManager>().multi){
+            SceneManager.LoadScene("BossLevelm");
+        }
         else{
             SceneManager.LoadScene("DialogBoss"); //Load the scene of dialog of the boss scene
         }
