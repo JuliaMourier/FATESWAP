@@ -278,7 +278,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1344
   animator: {fileID: 3738647528804872104}
-  character: {fileID: 0}
+  character: {fileID: 3738647529442578419}
 --- !u!1 &3738647528830159708
 GameObject:
   m_ObjectHideFlags: 0
